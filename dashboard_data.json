@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T17:27+00:00",
+  "updated_at": "2026-06-04T19:26+00:00",
   "city": "Berlin",
   "periods": [
     "today",
@@ -11,6 +11,8 @@
       "tenant_id": "4a3497a5-f9bd-43eb-9aaa-a972a856b3d2",
       "name": "PadelBros",
       "district": "Wittestraße 46",
+      "lat": 52.5762282,
+      "lng": 13.3049313,
       "courts": 8,
       "metrics": {
         "today": {
@@ -22,45 +24,63 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.6056,
-          "rev_measured": 0.0,
+          "occupancy": 0.6306,
+          "rev_measured": 263.0,
           "rev_estimated": 7739.0,
-          "booked_hours": 218.0,
+          "booked_hours": 227.0,
           "observed_days": 3,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3968,
-          "rev_measured": 0.0,
-          "rev_estimated": 20571.0,
-          "booked_hours": 619.0,
-          "observed_days": 13,
+          "occupancy": 0.3982,
+          "rev_measured": 634.0,
+          "rev_estimated": 21562.0,
+          "booked_hours": 669.0,
+          "observed_days": 14,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
-            "courts": 8,
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
           }
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
-            "courts": 8,
-            "occupancy": 0.6056,
-            "revenue": 7739.0
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.5981,
+            "revenue": 5503.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.7278,
+            "revenue": 2499.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
-            "courts": 8,
-            "occupancy": 0.3968,
-            "revenue": 20571.0
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.3913,
+            "revenue": 15808.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.419,
+            "revenue": 6388.0
           }
         ]
       },
@@ -71,14 +91,37 @@
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.75,
+          "1,5h": 0.25,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
+          "1h": 0.533,
+          "1,5h": 0.4,
+          "2h": 0.067
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.222,
+          "Mittag": 0.389,
+          "Nachmittag": 0.167,
+          "Abend": 0.222,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.184,
+          "Mittag": 0.184,
+          "Nachmittag": 0.289,
+          "Abend": 0.342,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -87,6 +130,8 @@
       "tenant_id": "8b818dae-aacb-4ea3-aa7b-0e77b1149c85",
       "name": "mitte — charlotte (Charlottenburg)",
       "district": "Sophie-Charlotten-Straße 14",
+      "lat": 52.5200191,
+      "lng": 13.2859645,
       "courts": 5,
       "metrics": {
         "today": {
@@ -98,26 +143,26 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.006,
+          "occupancy": 0.0982,
           "rev_measured": 0.0,
-          "rev_estimated": 36.0,
-          "booked_hours": 1.0,
+          "rev_estimated": 594.0,
+          "booked_hours": 16.5,
           "observed_days": 2,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.5218,
-          "rev_measured": 0.0,
-          "rev_estimated": 18936.0,
-          "booked_hours": 526.0,
-          "observed_days": 12,
+          "occupancy": 0.5385,
+          "rev_measured": 288.0,
+          "rev_estimated": 20880.0,
+          "booked_hours": 588.0,
+          "observed_days": 13,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Indoor",
             "courts": 5,
             "occupancy": 0.0,
             "revenue": 0
@@ -125,18 +170,18 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.006,
-            "revenue": 36.0
+            "occupancy": 0.0982,
+            "revenue": 594.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.5218,
-            "revenue": 18936.0
+            "occupancy": 0.5385,
+            "revenue": 21168.0
           }
         ]
       },
@@ -152,9 +197,32 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.333,
+          "1,5h": 0.667,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.188,
+          "Mittag": 0.5,
+          "Nachmittag": 0.125,
+          "Abend": 0.188,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -163,6 +231,8 @@
       "tenant_id": "0220b0b5-c27a-4433-9c91-1798aaec5250",
       "name": "Padelhaus",
       "district": "Köpenick",
+      "lat": 52.4852487,
+      "lng": 13.4973184,
       "courts": 9,
       "metrics": {
         "today": {
@@ -174,45 +244,81 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3833,
-          "rev_measured": 0.0,
+          "occupancy": 0.3954,
+          "rev_measured": 169.0,
           "rev_estimated": 7268.0,
-          "booked_hours": 207.0,
+          "booked_hours": 213.5,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2957,
-          "rev_measured": 0.0,
-          "rev_estimated": 16727.0,
-          "booked_hours": 519.0,
-          "observed_days": 13,
+          "occupancy": 0.2963,
+          "rev_measured": 326.0,
+          "rev_estimated": 17627.0,
+          "booked_hours": 560.0,
+          "observed_days": 14,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
-            "courts": 9,
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
           }
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
-            "courts": 9,
-            "occupancy": 0.3833,
-            "revenue": 7268.0
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.4083,
+            "revenue": 3898.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.3417,
+            "revenue": 1640.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.4167,
+            "revenue": 1900.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
-            "courts": 9,
-            "occupancy": 0.2957,
-            "revenue": 16727.0
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.2681,
+            "revenue": 8462.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.356,
+            "revenue": 5102.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.3071,
+            "revenue": 4390.0
           }
         ]
       },
@@ -223,14 +329,37 @@
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.4,
+          "1,5h": 0.6,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.25,
+          "1,5h": 0.75,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.231,
+          "Mittag": 0.154,
+          "Nachmittag": 0.154,
+          "Abend": 0.462,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.273,
+          "Mittag": 0.227,
+          "Nachmittag": 0.091,
+          "Abend": 0.409,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -239,6 +368,8 @@
       "tenant_id": "9fea856e-7d1a-4cae-9831-79015318967b",
       "name": "PBC Center",
       "district": "Großbeerenstraße 2-10",
+      "lat": 52.439074,
+      "lng": 13.3786568,
       "courts": 6,
       "metrics": {
         "today": {
@@ -250,18 +381,18 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.5451,
-          "rev_measured": 0.0,
+          "occupancy": 0.5573,
+          "rev_measured": 110.0,
           "rev_estimated": 5862.0,
-          "booked_hours": 157.0,
+          "booked_hours": 160.5,
           "observed_days": 3,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.475,
-          "rev_measured": 0.0,
+          "occupancy": 0.4849,
+          "rev_measured": 342.0,
           "rev_estimated": 16420.0,
-          "booked_hours": 456.0,
+          "booked_hours": 465.5,
           "observed_days": 10,
           "ccy": "EUR"
         }
@@ -269,26 +400,44 @@
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
-            "courts": 6,
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
           }
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
-            "courts": 6,
-            "occupancy": 0.5451,
-            "revenue": 5862.0
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.5339,
+            "revenue": 3511.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.6042,
+            "revenue": 2461.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
-            "courts": 6,
-            "occupancy": 0.475,
-            "revenue": 16420.0
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.432,
+            "revenue": 9227.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.5906,
+            "revenue": 7535.0
           }
         ]
       },
@@ -299,14 +448,37 @@
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.667,
+          "1,5h": 0.333,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.286,
+          "1,5h": 0.714,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.429,
+          "Nachmittag": 0.286,
+          "Abend": 0.286,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.158,
+          "Mittag": 0.316,
+          "Nachmittag": 0.263,
+          "Abend": 0.263,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -315,6 +487,8 @@
       "tenant_id": "6adc7add-0547-4f48-830e-153f9aa5948d",
       "name": "Padel Berlin Ostkreuz",
       "district": "Wiesenweg 1-4",
+      "lat": 52.5074565,
+      "lng": 13.4742189,
       "courts": 3,
       "metrics": {
         "today": {
@@ -326,45 +500,63 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3913,
-          "rev_measured": 0.0,
+          "occupancy": 0.3995,
+          "rev_measured": 50.0,
           "rev_estimated": 2661.0,
-          "booked_hours": 72.0,
+          "booked_hours": 73.5,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.5085,
-          "rev_measured": 0.0,
-          "rev_estimated": 13113.0,
-          "booked_hours": 327.5,
-          "observed_days": 14,
+          "occupancy": 0.5022,
+          "rev_measured": 50.0,
+          "rev_estimated": 13897.0,
+          "booked_hours": 346.5,
+          "observed_days": 15,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
+            "label": "Double · Indoor",
+            "courts": 1,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
           }
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
-            "occupancy": 0.3913,
-            "revenue": 2661.0
+            "label": "Double · Indoor",
+            "courts": 1,
+            "occupancy": 0.5887,
+            "revenue": 1322.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.3033,
+            "revenue": 1389.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
-            "occupancy": 0.5085,
-            "revenue": 13113.0
+            "label": "Double · Indoor",
+            "courts": 1,
+            "occupancy": 0.5419,
+            "revenue": 5006.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.482,
+            "revenue": 8942.0
           }
         ]
       },
@@ -376,13 +568,155 @@
         },
         "week": {
           "1h": 0.0,
-          "1,5h": 0.0,
+          "1,5h": 1.0,
           "2h": 0.0
         },
         "month": {
           "1h": 0.0,
+          "1,5h": 1.0,
+          "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 1.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 1.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "632ca5b0-93bc-4718-a3e9-288bc2fe507d",
+      "name": "Padel Neukölln",
+      "district": "Neukölln",
+      "lat": 52.4679985,
+      "lng": 13.4192319,
+      "courts": 6,
+      "metrics": {
+        "today": {
+          "occupancy": 0.0,
+          "rev_measured": 0.0,
+          "rev_estimated": 0.0,
+          "booked_hours": 0.0,
+          "observed_days": 0,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.3226,
+          "rev_measured": 76.0,
+          "rev_estimated": 2766.0,
+          "booked_hours": 75.5,
+          "observed_days": 3,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.3241,
+          "rev_measured": 114.0,
+          "rev_estimated": 11344.0,
+          "booked_hours": 404.5,
+          "observed_days": 16,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 2,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.0,
+            "revenue": 0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 2,
+            "occupancy": 0.2244,
+            "revenue": 665.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.3718,
+            "revenue": 2177.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 2,
+            "occupancy": 0.3017,
+            "revenue": 3517.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.3353,
+            "revenue": 7941.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.0,
           "1,5h": 0.0,
           "2h": 0.0
+        },
+        "week": {
+          "1h": 1.0,
+          "1,5h": 0.0,
+          "2h": 0.0
+        },
+        "month": {
+          "1h": 1.0,
+          "1,5h": 0.0,
+          "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.5,
+          "Nachmittag": 0.5,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.333,
+          "Nachmittag": 0.667,
+          "Abend": 0.0,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -391,6 +725,8 @@
       "tenant_id": "aa7e1831-a90d-4a4f-b6ae-f6d334179907",
       "name": "BeachMitte",
       "district": "Caroline-Michaelis-Str. 8",
+      "lat": 52.5334937,
+      "lng": 13.3843963,
       "courts": 5,
       "metrics": {
         "today": {
@@ -402,94 +738,18 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.0433,
+          "occupancy": 0.1308,
           "rev_measured": 0.0,
-          "rev_estimated": 198.0,
-          "booked_hours": 5.5,
+          "rev_estimated": 612.0,
+          "booked_hours": 17.0,
           "observed_days": 2,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3425,
-          "rev_measured": 0.0,
-          "rev_estimated": 9962.0,
-          "booked_hours": 261.0,
-          "observed_days": 12,
-          "ccy": "EUR"
-        }
-      },
-      "by_type": {
-        "today": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 5,
-            "occupancy": 0.0,
-            "revenue": 0
-          }
-        ],
-        "week": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 5,
-            "occupancy": 0.0433,
-            "revenue": 198.0
-          }
-        ],
-        "month": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 5,
-            "occupancy": 0.3425,
-            "revenue": 9962.0
-          }
-        ]
-      },
-      "by_duration": {
-        "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        }
-      },
-      "events": []
-    },
-    {
-      "tenant_id": "632ca5b0-93bc-4718-a3e9-288bc2fe507d",
-      "name": "Padel Neukölln",
-      "district": "Neukölln",
-      "courts": 6,
-      "metrics": {
-        "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
-          "ccy": "EUR"
-        },
-        "week": {
-          "occupancy": 0.3141,
-          "rev_measured": 0.0,
-          "rev_estimated": 2766.0,
-          "booked_hours": 73.5,
-          "observed_days": 3,
-          "ccy": "EUR"
-        },
-        "month": {
-          "occupancy": 0.3486,
-          "rev_measured": 0.0,
-          "rev_estimated": 9893.0,
-          "booked_hours": 353.5,
+          "occupancy": 0.3497,
+          "rev_measured": 147.0,
+          "rev_estimated": 11090.0,
+          "booked_hours": 295.5,
           "observed_days": 13,
           "ccy": "EUR"
         }
@@ -498,7 +758,13 @@
         "today": [
           {
             "label": "Double · Lage ?",
-            "courts": 6,
+            "courts": 1,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
             "occupancy": 0.0,
             "revenue": 0
           }
@@ -506,17 +772,29 @@
         "week": [
           {
             "label": "Double · Lage ?",
-            "courts": 6,
-            "occupancy": 0.3141,
-            "revenue": 2766.0
+            "courts": 1,
+            "occupancy": 0.4423,
+            "revenue": 414.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.0529,
+            "revenue": 198.0
           }
         ],
         "month": [
           {
             "label": "Double · Lage ?",
-            "courts": 6,
-            "occupancy": 0.3486,
-            "revenue": 9893.0
+            "courts": 1,
+            "occupancy": 0.4408,
+            "revenue": 2800.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.3269,
+            "revenue": 8437.0
           }
         ]
       },
@@ -532,9 +810,32 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.667,
+          "1,5h": 0.333,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.286,
+          "Abend": 0.714,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -543,56 +844,76 @@
       "tenant_id": "d4506944-7eb2-40bd-b9ea-9ad4a769db04",
       "name": "Birgit (Kreuzberg)",
       "district": "Kreuzberg",
+      "lat": 52.4976551,
+      "lng": 13.4508098,
       "courts": 3,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
+          "occupancy": 0.0392,
+          "rev_measured": 80.0,
           "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "booked_hours": 2.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.4902,
-          "rev_measured": 0.0,
+          "occupancy": 0.5,
+          "rev_measured": 80.0,
           "rev_estimated": 3841.0,
-          "booked_hours": 100.0,
+          "booked_hours": 102.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3284,
-          "rev_measured": 0.0,
-          "rev_estimated": 8242.0,
-          "booked_hours": 234.5,
-          "observed_days": 14,
+          "occupancy": 0.2346,
+          "rev_measured": 260.0,
+          "rev_estimated": 10944.0,
+          "booked_hours": 323.0,
+          "observed_days": 27,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.0588,
+            "revenue": 80.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 1,
             "occupancy": 0.0,
             "revenue": 0
           }
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
-            "occupancy": 0.4902,
-            "revenue": 3841.0
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.5809,
+            "revenue": 3026.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 1,
+            "occupancy": 0.3382,
+            "revenue": 895.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
-            "courts": 3,
-            "occupancy": 0.3284,
-            "revenue": 8242.0
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.2865,
+            "revenue": 9069.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 1,
+            "occupancy": 0.1307,
+            "revenue": 2134.0
           }
         ]
       },
@@ -600,17 +921,40 @@
         "today": {
           "1h": 0.0,
           "1,5h": 0.0,
-          "2h": 0.0
+          "2h": 1.0
         },
         "week": {
           "1h": 0.0,
           "1,5h": 0.0,
-          "2h": 0.0
+          "2h": 1.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
+          "1h": 0.25,
+          "1,5h": 0.25,
+          "2h": 0.5
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 1.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 1.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.308,
+          "Nachmittag": 0.154,
+          "Abend": 0.538,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -619,6 +963,8 @@
       "tenant_id": "31bb4900-5ad3-424a-a7fe-ed49ed2bf8e8",
       "name": "Padel Arena Berlin",
       "district": "Haberstraße 18",
+      "lat": 52.4625641,
+      "lng": 13.4607792,
       "courts": 14,
       "metrics": {
         "today": {
@@ -630,19 +976,19 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.0904,
-          "rev_measured": 0.0,
+          "occupancy": 0.0952,
+          "rev_measured": 154.0,
           "rev_estimated": 3005.0,
-          "booked_hours": 83.5,
+          "booked_hours": 88.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.0705,
-          "rev_measured": 0.0,
-          "rev_estimated": 7660.0,
-          "booked_hours": 228.0,
-          "observed_days": 14,
+          "occupancy": 0.0427,
+          "rev_measured": 213.0,
+          "rev_estimated": 8765.0,
+          "booked_hours": 266.5,
+          "observed_days": 27,
           "ccy": "EUR"
         }
       },
@@ -650,25 +996,43 @@
         "today": [
           {
             "label": "Double · Lage ?",
-            "courts": 14,
-            "occupancy": 0.0043,
+            "courts": 4,
+            "occupancy": 0.0,
+            "revenue": 0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 10,
+            "occupancy": 0.0061,
             "revenue": 40.0
           }
         ],
         "week": [
           {
             "label": "Double · Lage ?",
-            "courts": 14,
-            "occupancy": 0.0904,
-            "revenue": 3005.0
+            "courts": 4,
+            "occupancy": 0.0758,
+            "revenue": 718.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 10,
+            "occupancy": 0.103,
+            "revenue": 2441.0
           }
         ],
         "month": [
           {
             "label": "Double · Lage ?",
-            "courts": 14,
-            "occupancy": 0.0705,
-            "revenue": 7660.0
+            "courts": 4,
+            "occupancy": 0.0407,
+            "revenue": 2446.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 10,
+            "occupancy": 0.0435,
+            "revenue": 6532.0
           }
         ]
       },
@@ -679,14 +1043,37 @@
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.75,
+          "1,5h": 0.25,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.6,
+          "1,5h": 0.4,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.556,
+          "Mittag": 0.222,
+          "Nachmittag": 0.222,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.417,
+          "Mittag": 0.167,
+          "Nachmittag": 0.167,
+          "Abend": 0.25,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -695,6 +1082,8 @@
       "tenant_id": "f6f12032-198e-4657-ab45-8aeb0b8a24b5",
       "name": "Padel Lankwitz",
       "district": "Leonorenstraße 37",
+      "lat": 52.4428487,
+      "lng": 13.345597,
       "courts": 4,
       "metrics": {
         "today": {
@@ -706,26 +1095,26 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3798,
-          "rev_measured": 0.0,
+          "occupancy": 0.4014,
+          "rev_measured": 116.0,
           "rev_estimated": 2735.0,
-          "booked_hours": 79.0,
+          "booked_hours": 83.5,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3386,
-          "rev_measured": 0.0,
-          "rev_estimated": 7210.0,
-          "booked_hours": 246.5,
-          "observed_days": 14,
+          "occupancy": 0.3156,
+          "rev_measured": 116.0,
+          "rev_estimated": 8111.0,
+          "booked_hours": 279.0,
+          "observed_days": 17,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
             "occupancy": 0.0,
             "revenue": 0
@@ -733,18 +1122,18 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.3798,
-            "revenue": 2735.0
+            "occupancy": 0.4014,
+            "revenue": 2851.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.3386,
-            "revenue": 7210.0
+            "occupancy": 0.3156,
+            "revenue": 8227.0
           }
         ]
       },
@@ -755,14 +1144,37 @@
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.75,
+          "1,5h": 0.25,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.75,
+          "1,5h": 0.25,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.222,
+          "Mittag": 0.333,
+          "Nachmittag": 0.0,
+          "Abend": 0.444,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.222,
+          "Mittag": 0.333,
+          "Nachmittag": 0.0,
+          "Abend": 0.444,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -771,6 +1183,8 @@
       "tenant_id": "16825678-053a-400d-b626-4c386d58706b",
       "name": "Kickerworld Berlin Spandau",
       "district": "Spandau",
+      "lat": 52.5488991,
+      "lng": 13.2268255,
       "courts": 2,
       "metrics": {
         "today": {
@@ -782,26 +1196,26 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3348,
-          "rev_measured": 0.0,
+          "occupancy": 0.3527,
+          "rev_measured": 64.0,
           "rev_estimated": 1161.0,
-          "booked_hours": 37.5,
+          "booked_hours": 39.5,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2946,
-          "rev_measured": 0.0,
-          "rev_estimated": 3309.0,
-          "booked_hours": 115.5,
-          "observed_days": 14,
+          "occupancy": 0.2735,
+          "rev_measured": 64.0,
+          "rev_estimated": 4773.0,
+          "booked_hours": 168.5,
+          "observed_days": 22,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
@@ -809,18 +1223,18 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.3348,
-            "revenue": 1161.0
+            "occupancy": 0.3527,
+            "revenue": 1225.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2946,
-            "revenue": 3309.0
+            "occupancy": 0.2735,
+            "revenue": 4837.0
           }
         ]
       },
@@ -833,12 +1247,35 @@
         "week": {
           "1h": 0.0,
           "1,5h": 0.0,
-          "2h": 0.0
+          "2h": 1.0
         },
         "month": {
           "1h": 0.0,
           "1,5h": 0.0,
-          "2h": 0.0
+          "2h": 1.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 1.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 1.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -847,6 +1284,8 @@
       "tenant_id": "528af083-c941-480e-9d80-b79c82e5bd3f",
       "name": "Padel Mitte",
       "district": "Müllerstraße 185",
+      "lat": 52.5372399,
+      "lng": 13.3694468,
       "courts": 4,
       "metrics": {
         "today": {
@@ -858,26 +1297,26 @@
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.0349,
-          "rev_measured": 0.0,
+          "occupancy": 0.0638,
+          "rev_measured": 57.0,
           "rev_estimated": 27.0,
-          "booked_hours": 1.5,
+          "booked_hours": 3.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2474,
-          "rev_measured": 0.0,
-          "rev_estimated": 3180.0,
-          "booked_hours": 117.0,
-          "observed_days": 11,
+          "occupancy": 0.2211,
+          "rev_measured": 123.0,
+          "rev_estimated": 3767.0,
+          "booked_hours": 145.5,
+          "observed_days": 14,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
             "occupancy": 0.0,
             "revenue": 0
@@ -885,18 +1324,18 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.0349,
-            "revenue": 27.0
+            "occupancy": 0.0638,
+            "revenue": 84.0
           }
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.2474,
-            "revenue": 3180.0
+            "occupancy": 0.2211,
+            "revenue": 3890.0
           }
         ]
       },
@@ -908,13 +1347,36 @@
         },
         "week": {
           "1h": 0.0,
-          "1,5h": 0.0,
+          "1,5h": 1.0,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.333,
+          "1,5h": 0.667,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 1.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.375,
+          "Mittag": 0.0,
+          "Nachmittag": 0.625,
+          "Abend": 0.0,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -923,6 +1385,8 @@
       "tenant_id": "dbd1589f-a99f-41cb-93bb-33a95c0789ba",
       "name": "Rainbow Padel",
       "district": "Niederbarnimallee 116",
+      "lat": 52.7285251,
+      "lng": 13.4900338,
       "courts": 2,
       "metrics": {
         "today": {
@@ -942,18 +1406,18 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2969,
-          "rev_measured": 0.0,
-          "rev_estimated": 1532.0,
-          "booked_hours": 133.0,
-          "observed_days": 14,
+          "occupancy": 0.2182,
+          "rev_measured": 25.0,
+          "rev_estimated": 2189.0,
+          "booked_hours": 188.5,
+          "observed_days": 27,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
@@ -961,7 +1425,7 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
             "occupancy": 0.4609,
             "revenue": 679.0
@@ -969,10 +1433,10 @@
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2969,
-            "revenue": 1532.0
+            "occupancy": 0.2182,
+            "revenue": 2214.0
           }
         ]
       },
@@ -988,9 +1452,32 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
+          "1h": 1.0,
           "1,5h": 0.0,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 1.0,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -999,6 +1486,8 @@
       "tenant_id": "041a4a3c-8895-465d-91d1-c22f75049770",
       "name": "TIO TIO Rooftop",
       "district": "Marktstraße 6",
+      "lat": 52.504191,
+      "lng": 13.4735707,
       "courts": 5,
       "metrics": {
         "today": {
@@ -1018,10 +1507,10 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.1429,
-          "rev_measured": 0.0,
+          "occupancy": 0.1518,
+          "rev_measured": 96.0,
           "rev_estimated": 1402.0,
-          "booked_hours": 48.0,
+          "booked_hours": 51.0,
           "observed_days": 7,
           "ccy": "EUR"
         }
@@ -1029,7 +1518,7 @@
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 5,
             "occupancy": 0.0,
             "revenue": 0
@@ -1037,7 +1526,7 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 5,
             "occupancy": 0.0104,
             "revenue": 60.0
@@ -1045,10 +1534,10 @@
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 5,
-            "occupancy": 0.1429,
-            "revenue": 1402.0
+            "occupancy": 0.1518,
+            "revenue": 1498.0
           }
         ]
       },
@@ -1064,9 +1553,32 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.0,
+          "1h": 1.0,
           "1,5h": 0.0,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.667,
+          "Mittag": 0.0,
+          "Nachmittag": 0.333,
+          "Abend": 0.0,
+          "Nachts": 0.0
         }
       },
       "events": []
@@ -1075,6 +1587,8 @@
       "tenant_id": "d3edd4f5-1930-4d19-aba8-44d62f8f9da8",
       "name": "Füchse Berlin",
       "district": "Freiheitsweg 18",
+      "lat": 52.5760962,
+      "lng": 13.3584063,
       "courts": 2,
       "metrics": {
         "today": {
@@ -1094,18 +1608,18 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2056,
+          "occupancy": 0.2208,
           "rev_measured": 0.0,
-          "rev_estimated": 541.0,
-          "booked_hours": 18.5,
-          "observed_days": 3,
+          "rev_estimated": 770.0,
+          "booked_hours": 26.5,
+          "observed_days": 4,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
@@ -1113,7 +1627,7 @@
         ],
         "week": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
             "occupancy": 0.0,
             "revenue": 0
@@ -1121,10 +1635,10 @@
         ],
         "month": [
           {
-            "label": "Double · Lage ?",
+            "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2056,
-            "revenue": 541.0
+            "occupancy": 0.2208,
+            "revenue": 770.0
           }
         ]
       },
@@ -1143,6 +1657,29 @@
           "1h": 0.0,
           "1,5h": 0.0,
           "2h": 0.0
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
         }
       },
       "events": []
