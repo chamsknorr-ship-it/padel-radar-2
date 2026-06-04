@@ -222,6 +222,10 @@ function openDetail(idx){
   const v=DATA.venues[idx],m=v.metrics[period];
   const types=v.by_type[period]||[];const maxT=Math.max(1,...types.map(t=>t.revenue));
   const dur=v.by_duration[period]||{};
+  const tod=(v.by_timeofday&&v.by_timeofday[period])||{};
+  const todOrder=["Vormittag","Mittag","Nachmittag","Abend","Nachts"];
+  const todSum=todOrder.reduce((a,k)=>a+(tod[k]||0),0);
+  const todHtml=todSum>0?todOrder.map(k=>tbar(k,tod[k]||0,Math.round((tod[k]||0)*100)+"%","var(--teal)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
   const typeHtml=types.length?types.map(t=>tbar(t.label,t.revenue/maxT,pct(t.occupancy)+" · "+eur(t.revenue),"var(--blue)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine Daten.</div>';
   const durHtml=Object.keys(dur).length?["1h","1,5h","2h"].map(k=>tbar(k,dur[k]||0,Math.round((dur[k]||0)*100)+"%","var(--warn)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
   const evs=v.events||[];
@@ -239,6 +243,7 @@ function openDetail(idx){
     </div>
     <div class="dh">Nach Court-Typ · Auslastung &amp; Umsatz</div>${typeHtml}
     <div class="dh">Nach Buchungslänge · Anteil</div>${durHtml}
+    <div class="dh">Nach Tageszeit · Anteil</div>${todHtml}
     <div class="dh">Events &amp; Turniere</div>${evHtml}`;
   $("overlay").classList.add("on");document.body.style.overflow="hidden";
 }

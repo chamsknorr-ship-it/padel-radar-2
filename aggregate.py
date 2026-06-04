@@ -23,6 +23,22 @@ from infer import DEFAULT_OP_START, DEFAULT_OP_END, duration_bucket
 
 EVENT_THRESHOLD = 0.95  # ab dieser Tagesauslastung gilt ein Tag als "Event-Verdacht"
 
+# Tageszeit-Fenster (nach Startzeit der Buchung)
+TOD_BUCKETS = ["Vormittag", "Mittag", "Nachmittag", "Abend", "Nachts"]
+
+
+def tod_bucket(start_min: int) -> str:
+    h = start_min / 60
+    if 6 <= h < 11:
+        return "Vormittag"
+    if 11 <= h < 14:
+        return "Mittag"
+    if 14 <= h < 17:
+        return "Nachmittag"
+    if 17 <= h < 22:
+        return "Abend"
+    return "Nachts"
+
 
 def period_dates(period: str, today: date) -> list[str]:
     if period == "today":
@@ -81,7 +97,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
         vbooks = book_by_tenant.get(tid, [])
         obs = observed.get(tid, set())
 
-        metrics, by_type, by_duration = {}, {}, {}
+        metrics, by_type, by_duration, by_timeofday = {}, {}, {}, {}
         for pk in periods:
             pdays = [d for d in period_dates(pk, today) if d in obs]
             pdays_set = set(pdays)
@@ -99,6 +115,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
 
             meas_rev = est_rev = booked_min = 0.0
             dur_counts: dict[str, int] = {}
+            tod_min: dict[str, float] = {}
             for b in vbooks:
                 if b["date"] not in pdays_set:
                     continue
@@ -113,6 +130,8 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
                     meas_rev += b["price_value"]
                     bucket = duration_bucket(b["duration_min"])
                     dur_counts[bucket] = dur_counts.get(bucket, 0) + 1
+                    tb = tod_bucket(b["start_min"])
+                    tod_min[tb] = tod_min.get(tb, 0) + b["duration_min"]
                 else:
                     est_rev += b["price_value"]
 
@@ -136,6 +155,8 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             ]
             tot = sum(dur_counts.values()) or 1
             by_duration[pk] = {k: round(dur_counts.get(k, 0) / tot, 3) for k in ["1h", "1,5h", "2h"]}
+            tt = sum(tod_min.values()) or 1
+            by_timeofday[pk] = {k: round(tod_min.get(k, 0) / tt, 3) for k in TOD_BUCKETS}
 
         # Event-Erkennung (innerhalb beobachteter Tage)
         events = _detect_events(vcourts, vbooks, obs, courts, today)
@@ -144,10 +165,13 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             "tenant_id": tid,
             "name": v["name"],
             "district": v.get("district") or v.get("address") or "",
+            "lat": v.get("lat"),
+            "lng": v.get("lng"),
             "courts": len(vcourts),
             "metrics": metrics,
             "by_type": by_type,
             "by_duration": by_duration,
+            "by_timeofday": by_timeofday,
             "events": events,
         })
 
