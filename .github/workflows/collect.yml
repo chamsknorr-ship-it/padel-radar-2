@@ -26,7 +26,7 @@ jobs:
           PADEL_LAT: "52.5200"
           PADEL_LNG: "13.4050"
           PADEL_RADIUS_M: "30000"
-          PADEL_DAYS: "14"
+          PADEL_DAYS: "30"
         run: python collector.py
       - name: Ergebnisse speichern
         run: |
