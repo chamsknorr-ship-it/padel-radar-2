@@ -1,0 +1,47 @@
+name: Collect
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Code holen
+        uses: actions/checkout@v4
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Pakete installieren
+        run: pip install -r requirements.txt
+      - name: Daten sammeln
+        env:
+          PADEL_LAT: "52.5200"
+          PADEL_LNG: "13.4050"
+          PADEL_RADIUS_M: "30000"
+          PADEL_DAYS: "14"
+          # Optional, falls die Umkreissuche nichts findet:
+          # PADEL_TENANT_IDS: "id1,id2,id3"
+        run: python collector.py
+      - name: Ergebnisse speichern
+        run: |
+          git config user.name  "padel-radar-bot"
+          git config user.email "actions@github.com"
+          git add -A data dashboard_data.json
+          if git diff --cached --quiet; then
+            echo "Keine Aenderungen."
+          else
+            git commit -m "Datenaktualisierung [skip ci]"
+            git push
+          fi

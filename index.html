@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Padel Radar · Berlin</title>
+<meta name="theme-color" content="#0e1116">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Padel Radar">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e1116'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23c2f24a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%23c2f24a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1116; --bg2:#161b22; --bg3:#1c232d; --line:#262d38; --line2:#323b48;
+  --txt:#e8edf2; --muted:#9aa6b2; --faint:#6b7682;
+  --acc:#c2f24a; --acc-dim:#8fae3a; --teal:#2dd4a7; --teal-dim:#1c8e72;
+  --warn:#f0b429; --blue:#5aa9f0;
+  --font-disp:'Bricolage Grotesque',sans-serif;
+  --font:'Schibsted Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --r:12px; --r-sm:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.5;
+  -webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 0}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 16px 64px}
+a{color:inherit}
+
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:6px}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:34px;height:34px;border-radius:9px;border:2px solid var(--acc);position:relative;flex:none}
+.logo:after{content:"";position:absolute;inset:0;margin:auto;width:6px;height:6px;border-radius:50%;background:var(--acc)}
+.brand h1{font-family:var(--font-disp);font-weight:700;font-size:23px;letter-spacing:-.02em}
+.brand .sub{font-size:13px;color:var(--muted)}
+.updated{font-size:12px;color:var(--faint);font-family:var(--mono)}
+.sample{display:inline-block;margin-top:8px;font-size:12px;color:#0e1116;background:var(--warn);
+  padding:3px 10px;border-radius:99px;font-weight:600}
+
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}
+.seg{display:flex;background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:3px}
+.seg button{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:14px;
+  padding:7px 16px;border-radius:99px;cursor:pointer;transition:.12s}
+.seg button.on{background:var(--acc);color:#0e1116;font-weight:600}
+.search{flex:1;min-width:160px}
+.search input{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);
+  font-family:var(--font);font-size:14px;padding:9px 13px;border-radius:var(--r-sm);outline:none}
+.search input:focus{border-color:var(--line2)}
+.sort select{background:var(--bg2);border:1px solid var(--line);color:var(--txt);font-family:var(--font);
+  font-size:14px;padding:9px 12px;border-radius:var(--r-sm);outline:none;cursor:pointer}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.kpi{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.kpi .l{font-size:12px;color:var(--muted);letter-spacing:.01em}
+.kpi .v{font-family:var(--mono);font-size:26px;font-weight:500;margin-top:6px;letter-spacing:-.02em}
+.kpi .v.acc{color:var(--acc)}
+
+.section-h{font-size:13px;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.list{display:flex;flex-direction:column;gap:9px}
+.row{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:14px;
+  background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;cursor:pointer;transition:.12s}
+.row:hover{border-color:var(--line2);background:var(--bg3)}
+.row .rank{font-family:var(--mono);font-size:14px;color:var(--faint)}
+.row .nm{font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .ds{font-size:12px;color:var(--muted)}
+.row .rev{font-family:var(--mono);font-size:16px;text-align:right;white-space:nowrap}
+.row .meta{font-size:12px;color:var(--muted);text-align:right;margin-top:3px;white-space:nowrap}
+.bar{height:7px;border-radius:99px;background:var(--bg);overflow:hidden;display:flex;margin-top:8px}
+.bar .m{background:var(--teal)}
+.bar .e{background:repeating-linear-gradient(45deg,var(--teal-dim) 0 4px,transparent 4px 8px)}
+.legend{display:flex;gap:18px;margin-top:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:6px}
+.sw{width:11px;height:11px;border-radius:3px}
+
+.empty{color:var(--faint);font-size:14px;padding:30px 0;text-align:center}
+
+.overlay{position:fixed;inset:0;background:rgba(6,9,13,.72);display:none;align-items:flex-start;
+  justify-content:center;padding:24px 14px;overflow-y:auto;z-index:50}
+.overlay.on{display:flex}
+.panel{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;max-width:720px;width:100%;
+  padding:22px;margin:auto}
+.panel .back{background:none;border:1px solid var(--line2);color:var(--muted);font-family:var(--font);
+  font-size:13px;padding:7px 13px;border-radius:99px;cursor:pointer;margin-bottom:16px}
+.panel h2{font-family:var(--font-disp);font-weight:600;font-size:21px;letter-spacing:-.02em}
+.panel .dsub{font-size:13px;color:var(--muted);margin:2px 0 18px}
+.mcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}
+.mcard{background:var(--bg);border-radius:var(--r);padding:13px 15px}
+.mcard .l{font-size:12px;color:var(--muted)}
+.mcard .v{font-family:var(--mono);font-size:23px;font-weight:500;margin-top:5px}
+.mcard .x{font-size:11px;color:var(--faint);margin-top:3px}
+.dh{font-size:13px;color:var(--muted);margin:20px 0 12px}
+.tbar{margin-bottom:13px}
+.tbar .t{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px}
+.tbar .t .r{color:var(--muted);font-family:var(--mono);font-size:13px}
+.tbar .track{height:8px;border-radius:99px;background:var(--bg);overflow:hidden}
+.tbar .fill{height:100%;border-radius:99px}
+.ev{display:flex;gap:11px;align-items:flex-start;background:var(--bg);border-radius:var(--r-sm);padding:11px 13px;margin-bottom:9px}
+.ev .dot{width:9px;height:9px;border-radius:50%;background:var(--warn);margin-top:6px;flex:none}
+.ev .n{font-size:14px;font-weight:500}
+.ev .nt{font-size:12px;color:var(--muted)}
+.foot{margin-top:34px;font-size:12px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
+
+@media(max-width:560px){
+  .brand h1{font-size:20px}
+  .row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}
+  .kpi .v{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Padel Radar</h1>
+          <div class="sub">Wettbewerbs-Monitoring · Berlin</div>
+        </div>
+      </div>
+      <div id="sample-badge"></div>
+    </div>
+    <div class="updated" id="updated"></div>
+  </div>
+
+  <div class="controls">
+    <div class="seg" id="seg">
+      <button data-p="today">Heute</button>
+      <button data-p="week" class="on">Woche</button>
+      <button data-p="month">Monat</button>
+    </div>
+    <div class="sort">
+      <select id="sort">
+        <option value="rev">Sortieren: Umsatz</option>
+        <option value="occ">Sortieren: Auslastung</option>
+        <option value="name">Sortieren: Name</option>
+      </select>
+    </div>
+    <div class="search"><input id="search" type="search" placeholder="Club oder Bezirk suchen…"></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="section-h"><span id="list-title">Clubs nach geschätztem Umsatz</span></div>
+  <div class="list" id="list"></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--teal)"></span>gemessen (live erfasst)</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(45deg,var(--teal-dim) 0 3px,transparent 3px 6px)"></span>geschätzt (Altbestand)</span>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<div class="overlay" id="overlay"><div class="panel" id="panel"></div></div>
+
+<script>
+const PLABEL={today:"heute",week:"diese Woche",month:"diesen Monat"};
+const FALLBACK={updated_at:new Date().toISOString(),city:"Berlin",sample:true,periods:["today","week","month"],
+  venues:[{tenant_id:"x",name:"Beispiel-Club",district:"Berlin",courts:4,
+    metrics:{today:{occupancy:.7,rev_measured:300,rev_estimated:500,booked_hours:30,observed_days:1,ccy:"EUR"},
+             week:{occupancy:.66,rev_measured:2100,rev_estimated:2600,booked_hours:210,observed_days:7,ccy:"EUR"},
+             month:{occupancy:.62,rev_measured:9000,rev_estimated:9000,booked_hours:900,observed_days:30,ccy:"EUR"}},
+    by_type:{today:[{label:"Double · Indoor",courts:4,occupancy:.7,revenue:800}],week:[{label:"Double · Indoor",courts:4,occupancy:.66,revenue:4700}],month:[{label:"Double · Indoor",courts:4,occupancy:.62,revenue:18000}]},
+    by_duration:{today:{"1h":.3,"1,5h":.5,"2h":.2},week:{"1h":.3,"1,5h":.5,"2h":.2},month:{"1h":.3,"1,5h":.5,"2h":.2}},
+    events:[]}]};
+
+let DATA=null, period="week", sortBy="rev", query="";
+const eur=n=>"€"+Math.round(n).toLocaleString("de-DE");
+const pct=n=>Math.round(n*100)+"%";
+const $=id=>document.getElementById(id);
+
+function totalRev(v,p){const m=v.metrics[p];return m.rev_measured+m.rev_estimated;}
+
+function renderKPIs(){
+  const vs=DATA.venues; let cap=0,book=0,rev=0,ev=0;
+  vs.forEach(v=>{const m=v.metrics[period];rev+=m.rev_measured+m.rev_estimated;book+=m.booked_hours;
+    cap+=(m.booked_hours/(m.occupancy||1));ev+=(v.events||[]).length;});
+  const occ=cap?book/cap:0;
+  const cards=[["Clubs erfasst",vs.length,""],["Ø Auslastung",pct(occ),""],
+    ["Umsatz · "+PLABEL[period],eur(rev),"acc"],["Events erkannt",ev,""]];
+  $("kpis").innerHTML=cards.map(c=>`<div class="kpi"><div class="l">${c[0]}</div>
+    <div class="v ${c[2]}">${c[1]}</div></div>`).join("");
+}
+
+function renderList(){
+  let vs=DATA.venues.filter(v=>{
+    if(!query)return true;const q=query.toLowerCase();
+    return v.name.toLowerCase().includes(q)||(v.district||"").toLowerCase().includes(q);});
+  vs=vs.slice().sort((a,b)=>{
+    if(sortBy==="name")return a.name.localeCompare(b.name);
+    if(sortBy==="occ")return b.metrics[period].occupancy-a.metrics[period].occupancy;
+    return totalRev(b,period)-totalRev(a,period);});
+  const max=Math.max(1,...vs.map(v=>totalRev(v,period)));
+  if(!vs.length){$("list").innerHTML='<div class="empty">Keine Clubs gefunden.</div>';return;}
+  $("list").innerHTML=vs.map((v,i)=>{
+    const m=v.metrics[period];const mw=m.rev_measured/max*100,ew=m.rev_estimated/max*100;
+    const idx=DATA.venues.indexOf(v);
+    return `<div class="row" onclick="openDetail(${idx})">
+      <span class="rank">${i+1}</span>
+      <div style="min-width:0">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline">
+          <span class="nm">${v.name}</span>
+          <span class="rev">${eur(totalRev(v,period))}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:10px">
+          <span class="ds">${v.district||""}</span>
+          <span class="meta">${pct(m.occupancy)} Auslastung · ${v.courts} Courts</span>
+        </div>
+        <div class="bar"><div class="m" style="width:${mw}%"></div><div class="e" style="width:${ew}%"></div></div>
+      </div>
+      <span style="color:var(--faint);font-size:18px">›</span>
+    </div>`;}).join("");
+}
+
+function tbar(label,frac,right,color){
+  return `<div class="tbar"><div class="t"><span>${label}</span><span class="r">${right}</span></div>
+    <div class="track"><div class="fill" style="width:${Math.round(frac*100)}%;background:${color}"></div></div></div>`;}
+
+function openDetail(idx){
+  const v=DATA.venues[idx],m=v.metrics[period];
+  const types=v.by_type[period]||[];const maxT=Math.max(1,...types.map(t=>t.revenue));
+  const dur=v.by_duration[period]||{};
+  const typeHtml=types.length?types.map(t=>tbar(t.label,t.revenue/maxT,pct(t.occupancy)+" · "+eur(t.revenue),"var(--blue)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine Daten.</div>';
+  const durHtml=Object.keys(dur).length?["1h","1,5h","2h"].map(k=>tbar(k,dur[k]||0,Math.round((dur[k]||0)*100)+"%","var(--warn)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
+  const evs=v.events||[];
+  const evHtml=evs.length?evs.map(e=>`<div class="ev"><span class="dot"></span><div>
+    <div class="n">${e.name} · ${e.date}</div><div class="nt">${e.note||""}</div></div></div>`).join(""):'<div class="empty" style="padding:12px 0">Keine Events erkannt.</div>';
+  $("panel").innerHTML=`
+    <button class="back" onclick="closeDetail()">‹ zurück</button>
+    <h2>${v.name}</h2>
+    <div class="dsub">${v.district||""} · ${v.courts} Courts · ${PLABEL[period]} · ${m.observed_days} beobachtete Tage</div>
+    <div class="mcards">
+      <div class="mcard"><div class="l">Auslastung</div><div class="v">${pct(m.occupancy)}</div></div>
+      <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(m.rev_measured+m.rev_estimated)}</div>
+        <div class="x">${eur(m.rev_measured)} gemessen · ${eur(m.rev_estimated)} geschätzt</div></div>
+      <div class="mcard"><div class="l">Gebuchte Std.</div><div class="v">${Math.round(m.booked_hours)}</div></div>
+    </div>
+    <div class="dh">Nach Court-Typ · Auslastung &amp; Umsatz</div>${typeHtml}
+    <div class="dh">Nach Buchungslänge · Anteil</div>${durHtml}
+    <div class="dh">Events &amp; Turniere</div>${evHtml}`;
+  $("overlay").classList.add("on");document.body.style.overflow="hidden";
+}
+function closeDetail(){$("overlay").classList.remove("on");document.body.style.overflow="";}
+$("overlay").addEventListener("click",e=>{if(e.target===$("overlay"))closeDetail();});
+
+function renderAll(){renderKPIs();renderList();}
+
+function init(){
+  const upd=new Date(DATA.updated_at);
+  $("updated").textContent="aktualisiert "+upd.toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  if(DATA.sample)$("sample-badge").innerHTML='<span class="sample">Beispieldaten – echte Zahlen nach Einrichtung</span>';
+  $("foot").innerHTML="Zahlen sind Schätzungen aus öffentlich sichtbarer Verfügbarkeit (Snapshot-Vergleich alle 15 Min). "+
+    "»Gemessen« = während des Monitorings live erfasste Buchungen, »geschätzt« = Belegung, die schon vor Beobachtungsbeginn bestand. "+
+    "Auslastung bezieht sich nur auf beobachtete Tage.";
+  $("seg").addEventListener("click",e=>{if(e.target.dataset.p){period=e.target.dataset.p;
+    [...$("seg").children].forEach(b=>b.classList.toggle("on",b===e.target));renderAll();}});
+  $("sort").addEventListener("change",e=>{sortBy=e.target.value;renderList();});
+  $("search").addEventListener("input",e=>{query=e.target.value;renderList();});
+  renderAll();
+}
+
+fetch("dashboard_data.json",{cache:"no-store"})
+  .then(r=>{if(!r.ok)throw 0;return r.json();})
+  .then(d=>{DATA=d;init();})
+  .catch(()=>{DATA=FALLBACK;init();});
+</script>
+</body>
+</html>

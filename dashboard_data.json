@@ -1,0 +1,834 @@
+{
+  "updated_at": "2026-06-04T16:28+00:00",
+  "city": "Berlin",
+  "periods": [
+    "today",
+    "week",
+    "month"
+  ],
+  "sample": true,
+  "venues": [
+    {
+      "tenant_id": "sample4",
+      "name": "Padel Republic Mitte",
+      "district": "Mitte",
+      "courts": 8,
+      "metrics": {
+        "today": {
+          "occupancy": 0.777,
+          "rev_measured": 979.0,
+          "rev_estimated": 2937.0,
+          "booked_hours": 93.2,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.7104,
+          "rev_measured": 11278.0,
+          "rev_estimated": 13785.0,
+          "booked_hours": 596.7,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.666,
+          "rev_measured": 50350.0,
+          "rev_estimated": 50350.0,
+          "booked_hours": 2397.6,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 8,
+            "occupancy": 0.777,
+            "revenue": 3916.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 8,
+            "occupancy": 0.7104,
+            "revenue": 25063.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 8,
+            "occupancy": 0.666,
+            "revenue": 100699.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.2,
+          "1,5h": 0.52,
+          "2h": 0.28
+        },
+        "week": {
+          "1h": 0.2,
+          "1,5h": 0.52,
+          "2h": 0.28
+        },
+        "month": {
+          "1h": 0.2,
+          "1,5h": 0.52,
+          "2h": 0.28
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample1",
+      "name": "Padel Lounge Charlottenburg",
+      "district": "Charlottenburg",
+      "courts": 8,
+      "metrics": {
+        "today": {
+          "occupancy": 0.7665,
+          "rev_measured": 876.0,
+          "rev_estimated": 2629.0,
+          "booked_hours": 92.0,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.7008,
+          "rev_measured": 10097.0,
+          "rev_estimated": 12341.0,
+          "booked_hours": 588.7,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.657,
+          "rev_measured": 45077.0,
+          "rev_estimated": 45077.0,
+          "booked_hours": 2365.2,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.8295,
+            "revenue": 2986.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.5775,
+            "revenue": 520.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.7584,
+            "revenue": 19112.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.528,
+            "revenue": 3326.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 6,
+            "occupancy": 0.711,
+            "revenue": 76788.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.495,
+            "revenue": 13365.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.22,
+          "1,5h": 0.5,
+          "2h": 0.28
+        },
+        "week": {
+          "1h": 0.22,
+          "1,5h": 0.5,
+          "2h": 0.28
+        },
+        "month": {
+          "1h": 0.22,
+          "1,5h": 0.5,
+          "2h": 0.28
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample0",
+      "name": "Stadtpadel Kreuzberg",
+      "district": "Kreuzberg",
+      "courts": 6,
+      "metrics": {
+        "today": {
+          "occupancy": 0.854,
+          "rev_measured": 685.0,
+          "rev_estimated": 2054.0,
+          "booked_hours": 76.9,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.7808,
+          "rev_measured": 7889.0,
+          "rev_estimated": 9642.0,
+          "booked_hours": 491.9,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.732,
+          "rev_measured": 35219.0,
+          "rev_estimated": 35219.0,
+          "booked_hours": 1976.4,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.903,
+            "revenue": 2059.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.756,
+            "revenue": 680.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.8256,
+            "revenue": 13177.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.6912,
+            "revenue": 4355.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.774,
+            "revenue": 52942.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 2,
+            "occupancy": 0.648,
+            "revenue": 17496.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.28,
+          "1,5h": 0.48,
+          "2h": 0.24
+        },
+        "week": {
+          "1h": 0.28,
+          "1,5h": 0.48,
+          "2h": 0.24
+        },
+        "month": {
+          "1h": 0.28,
+          "1,5h": 0.48,
+          "2h": 0.24
+        }
+      },
+      "events": [
+        {
+          "date": "2026-06-10",
+          "name": "Liga-Spieltag",
+          "note": "alle Courts ganztägig"
+        }
+      ]
+    },
+    {
+      "tenant_id": "sample3",
+      "name": "Hexagon Padel Friedrichshain",
+      "district": "Friedrichshain",
+      "courts": 7,
+      "metrics": {
+        "today": {
+          "occupancy": 0.723,
+          "rev_measured": 675.0,
+          "rev_estimated": 2026.0,
+          "booked_hours": 75.9,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.661,
+          "rev_measured": 7778.0,
+          "rev_estimated": 9507.0,
+          "booked_hours": 485.9,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.6197,
+          "rev_measured": 34725.0,
+          "rev_estimated": 34725.0,
+          "booked_hours": 1952.1,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.8715,
+            "revenue": 2039.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 3,
+            "occupancy": 0.525,
+            "revenue": 662.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.7968,
+            "revenue": 13052.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 3,
+            "occupancy": 0.48,
+            "revenue": 4234.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.747,
+            "revenue": 52439.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 3,
+            "occupancy": 0.45,
+            "revenue": 17010.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.26,
+          "1,5h": 0.49,
+          "2h": 0.25
+        },
+        "week": {
+          "1h": 0.26,
+          "1,5h": 0.49,
+          "2h": 0.25
+        },
+        "month": {
+          "1h": 0.26,
+          "1,5h": 0.49,
+          "2h": 0.25
+        }
+      },
+      "events": [
+        {
+          "date": "2026-06-11",
+          "name": "Anfänger-Turnier",
+          "note": "4 Courts vormittags"
+        }
+      ]
+    },
+    {
+      "tenant_id": "sample2",
+      "name": "Base Padel Tempelhof",
+      "district": "Tempelhof",
+      "courts": 6,
+      "metrics": {
+        "today": {
+          "occupancy": 0.8138,
+          "rev_measured": 640.0,
+          "rev_estimated": 1921.0,
+          "booked_hours": 73.2,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.744,
+          "rev_measured": 7376.0,
+          "rev_estimated": 9015.0,
+          "booked_hours": 468.7,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.6975,
+          "rev_measured": 32927.0,
+          "rev_estimated": 32927.0,
+          "booked_hours": 1883.3,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.8505,
+            "revenue": 2296.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 1,
+            "occupancy": 0.63,
+            "revenue": 265.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.7776,
+            "revenue": 14697.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 1,
+            "occupancy": 0.576,
+            "revenue": 1693.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 5,
+            "occupancy": 0.729,
+            "revenue": 59049.0
+          },
+          {
+            "label": "Single · Indoor",
+            "courts": 1,
+            "occupancy": 0.54,
+            "revenue": 6804.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.3,
+          "1,5h": 0.46,
+          "2h": 0.24
+        },
+        "week": {
+          "1h": 0.3,
+          "1,5h": 0.46,
+          "2h": 0.24
+        },
+        "month": {
+          "1h": 0.3,
+          "1,5h": 0.46,
+          "2h": 0.24
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample8",
+      "name": "Volley Padel Neukölln",
+      "district": "Neukölln",
+      "courts": 4,
+      "metrics": {
+        "today": {
+          "occupancy": 0.8085,
+          "rev_measured": 424.0,
+          "rev_estimated": 1273.0,
+          "booked_hours": 48.5,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.7392,
+          "rev_measured": 4890.0,
+          "rev_estimated": 5976.0,
+          "booked_hours": 310.5,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.693,
+          "rev_measured": 21830.0,
+          "rev_estimated": 21830.0,
+          "booked_hours": 1247.4,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.8085,
+            "revenue": 1698.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.7392,
+            "revenue": 10866.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.693,
+            "revenue": 43659.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.27,
+          "1,5h": 0.5,
+          "2h": 0.23
+        },
+        "week": {
+          "1h": 0.27,
+          "1,5h": 0.5,
+          "2h": 0.23
+        },
+        "month": {
+          "1h": 0.27,
+          "1,5h": 0.5,
+          "2h": 0.23
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample6",
+      "name": "Padel Arena Spandau",
+      "district": "Spandau",
+      "courts": 6,
+      "metrics": {
+        "today": {
+          "occupancy": 0.602,
+          "rev_measured": 423.0,
+          "rev_estimated": 1268.0,
+          "booked_hours": 54.2,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.5504,
+          "rev_measured": 4870.0,
+          "rev_estimated": 5952.0,
+          "booked_hours": 346.8,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.516,
+          "rev_measured": 21740.0,
+          "rev_estimated": 21740.0,
+          "booked_hours": 1393.2,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.693,
+            "revenue": 1414.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 2,
+            "occupancy": 0.42,
+            "revenue": 277.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.6336,
+            "revenue": 9048.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 2,
+            "occupancy": 0.384,
+            "revenue": 1774.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 4,
+            "occupancy": 0.594,
+            "revenue": 36353.0
+          },
+          {
+            "label": "Single · Outdoor",
+            "courts": 2,
+            "occupancy": 0.36,
+            "revenue": 7128.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.32,
+          "1,5h": 0.45,
+          "2h": 0.23
+        },
+        "week": {
+          "1h": 0.32,
+          "1,5h": 0.45,
+          "2h": 0.23
+        },
+        "month": {
+          "1h": 0.32,
+          "1,5h": 0.45,
+          "2h": 0.23
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample5",
+      "name": "Smash Padel Lichtenberg",
+      "district": "Lichtenberg",
+      "courts": 5,
+      "metrics": {
+        "today": {
+          "occupancy": 0.6342,
+          "rev_measured": 352.0,
+          "rev_estimated": 1055.0,
+          "booked_hours": 47.6,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.5798,
+          "rev_measured": 4050.0,
+          "rev_estimated": 4950.0,
+          "booked_hours": 304.4,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.5436,
+          "rev_measured": 18079.0,
+          "rev_estimated": 18079.0,
+          "booked_hours": 1223.1,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.735,
+            "revenue": 1058.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.483,
+            "revenue": 348.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.672,
+            "revenue": 6774.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.4416,
+            "revenue": 2226.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.63,
+            "revenue": 27216.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.414,
+            "revenue": 8942.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.34,
+          "1,5h": 0.44,
+          "2h": 0.22
+        },
+        "week": {
+          "1h": 0.34,
+          "1,5h": 0.44,
+          "2h": 0.22
+        },
+        "month": {
+          "1h": 0.34,
+          "1,5h": 0.44,
+          "2h": 0.22
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "sample7",
+      "name": "Padelzeit Reinickendorf",
+      "district": "Reinickendorf",
+      "courts": 5,
+      "metrics": {
+        "today": {
+          "occupancy": 0.6111,
+          "rev_measured": 348.0,
+          "rev_estimated": 1045.0,
+          "booked_hours": 45.8,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.5587,
+          "rev_measured": 4013.0,
+          "rev_estimated": 4905.0,
+          "booked_hours": 293.3,
+          "observed_days": 7,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.5238,
+          "rev_measured": 17915.0,
+          "rev_estimated": 17915.0,
+          "booked_hours": 1178.5,
+          "observed_days": 30,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.7245,
+            "revenue": 1076.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.441,
+            "revenue": 318.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.6624,
+            "revenue": 6886.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.4032,
+            "revenue": 2032.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Indoor",
+            "courts": 3,
+            "occupancy": 0.621,
+            "revenue": 27666.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.378,
+            "revenue": 8165.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.3,
+          "1,5h": 0.47,
+          "2h": 0.23
+        },
+        "week": {
+          "1h": 0.3,
+          "1,5h": 0.47,
+          "2h": 0.23
+        },
+        "month": {
+          "1h": 0.3,
+          "1,5h": 0.47,
+          "2h": 0.23
+        }
+      },
+      "events": []
+    }
+  ]
+}
