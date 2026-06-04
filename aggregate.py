@@ -26,6 +26,9 @@ EVENT_THRESHOLD = 0.95  # ab dieser Tagesauslastung gilt ein Tag als "Event-Verd
 # Tageszeit-Fenster (nach Startzeit der Buchung)
 TOD_BUCKETS = ["Vormittag", "Mittag", "Nachmittag", "Abend", "Nachts"]
 
+# Wochentage (0 = Montag)
+WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+
 
 def tod_bucket(start_min: int) -> str:
     h = start_min / 60
@@ -97,7 +100,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
         vbooks = book_by_tenant.get(tid, [])
         obs = observed.get(tid, set())
 
-        metrics, by_type, by_duration, by_timeofday = {}, {}, {}, {}
+        metrics, by_type, by_duration, by_timeofday, by_weekday = {}, {}, {}, {}, {}
         for pk in periods:
             pdays = [d for d in period_dates(pk, today) if d in obs]
             pdays_set = set(pdays)
@@ -116,6 +119,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             meas_rev = est_rev = booked_min = 0.0
             dur_counts: dict[str, int] = {}
             tod_min: dict[str, float] = {}
+            wd_min: dict[str, float] = {}
             for b in vbooks:
                 if b["date"] not in pdays_set:
                     continue
@@ -132,6 +136,8 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
                     dur_counts[bucket] = dur_counts.get(bucket, 0) + 1
                     tb = tod_bucket(b["start_min"])
                     tod_min[tb] = tod_min.get(tb, 0) + b["duration_min"]
+                    wl = WEEKDAYS[date.fromisoformat(b["date"]).weekday()]
+                    wd_min[wl] = wd_min.get(wl, 0) + b["duration_min"]
                 else:
                     est_rev += b["price_value"]
 
@@ -157,6 +163,8 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             by_duration[pk] = {k: round(dur_counts.get(k, 0) / tot, 3) for k in ["1h", "1,5h", "2h"]}
             tt = sum(tod_min.values()) or 1
             by_timeofday[pk] = {k: round(tod_min.get(k, 0) / tt, 3) for k in TOD_BUCKETS}
+            wt = sum(wd_min.values()) or 1
+            by_weekday[pk] = {k: round(wd_min.get(k, 0) / wt, 3) for k in WEEKDAYS}
 
         # Event-Erkennung (innerhalb beobachteter Tage)
         events = _detect_events(vcourts, vbooks, obs, courts, today)
@@ -172,6 +180,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             "by_type": by_type,
             "by_duration": by_duration,
             "by_timeofday": by_timeofday,
+            "by_weekday": by_weekday,
             "events": events,
         })
 
