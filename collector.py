@@ -73,15 +73,15 @@ def _c(size, location, n):
 COURT_PROFILES = {
     "d3edd4f5-1930-4d19-aba8-44d62f8f9da8": _c("double", "outdoor", 2),                         # Füchse
     "16825678-053a-400d-b626-4c386d58706b": _c("double", "outdoor", 2),                         # Kickerworld
-    "31bb4900-5ad3-424a-a7fe-ed49ed2bf8e8": _c("double", "outdoor", 10),                        # Padel Arena
+    "31bb4900-5ad3-424a-a7fe-ed49ed2bf8e8": _c("double", "outdoor", 13) + _c("single", "outdoor", 1),  # Padel Arena
     "6adc7add-0547-4f48-830e-153f9aa5948d": _c("double", "outdoor", 2) + _c("double", "indoor", 1),  # Ostkreuz
     "0220b0b5-c27a-4433-9c91-1798aaec5250": _c("double", "indoor", 5) + _c("single", "indoor", 2) + _c("double", "outdoor", 2),  # Padelhaus
     "041a4a3c-8895-465d-91d1-c22f75049770": _c("double", "outdoor", 5),                         # TIO TIO
     "4a3497a5-f9bd-43eb-9aaa-a972a856b3d2": _c("double", "indoor", 6) + _c("single", "indoor", 2),   # PadelBros
     "8b818dae-aacb-4ea3-aa7b-0e77b1149c85": _c("double", "indoor", 5),                          # mitte-charlotte
-    "632ca5b0-93bc-4718-a3e9-288bc2fe507d": _c("double", "outdoor", 4),                         # Padel Neukölln
+    "632ca5b0-93bc-4718-a3e9-288bc2fe507d": _c("double", "outdoor", 6),                         # Padel Neukölln
     "528af083-c941-480e-9d80-b79c82e5bd3f": _c("double", "outdoor", 4),                         # Padel Mitte
-    "aa7e1831-a90d-4a4f-b6ae-f6d334179907": _c("double", "outdoor", 4),                         # BeachMitte
+    "aa7e1831-a90d-4a4f-b6ae-f6d334179907": _c("double", "outdoor", 5),                         # BeachMitte
     "ab298454-60d0-499d-8491-692db482421a": _c("double", "indoor", 10) + _c("single", "indoor", 2),  # Padel Factory
     "9fea856e-7d1a-4cae-9831-79015318967b": _c("double", "indoor", 4) + _c("single", "indoor", 2),   # PBC Center
     "d4506944-7eb2-40bd-b9ea-9ad4a769db04": _c("double", "outdoor", 2) + _c("single", "outdoor", 1), # Birgit
