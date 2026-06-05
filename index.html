@@ -8,8 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Padel Radar">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e1116'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23c2f24a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%23c2f24a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -105,7 +104,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
 @media(max-width:560px){.brand h1{font-size:20px}.row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}.kpi .v{font-size:22px}}
 
 #map{height:560px;border-radius:var(--r);border:1px solid var(--line);overflow:hidden;background:var(--bg2)}
-.leaflet-container{background:#0b0e12;font-family:var(--font)} .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.6)}
+.leaflet-container{background:#0b0e12;font-family:var(--font)}
 .leaflet-control-zoom a{background:var(--bg2)!important;color:var(--txt)!important;border-color:var(--line)!important}
 .leaflet-control-zoom a:hover{background:var(--bg3)!important}
 .leaflet-bar{border-color:var(--line)!important;box-shadow:none!important}
@@ -220,15 +219,18 @@ function currentRange(){
 function computeRange(v,from,to){
   let nDays=0,booked=0,rev_m=0,rev_e=0,mm=0;
   const typeB={},typeR={},tod={},dur={},wd={};
+  const vorlauf={},wdAdv={};
   for(const iso of eachDate(from,to)){const rec=v.daily[iso];if(!rec)continue;nDays++;
     rev_m+=rec.rev_m||0;rev_e+=rec.rev_e||0;mm+=rec.measured_min||0;
     const w=weekdayOf(iso);wd[w]=(wd[w]||0)+(rec.measured_min||0);
     for(const k in rec.types){typeB[k]=(typeB[k]||0)+rec.types[k].b;typeR[k]=(typeR[k]||0)+rec.types[k].r;booked+=rec.types[k].b;}
     for(const k in rec.tod) tod[k]=(tod[k]||0)+rec.tod[k];
-    for(const k in rec.dur) dur[k]=(dur[k]||0)+rec.dur[k];}
+    for(const k in rec.dur) dur[k]=(dur[k]||0)+rec.dur[k];
+    for(const k in (rec.vorlauf||{})) vorlauf[k]=(vorlauf[k]||0)+rec.vorlauf[k];
+    for(const k in (rec.wd_adv||{})){const x=rec.wd_adv[k];wdAdv[k]=wdAdv[k]||{s:0,n:0};wdAdv[k].s+=x.s;wdAdv[k].n+=x.n;}}
   const cap1=Object.values(v.capacity||{}).reduce((a,b)=>a+b,0);
   const typeCap={};for(const k in (v.capacity||{}))typeCap[k]=v.capacity[k]*nDays;
-  return {nDays,booked,cap:cap1*nDays,rev_m,rev_e,rev:rev_m+rev_e,mm,typeB,typeR,typeCap,tod,dur,wd};
+  return {nDays,booked,cap:cap1*nDays,rev_m,rev_e,rev:rev_m+rev_e,mm,typeB,typeR,typeCap,tod,dur,wd,vorlauf,wdAdv};
 }
 
 function tbar(label,frac,right,color){return `<div class="tbar"><div class="t"><span>${label}</span>
@@ -282,6 +284,19 @@ function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];
   const typeHtml=types.length?types.map(t=>tbar(`${t.label} · ${t.courts} C`,t.rev/maxT,pct(t.occ)+" · "+eur(t.rev),"var(--blue)")).join(""):'<div class="empty">–</div>';
   const evs=(v.events||[]).filter(e=>e.date>=from&&e.date<=to);
   const evHtml=evs.length?evs.map(e=>`<div class="ev"><span class="dot"></span><div><div class="n">${e.name} · ${ddmm(e.date)}</div><div class="nt">${e.note||""}</div></div></div>`).join(""):'<div class="empty" style="padding:12px 0">Keine Events erkannt.</div>';
+  // Vorlaufzeit
+  const VORO=["<2h","<6h","Gleicher Tag","1 Tag","2 Tage","3–7 Tage","8–14 Tage","15–30 Tage"];
+  const vtot=VORO.reduce((a,k)=>a+(c.vorlauf[k]||0),0);
+  const vorlaufHtml=vtot>0
+    ?VORO.map(k=>tbar(k,(c.vorlauf[k]||0)/vtot,Math.round((c.vorlauf[k]||0)/vtot*100)+"%","var(--acc)")).join("")
+    :'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
+  // Wochentag mit Ø Vorlauf
+  const wtot=WDO.reduce((a,k)=>a+(c.wd[k]||0),0)||1;
+  const wdHtml=WDO.length&&wtot>0
+    ?WDO.map(k=>{const avg=c.wdAdv[k]&&c.wdAdv[k].n>0?(c.wdAdv[k].s/c.wdAdv[k].n).toFixed(1):null;
+      const lbl=avg!==null?`${k} · Ø ${avg} T`:k;
+      return tbar(lbl,(c.wd[k]||0)/wtot,Math.round((c.wd[k]||0)/wtot*100)+"%","var(--blue)");}).join("")
+    :'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
   $("panel").innerHTML=`<button class="back" onclick="closeDetail()">‹ zurück</button>
     <h2>${v.name}</h2><div class="dsub">${v.district||""} · ${v.courts} Courts · ${ddmm(from)}–${ddmm(to)} · ${c.nDays} beob. Tage</div>
     <div class="mcards">
@@ -292,7 +307,8 @@ function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];
     <div class="dh">Nach Court-Typ · Auslastung &amp; Umsatz</div>${typeHtml}
     <div class="dh">Nach Buchungslänge · Anteil</div>${barShares(c.dur,DURO,"var(--warn)")}
     <div class="dh">Nach Tageszeit · Anteil</div>${barShares(c.tod,TODO,"var(--teal)")}
-    <div class="dh">Nach Wochentag · Anteil</div>${barShares(c.wd,WDO,"var(--blue)")}
+    <div class="dh">Nach Wochentag · Anteil</div>${wdHtml}
+    <div class="dh">Vorlaufzeit · Anteil gemessener Buchungen</div>${vorlaufHtml}
     <div class="dh">Events &amp; Turniere</div>${evHtml}`;
   $("overlay").classList.add("on");document.body.style.overflow="hidden";
 }
@@ -345,8 +361,9 @@ function renderReport(from,to){
 let MAP=null,HEAT=null,MARKERS=null;
 function initMap(){
   MAP=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([52.515,13.40],11);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {attribution:'© OpenStreetMap',subdomains:'abc',maxZoom:19}).addTo(MAP);
+  L.tileLayer('https://{s}.basemap.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    {attribution:'© OpenStreetMap · © CARTO',subdomains:'abcd',maxZoom:19}).addTo(MAP);
+  MARKERS=L.layerGroup().addTo(MAP);
 }
 function renderMap(from,to){
   if(typeof L==="undefined"){$("map").innerHTML='<div class="empty" style="padding:60px 0">Karte konnte nicht geladen werden (keine Internetverbindung zur Kartenquelle).</div>';return;}
@@ -356,8 +373,8 @@ function renderMap(from,to){
   const max=Math.max(1,...rows.map(r=>r.hours));
   const pts=rows.map(r=>[r.v.lat,r.v.lng,Math.max(0.05,r.hours/max)]);
   if(HEAT)MAP.removeLayer(HEAT);
-  HEAT=L.heatLayer(pts,{radius:48,blur:38,minOpacity:0.3,max:1.0,
-    gradient:{0.2:'#1c8e72',0.45:'#2dd4a7',0.7:'#c2f24a',0.88:'#f0b429',1.0:'#f0654a'}}).addTo(MAP);
+  HEAT=L.heatLayer(pts,{radius:22,blur:12,minOpacity:0.4,max:1.0,
+    gradient:{0.2:'#0d5e4a',0.4:'#2dd4a7',0.65:'#c2f24a',0.85:'#f0b429',1.0:'#ef4444'}}).addTo(MAP);
   MARKERS.clearLayers();
   rows.forEach(r=>{const m=L.circleMarker([r.v.lat,r.v.lng],
     {radius:5+14*(r.hours/max),color:'rgba(232,237,242,.7)',weight:1,fillColor:'#c2f24a',fillOpacity:0.05});

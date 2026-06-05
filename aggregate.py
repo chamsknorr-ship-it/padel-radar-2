@@ -31,6 +31,22 @@ EVENT_THRESHOLD = 0.95  # ab dieser Tagesauslastung gilt ein Tag als "Event-Verd
 
 TOD_BUCKETS = ["Vormittag", "Mittag", "Nachmittag", "Abend", "Nachts"]
 
+WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+
+VORLAUF_BUCKETS = ["<2h", "<6h", "Gleicher Tag", "1 Tag", "2 Tage",
+                   "3–7 Tage", "8–14 Tage", "15–30 Tage"]
+
+
+def advance_bucket(h: float) -> str:
+    if h < 2:   return "<2h"
+    if h < 6:   return "<6h"
+    if h < 24:  return "Gleicher Tag"
+    if h < 48:  return "1 Tag"
+    if h < 72:  return "2 Tage"
+    if h < 168: return "3–7 Tage"
+    if h < 336: return "8–14 Tage"
+    return "15–30 Tage"
+
 
 def tod_bucket(start_min: int) -> str:
     h = start_min / 60
@@ -106,7 +122,8 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             type_courts[lab] = type_courts.get(lab, 0) + 1
 
         daily = {d: {"rev_m": 0.0, "rev_e": 0.0, "measured_min": 0.0,
-                     "types": {}, "tod": {}, "dur": {}} for d in obs}
+                     "types": {}, "tod": {}, "dur": {},
+                     "vorlauf": {}, "wd_adv": {}} for d in obs}
 
         for b in book_by_tenant.get(tid, []):
             d = b["date"]
@@ -125,6 +142,24 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
                 rec["tod"][tb] = rec["tod"].get(tb, 0) + b["duration_min"]
                 du = duration_bucket(b["duration_min"])
                 rec["dur"][du] = rec["dur"].get(du, 0) + 1
+                # Vorlaufzeit aus observed_at berechnen
+                try:
+                    slot_dt = datetime(
+                        *[int(x) for x in b["date"].split("-")],
+                        b["start_min"] // 60, b["start_min"] % 60)
+                    obs_dt = datetime.fromisoformat(b["observed_at"])
+                    if obs_dt.tzinfo:
+                        obs_dt = obs_dt.replace(tzinfo=None)
+                    adv_h = (slot_dt - obs_dt).total_seconds() / 3600
+                    if adv_h >= 0:
+                        bk = advance_bucket(adv_h)
+                        rec["vorlauf"][bk] = rec["vorlauf"].get(bk, 0) + 1
+                        wl = WEEKDAYS[date.fromisoformat(b["date"]).weekday()]
+                        wa = rec["wd_adv"].setdefault(wl, {"s": 0.0, "n": 0})
+                        wa["s"] = round(wa["s"] + adv_h / 24, 2)
+                        wa["n"] += 1
+                except Exception:
+                    pass
             else:
                 rec["rev_e"] += b["price_value"]
 
