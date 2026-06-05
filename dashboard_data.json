@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T20:19+00:00",
+  "updated_at": "2026-06-05T07:44+00:00",
   "city": "Berlin",
   "periods": [
     "today",
@@ -16,27 +16,27 @@
       "courts": 8,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
+          "occupancy": 0.3833,
+          "rev_measured": 195.0,
+          "rev_estimated": 1171.0,
+          "booked_hours": 46.0,
+          "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.6417,
-          "rev_measured": 367.0,
+          "occupancy": 0.6722,
+          "rev_measured": 739.0,
           "rev_estimated": 7739.0,
-          "booked_hours": 231.0,
+          "booked_hours": 242.0,
           "observed_days": 3,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.4042,
-          "rev_measured": 946.0,
-          "rev_estimated": 21562.0,
-          "booked_hours": 679.0,
-          "observed_days": 14,
+          "occupancy": 0.4464,
+          "rev_measured": 1669.0,
+          "rev_estimated": 24474.0,
+          "booked_hours": 803.5,
+          "observed_days": 15,
           "ccy": "EUR"
         }
       },
@@ -45,22 +45,22 @@
           {
             "label": "Double · Indoor",
             "courts": 6,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.2944,
+            "revenue": 727.0
           },
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.65,
+            "revenue": 639.0
           }
         ],
         "week": [
           {
             "label": "Double · Indoor",
             "courts": 6,
-            "occupancy": 0.6037,
-            "revenue": 5527.0
+            "occupancy": 0.6444,
+            "revenue": 5899.0
           },
           {
             "label": "Single · Indoor",
@@ -73,54 +73,54 @@
           {
             "label": "Double · Indoor",
             "courts": 6,
-            "occupancy": 0.3933,
-            "revenue": 15856.0
+            "occupancy": 0.4381,
+            "revenue": 18562.0
           },
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.4369,
-            "revenue": 6652.0
+            "occupancy": 0.4711,
+            "revenue": 7580.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.714,
+          "1,5h": 0.286,
           "2h": 0.0
         },
         "week": {
-          "1h": 0.636,
-          "1,5h": 0.364,
-          "2h": 0.0
+          "1h": 0.632,
+          "1,5h": 0.263,
+          "2h": 0.105
         },
         "month": {
-          "1h": 0.455,
-          "1,5h": 0.455,
-          "2h": 0.091
+          "1h": 0.444,
+          "1,5h": 0.389,
+          "2h": 0.167
         }
       },
       "by_timeofday": {
         "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
+          "Vormittag": 0.5,
+          "Mittag": 0.25,
           "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Abend": 0.25,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.385,
-          "Mittag": 0.346,
-          "Nachmittag": 0.115,
-          "Abend": 0.154,
+          "Vormittag": 0.354,
+          "Mittag": 0.312,
+          "Nachmittag": 0.062,
+          "Abend": 0.271,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.345,
-          "Mittag": 0.155,
-          "Nachmittag": 0.276,
-          "Abend": 0.224,
+          "Vormittag": 0.343,
+          "Mittag": 0.152,
+          "Nachmittag": 0.192,
+          "Abend": 0.313,
           "Nachts": 0.0
         }
       },
@@ -130,7 +130,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -139,18 +139,18 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.462,
-          "Sa": 0.308,
-          "So": 0.231
+          "Fr": 0.333,
+          "Sa": 0.5,
+          "So": 0.167
         },
         "month": {
-          "Mo": 0.138,
-          "Di": 0.103,
-          "Mi": 0.052,
+          "Mo": 0.081,
+          "Di": 0.131,
+          "Mi": 0.03,
           "Do": 0.121,
-          "Fr": 0.293,
-          "Sa": 0.19,
-          "So": 0.103
+          "Fr": 0.242,
+          "Sa": 0.313,
+          "So": 0.081
         }
       },
       "events": []
@@ -180,11 +180,11 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.5563,
-          "rev_measured": 450.0,
-          "rev_estimated": 21420.0,
-          "booked_hours": 607.5,
-          "observed_days": 13,
+          "occupancy": 0.5778,
+          "rev_measured": 900.0,
+          "rev_estimated": 23562.0,
+          "booked_hours": 679.5,
+          "observed_days": 14,
           "ccy": "EUR"
         }
       },
@@ -209,8 +209,8 @@
           {
             "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.5563,
-            "revenue": 21870.0
+            "occupancy": 0.5778,
+            "revenue": 24462.0
           }
         ]
       },
@@ -226,8 +226,8 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.222,
-          "1,5h": 0.778,
+          "1h": 0.368,
+          "1,5h": 0.632,
           "2h": 0.0
         }
       },
@@ -247,10 +247,10 @@
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.12,
-          "Mittag": 0.32,
-          "Nachmittag": 0.08,
-          "Abend": 0.48,
+          "Vormittag": 0.1,
+          "Mittag": 0.36,
+          "Nachmittag": 0.04,
+          "Abend": 0.5,
           "Nachts": 0.0
         }
       },
@@ -275,12 +275,12 @@
         },
         "month": {
           "Mo": 0.0,
-          "Di": 0.32,
-          "Mi": 0.12,
+          "Di": 0.26,
+          "Mi": 0.16,
           "Do": 0.24,
-          "Fr": 0.0,
+          "Fr": 0.06,
           "Sa": 0.0,
-          "So": 0.32
+          "So": 0.28
         }
       },
       "events": []
@@ -294,27 +294,27 @@
       "courts": 9,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "occupancy": 0.1815,
+          "rev_measured": 67.0,
+          "rev_estimated": 537.0,
+          "booked_hours": 24.5,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3991,
-          "rev_measured": 235.0,
+          "occupancy": 0.4148,
+          "rev_measured": 504.0,
           "rev_estimated": 7268.0,
-          "booked_hours": 215.5,
+          "booked_hours": 224.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3003,
-          "rev_measured": 595.0,
-          "rev_estimated": 17627.0,
-          "booked_hours": 567.5,
-          "observed_days": 14,
+          "occupancy": 0.3388,
+          "rev_measured": 1088.0,
+          "rev_estimated": 20287.0,
+          "booked_hours": 686.0,
+          "observed_days": 15,
           "ccy": "EUR"
         }
       },
@@ -323,8 +323,8 @@
           {
             "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.2133,
+            "revenue": 364.0
           },
           {
             "label": "Double · Outdoor",
@@ -335,16 +335,16 @@
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.2833,
+            "revenue": 240.0
           }
         ],
         "week": [
           {
             "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.415,
-            "revenue": 3964.0
+            "occupancy": 0.4433,
+            "revenue": 4232.0
           },
           {
             "label": "Double · Outdoor",
@@ -363,60 +363,60 @@
           {
             "label": "Double · Indoor",
             "courts": 5,
-            "occupancy": 0.2724,
-            "revenue": 8610.0
+            "occupancy": 0.316,
+            "revenue": 10374.0
           },
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.356,
-            "revenue": 5102.0
+            "occupancy": 0.39,
+            "revenue": 5848.0
           },
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.3143,
-            "revenue": 4510.0
+            "occupancy": 0.3444,
+            "revenue": 5154.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.667,
+          "1,5h": 0.333,
           "2h": 0.0
         },
         "week": {
-          "1h": 0.571,
-          "1,5h": 0.429,
-          "2h": 0.0
+          "1h": 0.643,
+          "1,5h": 0.286,
+          "2h": 0.071
         },
         "month": {
-          "1h": 0.357,
-          "1,5h": 0.643,
-          "2h": 0.0
+          "1h": 0.462,
+          "1,5h": 0.5,
+          "2h": 0.038
         }
       },
       "by_timeofday": {
         "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
+          "Vormittag": 0.429,
+          "Mittag": 0.286,
+          "Nachmittag": 0.286,
           "Abend": 0.0,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.176,
-          "Mittag": 0.118,
-          "Nachmittag": 0.353,
-          "Abend": 0.353,
+          "Vormittag": 0.147,
+          "Mittag": 0.235,
+          "Nachmittag": 0.294,
+          "Abend": 0.324,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.162,
-          "Mittag": 0.189,
-          "Nachmittag": 0.243,
-          "Abend": 0.405,
+          "Vormittag": 0.164,
+          "Mittag": 0.194,
+          "Nachmittag": 0.194,
+          "Abend": 0.448,
           "Nachts": 0.0
         }
       },
@@ -426,7 +426,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -435,18 +435,18 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.294,
-          "Sa": 0.235,
-          "So": 0.471
+          "Fr": 0.206,
+          "Sa": 0.412,
+          "So": 0.382
         },
         "month": {
           "Mo": 0.0,
-          "Di": 0.162,
-          "Mi": 0.0,
-          "Do": 0.081,
-          "Fr": 0.378,
-          "Sa": 0.162,
-          "So": 0.216
+          "Di": 0.09,
+          "Mi": 0.045,
+          "Do": 0.164,
+          "Fr": 0.269,
+          "Sa": 0.239,
+          "So": 0.194
         }
       },
       "events": []
@@ -460,27 +460,27 @@
       "courts": 6,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
+          "occupancy": 0.2188,
+          "rev_measured": 168.0,
+          "rev_estimated": 582.0,
+          "booked_hours": 21.0,
+          "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.5694,
-          "rev_measured": 232.0,
+          "occupancy": 0.5747,
+          "rev_measured": 290.0,
           "rev_estimated": 5862.0,
-          "booked_hours": 164.0,
+          "booked_hours": 165.5,
           "observed_days": 3,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.4932,
-          "rev_measured": 614.0,
-          "rev_estimated": 16420.0,
-          "booked_hours": 473.5,
-          "observed_days": 10,
+          "occupancy": 0.5379,
+          "rev_measured": 989.0,
+          "rev_estimated": 19032.0,
+          "booked_hours": 568.0,
+          "observed_days": 11,
           "ccy": "EUR"
         }
       },
@@ -489,22 +489,22 @@
           {
             "label": "Double · Indoor",
             "courts": 4,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.2812,
+            "revenue": 642.0
           },
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.0938,
+            "revenue": 108.0
           }
         ],
         "week": [
           {
             "label": "Double · Indoor",
             "courts": 4,
-            "occupancy": 0.5391,
-            "revenue": 3531.0
+            "occupancy": 0.5469,
+            "revenue": 3589.0
           },
           {
             "label": "Single · Indoor",
@@ -517,54 +517,54 @@
           {
             "label": "Double · Indoor",
             "courts": 4,
-            "occupancy": 0.4383,
-            "revenue": 9331.0
+            "occupancy": 0.4872,
+            "revenue": 11153.0
           },
           {
             "label": "Single · Indoor",
             "courts": 2,
-            "occupancy": 0.6031,
-            "revenue": 7703.0
+            "occupancy": 0.6392,
+            "revenue": 8867.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.5,
+          "1,5h": 0.5,
           "2h": 0.0
         },
         "week": {
-          "1h": 0.667,
-          "1,5h": 0.333,
+          "1h": 0.571,
+          "1,5h": 0.429,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.385,
-          "1,5h": 0.538,
-          "2h": 0.077
+          "1h": 0.35,
+          "1,5h": 0.6,
+          "2h": 0.05
         }
       },
       "by_timeofday": {
         "today": {
           "Vormittag": 0.0,
-          "Mittag": 0.0,
+          "Mittag": 0.5,
           "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Abend": 0.5,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.214,
-          "Mittag": 0.357,
-          "Nachmittag": 0.143,
-          "Abend": 0.286,
+          "Vormittag": 0.176,
+          "Mittag": 0.294,
+          "Nachmittag": 0.118,
+          "Abend": 0.412,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.257,
-          "Mittag": 0.343,
-          "Nachmittag": 0.143,
-          "Abend": 0.257,
+          "Vormittag": 0.333,
+          "Mittag": 0.278,
+          "Nachmittag": 0.13,
+          "Abend": 0.259,
           "Nachts": 0.0
         }
       },
@@ -574,7 +574,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -583,18 +583,18 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.5,
-          "Sa": 0.143,
-          "So": 0.357
+          "Fr": 0.588,
+          "Sa": 0.118,
+          "So": 0.294
         },
         "month": {
-          "Mo": 0.171,
+          "Mo": 0.167,
           "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.143,
-          "Fr": 0.2,
-          "Sa": 0.143,
-          "So": 0.343
+          "Mi": 0.093,
+          "Do": 0.13,
+          "Fr": 0.241,
+          "Sa": 0.148,
+          "So": 0.222
         }
       },
       "events": []
@@ -608,10 +608,10 @@
       "courts": 3,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
+          "occupancy": 0.4348,
           "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "rev_estimated": 814.0,
+          "booked_hours": 20.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
@@ -624,11 +624,11 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.5065,
-          "rev_measured": 164.0,
-          "rev_estimated": 13897.0,
-          "booked_hours": 349.5,
-          "observed_days": 15,
+          "occupancy": 0.5333,
+          "rev_measured": 333.0,
+          "rev_estimated": 15668.0,
+          "booked_hours": 392.5,
+          "observed_days": 16,
           "ccy": "EUR"
         }
       },
@@ -637,14 +637,14 @@
           {
             "label": "Double · Indoor",
             "courts": 1,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.6452,
+            "revenue": 397.0
           },
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.3279,
+            "revenue": 418.0
           }
         ],
         "week": [
@@ -665,14 +665,14 @@
           {
             "label": "Double · Indoor",
             "courts": 1,
-            "occupancy": 0.5484,
-            "revenue": 5063.0
+            "occupancy": 0.5665,
+            "revenue": 5661.0
           },
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.4852,
-            "revenue": 8998.0
+            "occupancy": 0.5164,
+            "revenue": 10341.0
           }
         ]
       },
@@ -709,10 +709,10 @@
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.333,
+          "Vormittag": 0.167,
           "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.667,
+          "Nachmittag": 0.333,
+          "Abend": 0.5,
           "Nachts": 0.0
         }
       },
@@ -739,10 +739,158 @@
           "Mo": 0.333,
           "Di": 0.0,
           "Mi": 0.0,
-          "Do": 0.333,
+          "Do": 0.5,
           "Fr": 0.0,
-          "Sa": 0.333,
+          "Sa": 0.167,
           "So": 0.0
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "aa7e1831-a90d-4a4f-b6ae-f6d334179907",
+      "name": "BeachMitte",
+      "district": "Caroline-Michaelis-Str. 8",
+      "lat": 52.5334937,
+      "lng": 13.3843963,
+      "courts": 5,
+      "metrics": {
+        "today": {
+          "occupancy": 0.2615,
+          "rev_measured": 0.0,
+          "rev_estimated": 612.0,
+          "booked_hours": 17.0,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.2103,
+          "rev_measured": 42.0,
+          "rev_estimated": 1578.0,
+          "booked_hours": 41.0,
+          "observed_days": 3,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.3928,
+          "rev_measured": 454.0,
+          "rev_estimated": 14108.0,
+          "booked_hours": 383.0,
+          "observed_days": 15,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 1,
+            "occupancy": 0.8846,
+            "revenue": 414.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.1058,
+            "revenue": 198.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 1,
+            "occupancy": 0.6154,
+            "revenue": 939.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.109,
+            "revenue": 681.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Lage ?",
+            "courts": 1,
+            "occupancy": 0.5077,
+            "revenue": 3763.0
+          },
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.3641,
+            "revenue": 10800.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.0,
+          "1,5h": 0.0,
+          "2h": 0.0
+        },
+        "week": {
+          "1h": 1.0,
+          "1,5h": 0.0,
+          "2h": 0.0
+        },
+        "month": {
+          "1h": 0.667,
+          "1,5h": 0.222,
+          "2h": 0.111
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 1.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.0,
+          "Mittag": 0.318,
+          "Nachmittag": 0.091,
+          "Abend": 0.591,
+          "Nachts": 0.0
+        }
+      },
+      "by_weekday": {
+        "today": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 0.0,
+          "Sa": 0.0,
+          "So": 0.0
+        },
+        "week": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 0.0,
+          "Sa": 1.0,
+          "So": 0.0
+        },
+        "month": {
+          "Mo": 0.409,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.091,
+          "Fr": 0.0,
+          "Sa": 0.182,
+          "So": 0.318
         }
       },
       "events": []
@@ -756,11 +904,11 @@
       "courts": 6,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
+          "occupancy": 0.0833,
+          "rev_measured": 38.0,
+          "rev_estimated": 182.0,
+          "booked_hours": 6.5,
+          "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
@@ -772,11 +920,11 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3285,
-          "rev_measured": 258.0,
-          "rev_estimated": 11344.0,
-          "booked_hours": 410.0,
-          "observed_days": 16,
+          "occupancy": 0.3669,
+          "rev_measured": 588.0,
+          "rev_estimated": 13852.0,
+          "booked_hours": 486.5,
+          "observed_days": 17,
           "ccy": "EUR"
         }
       },
@@ -791,8 +939,8 @@
           {
             "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.125,
+            "revenue": 220.0
           }
         ],
         "week": [
@@ -813,20 +961,20 @@
           {
             "label": "Double · Lage ?",
             "courts": 2,
-            "occupancy": 0.3089,
-            "revenue": 3567.0
+            "occupancy": 0.3405,
+            "revenue": 4403.0
           },
           {
             "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.3383,
-            "revenue": 8035.0
+            "occupancy": 0.3801,
+            "revenue": 10037.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
+          "1h": 1.0,
           "1,5h": 0.0,
           "2h": 0.0
         },
@@ -836,8 +984,8 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 0.571,
-          "1,5h": 0.429,
+          "1h": 0.286,
+          "1,5h": 0.714,
           "2h": 0.0
         }
       },
@@ -846,7 +994,7 @@
           "Vormittag": 0.0,
           "Mittag": 0.0,
           "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Abend": 1.0,
           "Nachts": 0.0
         },
         "week": {
@@ -857,10 +1005,10 @@
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.176,
-          "Mittag": 0.294,
-          "Nachmittag": 0.412,
-          "Abend": 0.118,
+          "Vormittag": 0.395,
+          "Mittag": 0.132,
+          "Nachmittag": 0.263,
+          "Abend": 0.211,
           "Nachts": 0.0
         }
       },
@@ -870,7 +1018,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -884,161 +1032,13 @@
           "So": 0.333
         },
         "month": {
-          "Mo": 0.0,
-          "Di": 0.176,
-          "Mi": 0.176,
-          "Do": 0.176,
-          "Fr": 0.235,
-          "Sa": 0.118,
-          "So": 0.118
-        }
-      },
-      "events": []
-    },
-    {
-      "tenant_id": "aa7e1831-a90d-4a4f-b6ae-f6d334179907",
-      "name": "BeachMitte",
-      "district": "Caroline-Michaelis-Str. 8",
-      "lat": 52.5334937,
-      "lng": 13.3843963,
-      "courts": 5,
-      "metrics": {
-        "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
-          "ccy": "EUR"
-        },
-        "week": {
-          "occupancy": 0.1385,
-          "rev_measured": 42.0,
-          "rev_estimated": 612.0,
-          "booked_hours": 18.0,
-          "observed_days": 2,
-          "ccy": "EUR"
-        },
-        "month": {
-          "occupancy": 0.3538,
-          "rev_measured": 294.0,
-          "rev_estimated": 11090.0,
-          "booked_hours": 299.0,
-          "observed_days": 13,
-          "ccy": "EUR"
-        }
-      },
-      "by_type": {
-        "today": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 1,
-            "occupancy": 0.0,
-            "revenue": 0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 4,
-            "occupancy": 0.0,
-            "revenue": 0
-          }
-        ],
-        "week": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 1,
-            "occupancy": 0.4808,
-            "revenue": 456.0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 4,
-            "occupancy": 0.0529,
-            "revenue": 198.0
-          }
-        ],
-        "month": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 1,
-            "occupancy": 0.4467,
-            "revenue": 2842.0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 4,
-            "occupancy": 0.3306,
-            "revenue": 8542.0
-          }
-        ]
-      },
-      "by_duration": {
-        "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "week": {
-          "1h": 1.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "month": {
-          "1h": 0.667,
-          "1,5h": 0.333,
-          "2h": 0.0
-        }
-      },
-      "by_timeofday": {
-        "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.0,
-          "Nachts": 0.0
-        },
-        "week": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 1.0,
-          "Nachts": 0.0
-        },
-        "month": {
-          "Vormittag": 0.0,
-          "Mittag": 0.214,
-          "Nachmittag": 0.143,
-          "Abend": 0.643,
-          "Nachts": 0.0
-        }
-      },
-      "by_weekday": {
-        "today": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 0.0,
-          "So": 0.0
-        },
-        "week": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 1.0,
-          "So": 0.0
-        },
-        "month": {
-          "Mo": 0.357,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 0.286,
-          "So": 0.357
+          "Mo": 0.079,
+          "Di": 0.158,
+          "Mi": 0.079,
+          "Do": 0.158,
+          "Fr": 0.184,
+          "Sa": 0.132,
+          "So": 0.211
         }
       },
       "events": []
@@ -1052,26 +1052,26 @@
       "courts": 3,
       "metrics": {
         "today": {
-          "occupancy": 0.0392,
-          "rev_measured": 80.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 2.0,
+          "occupancy": 0.5588,
+          "rev_measured": 68.0,
+          "rev_estimated": 908.0,
+          "booked_hours": 28.5,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.5049,
-          "rev_measured": 108.0,
+          "occupancy": 0.5368,
+          "rev_measured": 367.0,
           "rev_estimated": 3841.0,
-          "booked_hours": 103.0,
+          "booked_hours": 109.5,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.236,
-          "rev_measured": 328.0,
+          "occupancy": 0.2426,
+          "rev_measured": 687.0,
           "rev_estimated": 10944.0,
-          "booked_hours": 325.0,
+          "booked_hours": 334.0,
           "observed_days": 27,
           "ccy": "EUR"
         }
@@ -1081,231 +1081,83 @@
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.0588,
-            "revenue": 80.0
+            "occupancy": 0.7059,
+            "revenue": 819.0
           },
           {
             "label": "Single · Outdoor",
             "courts": 1,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.2647,
+            "revenue": 156.0
           }
         ],
         "week": [
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.5882,
-            "revenue": 3055.0
+            "occupancy": 0.6066,
+            "revenue": 3155.0
           },
           {
             "label": "Single · Outdoor",
             "courts": 1,
-            "occupancy": 0.3382,
-            "revenue": 895.0
+            "occupancy": 0.3971,
+            "revenue": 1054.0
           }
         ],
         "month": [
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2876,
-            "revenue": 9097.0
+            "occupancy": 0.293,
+            "revenue": 9297.0
           },
           {
             "label": "Single · Outdoor",
             "courts": 1,
-            "occupancy": 0.1329,
-            "revenue": 2174.0
+            "occupancy": 0.1416,
+            "revenue": 2333.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
+          "1h": 1.0,
           "1,5h": 0.0,
-          "2h": 1.0
+          "2h": 0.0
         },
         "week": {
-          "1h": 0.5,
-          "1,5h": 0.0,
-          "2h": 0.5
+          "1h": 0.429,
+          "1,5h": 0.429,
+          "2h": 0.143
         },
         "month": {
-          "1h": 0.5,
-          "1,5h": 0.167,
-          "2h": 0.333
+          "1h": 0.462,
+          "1,5h": 0.385,
+          "2h": 0.154
         }
       },
       "by_timeofday": {
         "today": {
-          "Vormittag": 0.0,
+          "Vormittag": 0.5,
           "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 1.0,
-          "Nachts": 0.0
-        },
-        "week": {
-          "Vormittag": 0.333,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.667,
-          "Nachts": 0.0
-        },
-        "month": {
-          "Vormittag": 0.118,
-          "Mittag": 0.235,
-          "Nachmittag": 0.118,
-          "Abend": 0.529,
-          "Nachts": 0.0
-        }
-      },
-      "by_weekday": {
-        "today": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 1.0,
-          "Fr": 0.0,
-          "Sa": 0.0,
-          "So": 0.0
-        },
-        "week": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.667,
-          "Fr": 0.333,
-          "Sa": 0.0,
-          "So": 0.0
-        },
-        "month": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.647,
-          "Fr": 0.118,
-          "Sa": 0.0,
-          "So": 0.235
-        }
-      },
-      "events": []
-    },
-    {
-      "tenant_id": "31bb4900-5ad3-424a-a7fe-ed49ed2bf8e8",
-      "name": "Padel Arena Berlin",
-      "district": "Haberstraße 18",
-      "lat": 52.4625641,
-      "lng": 13.4607792,
-      "courts": 14,
-      "metrics": {
-        "today": {
-          "occupancy": 0.0043,
-          "rev_measured": 0.0,
-          "rev_estimated": 40.0,
-          "booked_hours": 1.0,
-          "observed_days": 1,
-          "ccy": "EUR"
-        },
-        "week": {
-          "occupancy": 0.0969,
-          "rev_measured": 213.0,
-          "rev_estimated": 3005.0,
-          "booked_hours": 89.5,
-          "observed_days": 4,
-          "ccy": "EUR"
-        },
-        "month": {
-          "occupancy": 0.043,
-          "rev_measured": 272.0,
-          "rev_estimated": 8765.0,
-          "booked_hours": 268.0,
-          "observed_days": 27,
-          "ccy": "EUR"
-        }
-      },
-      "by_type": {
-        "today": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 4,
-            "occupancy": 0.0,
-            "revenue": 0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 10,
-            "occupancy": 0.0061,
-            "revenue": 40.0
-          }
-        ],
-        "week": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 4,
-            "occupancy": 0.0758,
-            "revenue": 718.0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 10,
-            "occupancy": 0.1053,
-            "revenue": 2500.0
-          }
-        ],
-        "month": [
-          {
-            "label": "Double · Lage ?",
-            "courts": 4,
-            "occupancy": 0.0407,
-            "revenue": 2446.0
-          },
-          {
-            "label": "Double · Outdoor",
-            "courts": 10,
-            "occupancy": 0.0439,
-            "revenue": 6591.0
-          }
-        ]
-      },
-      "by_duration": {
-        "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "week": {
-          "1h": 0.6,
-          "1,5h": 0.4,
-          "2h": 0.0
-        },
-        "month": {
-          "1h": 0.5,
-          "1,5h": 0.5,
-          "2h": 0.0
-        }
-      },
-      "by_timeofday": {
-        "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
+          "Nachmittag": 0.5,
           "Abend": 0.0,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.417,
-          "Mittag": 0.167,
-          "Nachmittag": 0.167,
-          "Abend": 0.25,
-          "Nachts": 0.0
+          "Vormittag": 0.263,
+          "Mittag": 0.0,
+          "Nachmittag": 0.105,
+          "Abend": 0.526,
+          "Nachts": 0.105
         },
         "month": {
-          "Vormittag": 0.333,
-          "Mittag": 0.133,
-          "Nachmittag": 0.133,
-          "Abend": 0.4,
-          "Nachts": 0.0
+          "Vormittag": 0.229,
+          "Mittag": 0.114,
+          "Nachmittag": 0.171,
+          "Abend": 0.429,
+          "Nachts": 0.057
         }
       },
       "by_weekday": {
@@ -1314,7 +1166,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -1322,19 +1174,19 @@
           "Mo": 0.0,
           "Di": 0.0,
           "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.75,
-          "Sa": 0.25,
+          "Do": 0.474,
+          "Fr": 0.211,
+          "Sa": 0.316,
           "So": 0.0
         },
         "month": {
           "Mo": 0.0,
           "Di": 0.0,
-          "Mi": 0.2,
-          "Do": 0.0,
-          "Fr": 0.6,
-          "Sa": 0.2,
-          "So": 0.0
+          "Mi": 0.0,
+          "Do": 0.514,
+          "Fr": 0.114,
+          "Sa": 0.257,
+          "So": 0.114
         }
       },
       "events": []
@@ -1348,27 +1200,27 @@
       "courts": 4,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "occupancy": 0.4423,
+          "rev_measured": 96.0,
+          "rev_estimated": 436.0,
+          "booked_hours": 23.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.4014,
-          "rev_measured": 116.0,
+          "occupancy": 0.4135,
+          "rev_measured": 191.0,
           "rev_estimated": 2735.0,
-          "booked_hours": 83.5,
+          "booked_hours": 86.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.3184,
-          "rev_measured": 154.0,
-          "rev_estimated": 8111.0,
-          "booked_hours": 281.5,
-          "observed_days": 17,
+          "occupancy": 0.3499,
+          "rev_measured": 362.0,
+          "rev_estimated": 9631.0,
+          "booked_hours": 327.5,
+          "observed_days": 18,
           "ccy": "EUR"
         }
       },
@@ -1377,64 +1229,64 @@
           {
             "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.4423,
+            "revenue": 533.0
           }
         ],
         "week": [
           {
             "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.4014,
-            "revenue": 2851.0
+            "occupancy": 0.4135,
+            "revenue": 2927.0
           }
         ],
         "month": [
           {
             "label": "Double · Outdoor",
             "courts": 4,
-            "occupancy": 0.3184,
-            "revenue": 8264.0
+            "occupancy": 0.3499,
+            "revenue": 9993.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "week": {
           "1h": 0.75,
           "1,5h": 0.25,
           "2h": 0.0
         },
-        "month": {
+        "week": {
           "1h": 0.667,
           "1,5h": 0.333,
           "2h": 0.0
+        },
+        "month": {
+          "1h": 0.5,
+          "1,5h": 0.4,
+          "2h": 0.1
         }
       },
       "by_timeofday": {
         "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
+          "Vormittag": 0.222,
+          "Mittag": 0.556,
           "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Abend": 0.222,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.222,
-          "Mittag": 0.333,
-          "Nachmittag": 0.0,
-          "Abend": 0.444,
+          "Vormittag": 0.143,
+          "Mittag": 0.357,
+          "Nachmittag": 0.214,
+          "Abend": 0.286,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.5,
-          "Mittag": 0.214,
-          "Nachmittag": 0.0,
-          "Abend": 0.286,
+          "Vormittag": 0.423,
+          "Mittag": 0.192,
+          "Nachmittag": 0.115,
+          "Abend": 0.269,
           "Nachts": 0.0
         }
       },
@@ -1444,7 +1296,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -1453,118 +1305,136 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.778,
-          "Sa": 0.222,
-          "So": 0.0
+          "Fr": 0.643,
+          "Sa": 0.143,
+          "So": 0.214
         },
         "month": {
-          "Mo": 0.214,
+          "Mo": 0.115,
           "Di": 0.0,
           "Mi": 0.0,
-          "Do": 0.143,
-          "Fr": 0.5,
-          "Sa": 0.143,
-          "So": 0.0
+          "Do": 0.192,
+          "Fr": 0.346,
+          "Sa": 0.231,
+          "So": 0.115
         }
       },
       "events": []
     },
     {
-      "tenant_id": "16825678-053a-400d-b626-4c386d58706b",
-      "name": "Kickerworld Berlin Spandau",
-      "district": "Spandau",
-      "lat": 52.5488991,
-      "lng": 13.2268255,
-      "courts": 2,
+      "tenant_id": "31bb4900-5ad3-424a-a7fe-ed49ed2bf8e8",
+      "name": "Padel Arena Berlin",
+      "district": "Haberstraße 18",
+      "lat": 52.4625641,
+      "lng": 13.4607792,
+      "courts": 14,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "occupancy": 0.1688,
+          "rev_measured": 213.0,
+          "rev_estimated": 1014.0,
+          "booked_hours": 39.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.3527,
-          "rev_measured": 64.0,
-          "rev_estimated": 1161.0,
-          "booked_hours": 39.5,
+          "occupancy": 0.119,
+          "rev_measured": 1024.0,
+          "rev_estimated": 3005.0,
+          "booked_hours": 110.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2768,
-          "rev_measured": 122.0,
-          "rev_estimated": 4773.0,
-          "booked_hours": 170.5,
-          "observed_days": 22,
+          "occupancy": 0.0467,
+          "rev_measured": 1178.0,
+          "rev_estimated": 8765.0,
+          "booked_hours": 291.0,
+          "observed_days": 27,
           "ccy": "EUR"
         }
       },
       "by_type": {
         "today": [
           {
+            "label": "Double · Lage ?",
+            "courts": 4,
+            "occupancy": 0.1212,
+            "revenue": 245.0
+          },
+          {
             "label": "Double · Outdoor",
-            "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "courts": 10,
+            "occupancy": 0.1879,
+            "revenue": 981.0
           }
         ],
         "week": [
           {
+            "label": "Double · Lage ?",
+            "courts": 4,
+            "occupancy": 0.0814,
+            "revenue": 778.0
+          },
+          {
             "label": "Double · Outdoor",
-            "courts": 2,
-            "occupancy": 0.3527,
-            "revenue": 1225.0
+            "courts": 10,
+            "occupancy": 0.1341,
+            "revenue": 3251.0
           }
         ],
         "month": [
           {
+            "label": "Double · Lage ?",
+            "courts": 4,
+            "occupancy": 0.0415,
+            "revenue": 2505.0
+          },
+          {
             "label": "Double · Outdoor",
-            "courts": 2,
-            "occupancy": 0.2768,
-            "revenue": 4895.0
+            "courts": 10,
+            "occupancy": 0.0487,
+            "revenue": 7438.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
+          "1h": 0.6,
+          "1,5h": 0.4,
           "2h": 0.0
         },
         "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 1.0
+          "1h": 0.5,
+          "1,5h": 0.45,
+          "2h": 0.05
         },
         "month": {
-          "1h": 0.667,
-          "1,5h": 0.0,
-          "2h": 0.333
+          "1h": 0.478,
+          "1,5h": 0.478,
+          "2h": 0.043
         }
       },
       "by_timeofday": {
         "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Vormittag": 0.167,
+          "Mittag": 0.167,
+          "Nachmittag": 0.417,
+          "Abend": 0.25,
           "Nachts": 0.0
         },
         "week": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 1.0,
-          "Abend": 0.0,
+          "Vormittag": 0.151,
+          "Mittag": 0.189,
+          "Nachmittag": 0.094,
+          "Abend": 0.566,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.0,
-          "Mittag": 0.25,
-          "Nachmittag": 0.75,
-          "Abend": 0.0,
+          "Vormittag": 0.131,
+          "Mittag": 0.164,
+          "Nachmittag": 0.164,
+          "Abend": 0.541,
           "Nachts": 0.0
         }
       },
@@ -1574,7 +1444,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -1582,18 +1452,18 @@
           "Mo": 0.0,
           "Di": 0.0,
           "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 1.0,
+          "Do": 0.509,
+          "Fr": 0.226,
+          "Sa": 0.264,
           "So": 0.0
         },
         "month": {
-          "Mo": 0.5,
+          "Mo": 0.0,
           "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 0.5,
+          "Mi": 0.098,
+          "Do": 0.443,
+          "Fr": 0.23,
+          "Sa": 0.23,
           "So": 0.0
         }
       },
@@ -1608,27 +1478,27 @@
       "courts": 4,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
-          "ccy": "EUR"
-        },
-        "week": {
-          "occupancy": 0.0638,
-          "rev_measured": 57.0,
+          "occupancy": 0.0851,
+          "rev_measured": 75.0,
           "rev_estimated": 27.0,
-          "booked_hours": 3.0,
+          "booked_hours": 4.0,
           "observed_days": 1,
           "ccy": "EUR"
         },
+        "week": {
+          "occupancy": 0.2606,
+          "rev_measured": 75.0,
+          "rev_estimated": 806.0,
+          "booked_hours": 24.5,
+          "observed_days": 2,
+          "ccy": "EUR"
+        },
         "month": {
-          "occupancy": 0.2234,
-          "rev_measured": 150.0,
-          "rev_estimated": 3767.0,
-          "booked_hours": 147.0,
-          "observed_days": 14,
+          "occupancy": 0.2872,
+          "rev_measured": 360.0,
+          "rev_estimated": 6028.0,
+          "booked_hours": 216.0,
+          "observed_days": 16,
           "ccy": "EUR"
         }
       },
@@ -1637,6 +1507,266 @@
           {
             "label": "Double · Outdoor",
             "courts": 4,
+            "occupancy": 0.0851,
+            "revenue": 102.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.2606,
+            "revenue": 881.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 4,
+            "occupancy": 0.2872,
+            "revenue": 6388.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 0.5,
+          "1,5h": 0.5,
+          "2h": 0.0
+        },
+        "week": {
+          "1h": 0.5,
+          "1,5h": 0.5,
+          "2h": 0.0
+        },
+        "month": {
+          "1h": 0.2,
+          "1,5h": 0.6,
+          "2h": 0.2
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.4,
+          "Nachmittag": 0.6,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.4,
+          "Nachmittag": 0.6,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.667,
+          "Mittag": 0.167,
+          "Nachmittag": 0.167,
+          "Abend": 0.0,
+          "Nachts": 0.0
+        }
+      },
+      "by_weekday": {
+        "today": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 1.0,
+          "Sa": 0.0,
+          "So": 0.0
+        },
+        "week": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 1.0,
+          "Sa": 0.0,
+          "So": 0.0
+        },
+        "month": {
+          "Mo": 0.4,
+          "Di": 0.1,
+          "Mi": 0.1,
+          "Do": 0.0,
+          "Fr": 0.3,
+          "Sa": 0.0,
+          "So": 0.1
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "16825678-053a-400d-b626-4c386d58706b",
+      "name": "Kickerworld Berlin Spandau",
+      "district": "Spandau",
+      "lat": 52.5488991,
+      "lng": 13.2268255,
+      "courts": 2,
+      "metrics": {
+        "today": {
+          "occupancy": 0.3036,
+          "rev_measured": 32.0,
+          "rev_estimated": 201.0,
+          "booked_hours": 8.5,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.3839,
+          "rev_measured": 176.0,
+          "rev_estimated": 1161.0,
+          "booked_hours": 43.0,
+          "observed_days": 4,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.2906,
+          "rev_measured": 394.0,
+          "rev_estimated": 4773.0,
+          "booked_hours": 179.0,
+          "observed_days": 22,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.3036,
+            "revenue": 233.0
+          }
+        ],
+        "week": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.3839,
+            "revenue": 1337.0
+          }
+        ],
+        "month": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 2,
+            "occupancy": 0.2906,
+            "revenue": 5167.0
+          }
+        ]
+      },
+      "by_duration": {
+        "today": {
+          "1h": 1.0,
+          "1,5h": 0.0,
+          "2h": 0.0
+        },
+        "week": {
+          "1h": 0.5,
+          "1,5h": 0.25,
+          "2h": 0.25
+        },
+        "month": {
+          "1h": 0.444,
+          "1,5h": 0.333,
+          "2h": 0.222
+        }
+      },
+      "by_timeofday": {
+        "today": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.0,
+          "Abend": 1.0,
+          "Nachts": 0.0
+        },
+        "week": {
+          "Vormittag": 0.0,
+          "Mittag": 0.0,
+          "Nachmittag": 0.364,
+          "Abend": 0.636,
+          "Nachts": 0.0
+        },
+        "month": {
+          "Vormittag": 0.16,
+          "Mittag": 0.08,
+          "Nachmittag": 0.24,
+          "Abend": 0.52,
+          "Nachts": 0.0
+        }
+      },
+      "by_weekday": {
+        "today": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 1.0,
+          "Sa": 0.0,
+          "So": 0.0
+        },
+        "week": {
+          "Mo": 0.0,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 0.182,
+          "Sa": 0.364,
+          "So": 0.455
+        },
+        "month": {
+          "Mo": 0.16,
+          "Di": 0.0,
+          "Mi": 0.0,
+          "Do": 0.0,
+          "Fr": 0.32,
+          "Sa": 0.32,
+          "So": 0.2
+        }
+      },
+      "events": []
+    },
+    {
+      "tenant_id": "041a4a3c-8895-465d-91d1-c22f75049770",
+      "name": "TIO TIO Rooftop",
+      "district": "Marktstraße 6",
+      "lat": 52.504191,
+      "lng": 13.4735707,
+      "courts": 5,
+      "metrics": {
+        "today": {
+          "occupancy": 0.0,
+          "rev_measured": 0.0,
+          "rev_estimated": 0.0,
+          "booked_hours": 0.0,
+          "observed_days": 1,
+          "ccy": "EUR"
+        },
+        "week": {
+          "occupancy": 0.0764,
+          "rev_measured": 0.0,
+          "rev_estimated": 440.0,
+          "booked_hours": 11.0,
+          "observed_days": 3,
+          "ccy": "EUR"
+        },
+        "month": {
+          "occupancy": 0.2487,
+          "rev_measured": 177.0,
+          "rev_estimated": 2692.0,
+          "booked_hours": 95.5,
+          "observed_days": 8,
+          "ccy": "EUR"
+        }
+      },
+      "by_type": {
+        "today": [
+          {
+            "label": "Double · Outdoor",
+            "courts": 5,
             "occupancy": 0.0,
             "revenue": 0
           }
@@ -1644,17 +1774,17 @@
         "week": [
           {
             "label": "Double · Outdoor",
-            "courts": 4,
-            "occupancy": 0.0638,
-            "revenue": 84.0
+            "courts": 5,
+            "occupancy": 0.0764,
+            "revenue": 440.0
           }
         ],
         "month": [
           {
             "label": "Double · Outdoor",
-            "courts": 4,
-            "occupancy": 0.2234,
-            "revenue": 3917.0
+            "courts": 5,
+            "occupancy": 0.2487,
+            "revenue": 2869.0
           }
         ]
       },
@@ -1666,12 +1796,12 @@
         },
         "week": {
           "1h": 0.0,
-          "1,5h": 1.0,
+          "1,5h": 0.0,
           "2h": 0.0
         },
         "month": {
-          "1h": 0.25,
-          "1,5h": 0.75,
+          "1h": 1.0,
+          "1,5h": 0.0,
           "2h": 0.0
         }
       },
@@ -1686,13 +1816,13 @@
         "week": {
           "Vormittag": 0.0,
           "Mittag": 0.0,
-          "Nachmittag": 1.0,
+          "Nachmittag": 0.0,
           "Abend": 0.0,
           "Nachts": 0.0
         },
         "month": {
-          "Vormittag": 0.545,
-          "Mittag": 0.0,
+          "Vormittag": 0.364,
+          "Mittag": 0.182,
           "Nachmittag": 0.455,
           "Abend": 0.0,
           "Nachts": 0.0
@@ -1713,16 +1843,16 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 1.0,
+          "Fr": 0.0,
           "Sa": 0.0,
           "So": 0.0
         },
         "month": {
-          "Mo": 0.727,
+          "Mo": 0.182,
           "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.273,
+          "Mi": 0.182,
+          "Do": 0.636,
+          "Fr": 0.0,
           "Sa": 0.0,
           "So": 0.0
         }
@@ -1738,26 +1868,26 @@
       "courts": 2,
       "metrics": {
         "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
+          "occupancy": 0.5156,
+          "rev_measured": 12.0,
+          "rev_estimated": 135.0,
+          "booked_hours": 16.5,
           "observed_days": 1,
           "ccy": "EUR"
         },
         "week": {
-          "occupancy": 0.4688,
-          "rev_measured": 12.0,
+          "occupancy": 0.4766,
+          "rev_measured": 25.0,
           "rev_estimated": 679.0,
-          "booked_hours": 60.0,
+          "booked_hours": 61.0,
           "observed_days": 4,
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2193,
-          "rev_measured": 38.0,
+          "occupancy": 0.2245,
+          "rev_measured": 94.0,
           "rev_estimated": 2189.0,
-          "booked_hours": 189.5,
+          "booked_hours": 194.0,
           "observed_days": 27,
           "ccy": "EUR"
         }
@@ -1767,30 +1897,30 @@
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.0,
-            "revenue": 0
+            "occupancy": 0.5156,
+            "revenue": 148.0
           }
         ],
         "week": [
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.4688,
-            "revenue": 691.0
+            "occupancy": 0.4766,
+            "revenue": 704.0
           }
         ],
         "month": [
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2193,
-            "revenue": 2227.0
+            "occupancy": 0.2245,
+            "revenue": 2283.0
           }
         ]
       },
       "by_duration": {
         "today": {
-          "1h": 0.0,
+          "1h": 1.0,
           "1,5h": 0.0,
           "2h": 0.0
         },
@@ -1800,9 +1930,9 @@
           "2h": 0.0
         },
         "month": {
-          "1h": 1.0,
-          "1,5h": 0.0,
-          "2h": 0.0
+          "1h": 0.667,
+          "1,5h": 0.167,
+          "2h": 0.167
         }
       },
       "by_timeofday": {
@@ -1810,7 +1940,7 @@
           "Vormittag": 0.0,
           "Mittag": 0.0,
           "Nachmittag": 0.0,
-          "Abend": 0.0,
+          "Abend": 1.0,
           "Nachts": 0.0
         },
         "week": {
@@ -1823,8 +1953,8 @@
         "month": {
           "Vormittag": 0.0,
           "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 1.0,
+          "Nachmittag": 0.467,
+          "Abend": 0.533,
           "Nachts": 0.0
         }
       },
@@ -1834,7 +1964,7 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 1.0,
           "Sa": 0.0,
           "So": 0.0
         },
@@ -1843,148 +1973,18 @@
           "Di": 0.0,
           "Mi": 0.0,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 0.5,
           "Sa": 0.0,
-          "So": 1.0
+          "So": 0.5
         },
         "month": {
           "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.667,
+          "Di": 0.267,
+          "Mi": 0.467,
           "Do": 0.0,
-          "Fr": 0.0,
+          "Fr": 0.133,
           "Sa": 0.0,
-          "So": 0.333
-        }
-      },
-      "events": []
-    },
-    {
-      "tenant_id": "041a4a3c-8895-465d-91d1-c22f75049770",
-      "name": "TIO TIO Rooftop",
-      "district": "Marktstraße 6",
-      "lat": 52.504191,
-      "lng": 13.4735707,
-      "courts": 5,
-      "metrics": {
-        "today": {
-          "occupancy": 0.0,
-          "rev_measured": 0.0,
-          "rev_estimated": 0.0,
-          "booked_hours": 0.0,
-          "observed_days": 0,
-          "ccy": "EUR"
-        },
-        "week": {
-          "occupancy": 0.0104,
-          "rev_measured": 0.0,
-          "rev_estimated": 60.0,
-          "booked_hours": 1.5,
-          "observed_days": 3,
-          "ccy": "EUR"
-        },
-        "month": {
-          "occupancy": 0.1518,
-          "rev_measured": 96.0,
-          "rev_estimated": 1402.0,
-          "booked_hours": 51.0,
-          "observed_days": 7,
-          "ccy": "EUR"
-        }
-      },
-      "by_type": {
-        "today": [
-          {
-            "label": "Double · Outdoor",
-            "courts": 5,
-            "occupancy": 0.0,
-            "revenue": 0
-          }
-        ],
-        "week": [
-          {
-            "label": "Double · Outdoor",
-            "courts": 5,
-            "occupancy": 0.0104,
-            "revenue": 60.0
-          }
-        ],
-        "month": [
-          {
-            "label": "Double · Outdoor",
-            "courts": 5,
-            "occupancy": 0.1518,
-            "revenue": 1498.0
-          }
-        ]
-      },
-      "by_duration": {
-        "today": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "week": {
-          "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        },
-        "month": {
-          "1h": 1.0,
-          "1,5h": 0.0,
-          "2h": 0.0
-        }
-      },
-      "by_timeofday": {
-        "today": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.0,
-          "Nachts": 0.0
-        },
-        "week": {
-          "Vormittag": 0.0,
-          "Mittag": 0.0,
-          "Nachmittag": 0.0,
-          "Abend": 0.0,
-          "Nachts": 0.0
-        },
-        "month": {
-          "Vormittag": 0.667,
-          "Mittag": 0.0,
-          "Nachmittag": 0.333,
-          "Abend": 0.0,
-          "Nachts": 0.0
-        }
-      },
-      "by_weekday": {
-        "today": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 0.0,
-          "So": 0.0
-        },
-        "week": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
-          "Fr": 0.0,
-          "Sa": 0.0,
-          "So": 0.0
-        },
-        "month": {
-          "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 1.0,
-          "Fr": 0.0,
-          "Sa": 0.0,
-          "So": 0.0
+          "So": 0.133
         }
       },
       "events": []
@@ -2014,11 +2014,11 @@
           "ccy": "EUR"
         },
         "month": {
-          "occupancy": 0.2208,
-          "rev_measured": 0.0,
-          "rev_estimated": 770.0,
-          "booked_hours": 26.5,
-          "observed_days": 4,
+          "occupancy": 0.35,
+          "rev_measured": 180.0,
+          "rev_estimated": 1358.0,
+          "booked_hours": 52.5,
+          "observed_days": 5,
           "ccy": "EUR"
         }
       },
@@ -2043,8 +2043,8 @@
           {
             "label": "Double · Outdoor",
             "courts": 2,
-            "occupancy": 0.2208,
-            "revenue": 770.0
+            "occupancy": 0.35,
+            "revenue": 1538.0
           }
         ]
       },
@@ -2061,8 +2061,8 @@
         },
         "month": {
           "1h": 0.0,
-          "1,5h": 0.0,
-          "2h": 0.0
+          "1,5h": 0.667,
+          "2h": 0.333
         }
       },
       "by_timeofday": {
@@ -2083,7 +2083,7 @@
         "month": {
           "Vormittag": 0.0,
           "Mittag": 0.0,
-          "Nachmittag": 0.0,
+          "Nachmittag": 1.0,
           "Abend": 0.0,
           "Nachts": 0.0
         }
@@ -2109,9 +2109,9 @@
         },
         "month": {
           "Mo": 0.0,
-          "Di": 0.0,
-          "Mi": 0.0,
-          "Do": 0.0,
+          "Di": 0.3,
+          "Mi": 0.3,
+          "Do": 0.4,
           "Fr": 0.0,
           "Sa": 0.0,
           "So": 0.0
