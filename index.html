@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
 <style>
 :root{
   --bg:#0e1116; --bg2:#161b22; --bg3:#1c232d; --line:#262d38; --line2:#323b48;
@@ -99,6 +102,18 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
 .ev .n{font-size:14px;font-weight:500}.ev .nt{font-size:12px;color:var(--muted)}
 .foot{margin-top:34px;font-size:12px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
 @media(max-width:560px){.brand h1{font-size:20px}.row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}.kpi .v{font-size:22px}}
+
+#map{height:560px;border-radius:var(--r);border:1px solid var(--line);overflow:hidden;background:var(--bg2)}
+.leaflet-container{background:#0b0e12;font-family:var(--font)}
+.leaflet-control-zoom a{background:var(--bg2)!important;color:var(--txt)!important;border-color:var(--line)!important}
+.leaflet-control-zoom a:hover{background:var(--bg3)!important}
+.leaflet-bar{border-color:var(--line)!important;box-shadow:none!important}
+.leaflet-tooltip{background:var(--bg3);border:1px solid var(--line2);color:var(--txt);box-shadow:0 4px 14px rgba(0,0,0,.4);font-size:13px}
+.leaflet-tooltip-top:before{border-top-color:var(--line2)}
+.leaflet-control-attribution{background:rgba(14,17,22,.7)!important;color:var(--faint)!important}
+.leaflet-control-attribution a{color:var(--muted)!important}
+.maplegend{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12px;color:var(--muted)}
+.maplegend .grad{flex:1;max-width:240px;height:8px;border-radius:99px;background:linear-gradient(90deg,#1c8e72,#2dd4a7,#c2f24a,#f0b429,#f0654a)}
 </style>
 </head>
 <body>
@@ -116,6 +131,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
   <div class="tabs">
     <button class="tab on" data-tab="clubs">Clubs</button>
     <button class="tab" data-tab="report">Bericht</button>
+    <button class="tab" data-tab="map">Karte</button>
   </div>
 
   <div class="controls">
@@ -151,6 +167,13 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
   </div>
 
   <div id="report-view" style="display:none"></div>
+
+  <div id="map-view" style="display:none">
+    <div class="section-h">Buchungsaufkommen in Berlin · je heller/röter, desto mehr gebucht im gewählten Zeitraum</div>
+    <div id="map"></div>
+    <div class="maplegend"><span>weniger</span><span class="grad"></span><span>mehr gebucht</span>
+      <span style="margin-left:auto;color:var(--faint)">Punkt antippen für Details · zoomen mit + / −</span></div>
+  </div>
 
   <div class="foot" id="foot"></div>
 </div>
@@ -317,13 +340,41 @@ function renderReport(from,to){
     </div>`;
 }
 
+/* ---------- Karte (Heatmap) ---------- */
+let MAP=null,HEAT=null,MARKERS=null;
+function initMap(){
+  MAP=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([52.515,13.40],11);
+  L.tileLayer('https://{s}.basemap.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    {attribution:'© OpenStreetMap · © CARTO',subdomains:'abcd',maxZoom:19}).addTo(MAP);
+  MARKERS=L.layerGroup().addTo(MAP);
+}
+function renderMap(from,to){
+  if(typeof L==="undefined"){$("map").innerHTML='<div class="empty" style="padding:60px 0">Karte konnte nicht geladen werden (keine Internetverbindung zur Kartenquelle).</div>';return;}
+  if(!MAP)initMap();
+  const rows=DATA.venues.filter(v=>v.lat&&v.lng).map(v=>{const c=computeRange(v,from,to);
+    return {v,hours:c.booked/60,occ:c.cap?c.booked/c.cap:0,rev:c.rev};});
+  const max=Math.max(1,...rows.map(r=>r.hours));
+  const pts=rows.map(r=>[r.v.lat,r.v.lng,Math.max(0.05,r.hours/max)]);
+  if(HEAT)MAP.removeLayer(HEAT);
+  HEAT=L.heatLayer(pts,{radius:48,blur:38,minOpacity:0.3,max:1.0,
+    gradient:{0.2:'#1c8e72',0.45:'#2dd4a7',0.7:'#c2f24a',0.88:'#f0b429',1.0:'#f0654a'}}).addTo(MAP);
+  MARKERS.clearLayers();
+  rows.forEach(r=>{const m=L.circleMarker([r.v.lat,r.v.lng],
+    {radius:5+14*(r.hours/max),color:'rgba(232,237,242,.7)',weight:1,fillColor:'#c2f24a',fillOpacity:0.05});
+    m.bindTooltip(`<b>${r.v.name}</b><br>${Math.round(r.hours)} Std · ${Math.round(r.occ*100)}% · ${eur(r.rev)}`,{direction:'top',offset:[0,-4]});
+    m.addTo(MARKERS);});
+  setTimeout(()=>{try{MAP.invalidateSize()}catch(e){}},60);
+}
+
 function renderAll(){
-  const[from,to]=currentRange();
-  renderRangeLabel();
-  if(tab==="clubs"){$("clubs-view").style.display="";$("report-view").style.display="none";
-    $("clubs-controls").style.display="";renderKPIs(from,to);renderList(from,to);}
-  else{$("clubs-view").style.display="none";$("report-view").style.display="";
-    $("clubs-controls").style.display="none";renderReport(from,to);}
+  const[from,to]=currentRange();renderRangeLabel();
+  $("clubs-view").style.display=tab==="clubs"?"":"none";
+  $("report-view").style.display=tab==="report"?"":"none";
+  $("map-view").style.display=tab==="map"?"":"none";
+  $("clubs-controls").style.display=tab==="clubs"?"":"none";
+  if(tab==="clubs"){renderKPIs(from,to);renderList(from,to);}
+  else if(tab==="report"){renderReport(from,to);}
+  else{renderMap(from,to);}
 }
 
 function init(){
