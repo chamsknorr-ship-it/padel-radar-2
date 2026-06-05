@@ -16,18 +16,13 @@
 :root{
   --bg:#0e1116; --bg2:#161b22; --bg3:#1c232d; --line:#262d38; --line2:#323b48;
   --txt:#e8edf2; --muted:#9aa6b2; --faint:#6b7682;
-  --acc:#c2f24a; --acc-dim:#8fae3a; --teal:#2dd4a7; --teal-dim:#1c8e72;
-  --warn:#f0b429; --blue:#5aa9f0;
-  --font-disp:'Bricolage Grotesque',sans-serif;
-  --font:'Schibsted Grotesk',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
-  --r:12px; --r-sm:8px;
+  --acc:#c2f24a; --teal:#2dd4a7; --teal-dim:#1c8e72; --warn:#f0b429; --blue:#5aa9f0;
+  --font-disp:'Bricolage Grotesque',sans-serif; --font:'Schibsted Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace; --r:12px; --r-sm:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.5;
-  -webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 0}
+body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 0}
 .wrap{max-width:1100px;margin:0 auto;padding:20px 16px 64px}
-a{color:inherit}
 
 .top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:6px}
 .brand{display:flex;align-items:center;gap:11px}
@@ -36,31 +31,34 @@ a{color:inherit}
 .brand h1{font-family:var(--font-disp);font-weight:700;font-size:23px;letter-spacing:-.02em}
 .brand .sub{font-size:13px;color:var(--muted)}
 .updated{font-size:12px;color:var(--faint);font-family:var(--mono)}
-.sample{display:inline-block;margin-top:8px;font-size:12px;color:#0e1116;background:var(--warn);
-  padding:3px 10px;border-radius:99px;font-weight:600}
+.sample{display:inline-block;margin-top:8px;font-size:12px;color:#0e1116;background:var(--warn);padding:3px 10px;border-radius:99px;font-weight:600}
 
-.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}
-.seg{display:flex;background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:3px}
-.seg button{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:14px;
-  padding:7px 16px;border-radius:99px;cursor:pointer;transition:.12s}
+.tabs{display:flex;gap:6px;margin:16px 0 14px;border-bottom:1px solid var(--line)}
+.tab{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:15px;padding:9px 4px;margin-right:14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab.on{color:var(--txt);border-bottom-color:var(--acc)}
+
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 8px}
+.seg{display:flex;flex-wrap:wrap;background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:3px}
+.seg button{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:14px;padding:7px 14px;border-radius:99px;cursor:pointer;transition:.12s;white-space:nowrap}
 .seg button.on{background:var(--acc);color:#0e1116;font-weight:600}
-.search{flex:1;min-width:160px}
-.search input{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);
-  font-family:var(--font);font-size:14px;padding:9px 13px;border-radius:var(--r-sm);outline:none}
-.search input:focus{border-color:var(--line2)}
-.sort select{background:var(--bg2);border:1px solid var(--line);color:var(--txt);font-family:var(--font);
-  font-size:14px;padding:9px 12px;border-radius:var(--r-sm);outline:none;cursor:pointer}
+.daterange{display:none;gap:8px;align-items:center;flex-wrap:wrap}
+.daterange.on{display:flex}
+.daterange label{font-size:13px;color:var(--muted)}
+.daterange input{background:var(--bg2);border:1px solid var(--line);color:var(--txt);font-family:var(--font);font-size:14px;padding:7px 10px;border-radius:var(--r-sm);color-scheme:dark;outline:none}
+.search{flex:1;min-width:150px}
+.search input{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);font-family:var(--font);font-size:14px;padding:9px 13px;border-radius:var(--r-sm);outline:none}
+.sort select{background:var(--bg2);border:1px solid var(--line);color:var(--txt);font-family:var(--font);font-size:14px;padding:9px 12px;border-radius:var(--r-sm);cursor:pointer}
+.rangelabel{font-size:12px;color:var(--faint);font-family:var(--mono);margin:2px 0 16px}
 
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
 .kpi{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
-.kpi .l{font-size:12px;color:var(--muted);letter-spacing:.01em}
-.kpi .v{font-family:var(--mono);font-size:26px;font-weight:500;margin-top:6px;letter-spacing:-.02em}
+.kpi .l{font-size:12px;color:var(--muted)}
+.kpi .v{font-family:var(--mono);font-size:25px;font-weight:500;margin-top:6px;letter-spacing:-.02em}
 .kpi .v.acc{color:var(--acc)}
 
-.section-h{font-size:13px;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.section-h{font-size:13px;color:var(--muted);margin-bottom:10px}
 .list{display:flex;flex-direction:column;gap:9px}
-.row{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:14px;
-  background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;cursor:pointer;transition:.12s}
+.row{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;cursor:pointer;transition:.12s}
 .row:hover{border-color:var(--line2);background:var(--bg3)}
 .row .rank{font-family:var(--mono);font-size:14px;color:var(--faint)}
 .row .nm{font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -71,58 +69,53 @@ a{color:inherit}
 .bar .m{background:var(--teal)}
 .bar .e{background:repeating-linear-gradient(45deg,var(--teal-dim) 0 4px,transparent 4px 8px)}
 .legend{display:flex;gap:18px;margin-top:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
-.legend span{display:flex;align-items:center;gap:6px}
-.sw{width:11px;height:11px;border-radius:3px}
+.legend span{display:flex;align-items:center;gap:6px}.sw{width:11px;height:11px;border-radius:3px}
+.empty{color:var(--faint);font-size:14px;padding:26px 0;text-align:center}
 
-.empty{color:var(--faint);font-size:14px;padding:30px 0;text-align:center}
-
-.overlay{position:fixed;inset:0;background:rgba(6,9,13,.72);display:none;align-items:flex-start;
-  justify-content:center;padding:24px 14px;overflow-y:auto;z-index:50}
-.overlay.on{display:flex}
-.panel{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;max-width:720px;width:100%;
-  padding:22px;margin:auto}
-.panel .back{background:none;border:1px solid var(--line2);color:var(--muted);font-family:var(--font);
-  font-size:13px;padding:7px 13px;border-radius:99px;cursor:pointer;margin-bottom:16px}
-.panel h2{font-family:var(--font-disp);font-weight:600;font-size:21px;letter-spacing:-.02em}
-.panel .dsub{font-size:13px;color:var(--muted);margin:2px 0 18px}
-.mcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}
-.mcard{background:var(--bg);border-radius:var(--r);padding:13px 15px}
-.mcard .l{font-size:12px;color:var(--muted)}
-.mcard .v{font-family:var(--mono);font-size:23px;font-weight:500;margin-top:5px}
-.mcard .x{font-size:11px;color:var(--faint);margin-top:3px}
-.dh{font-size:13px;color:var(--muted);margin:20px 0 12px}
-.tbar{margin-bottom:13px}
+.tbar{margin-bottom:11px}
 .tbar .t{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px}
 .tbar .t .r{color:var(--muted);font-family:var(--mono);font-size:13px}
 .tbar .track{height:8px;border-radius:99px;background:var(--bg);overflow:hidden}
 .tbar .fill{height:100%;border-radius:99px}
+
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.card h3{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:640px){.two{grid-template-columns:1fr;gap:0}}
+
+.overlay{position:fixed;inset:0;background:rgba(6,9,13,.72);display:none;align-items:flex-start;justify-content:center;padding:24px 14px;overflow-y:auto;z-index:50}
+.overlay.on{display:flex}
+.panel{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;max-width:720px;width:100%;padding:22px;margin:auto}
+.panel .back{background:none;border:1px solid var(--line2);color:var(--muted);font-family:var(--font);font-size:13px;padding:7px 13px;border-radius:99px;cursor:pointer;margin-bottom:16px}
+.panel h2{font-family:var(--font-disp);font-weight:600;font-size:21px;letter-spacing:-.02em}
+.panel .dsub{font-size:13px;color:var(--muted);margin:2px 0 18px}
+.mcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}
+.mcard{background:var(--bg);border-radius:var(--r);padding:13px 15px}
+.mcard .l{font-size:12px;color:var(--muted)}.mcard .v{font-family:var(--mono);font-size:23px;font-weight:500;margin-top:5px}
+.mcard .x{font-size:11px;color:var(--faint);margin-top:3px}
+.dh{font-size:13px;color:var(--muted);margin:20px 0 12px}
 .ev{display:flex;gap:11px;align-items:flex-start;background:var(--bg);border-radius:var(--r-sm);padding:11px 13px;margin-bottom:9px}
 .ev .dot{width:9px;height:9px;border-radius:50%;background:var(--warn);margin-top:6px;flex:none}
-.ev .n{font-size:14px;font-weight:500}
-.ev .nt{font-size:12px;color:var(--muted)}
+.ev .n{font-size:14px;font-weight:500}.ev .nt{font-size:12px;color:var(--muted)}
 .foot{margin-top:34px;font-size:12px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
-
-@media(max-width:560px){
-  .brand h1{font-size:20px}
-  .row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}
-  .kpi .v{font-size:22px}
-}
+@media(max-width:560px){.brand h1{font-size:20px}.row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}.kpi .v{font-size:22px}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <h1>Padel Radar</h1>
-          <div class="sub">Wettbewerbs-Monitoring · Berlin</div>
-        </div>
+      <div class="brand"><div class="logo"></div>
+        <div><h1>Padel Radar</h1><div class="sub">Wettbewerbs-Monitoring · Berlin</div></div>
       </div>
       <div id="sample-badge"></div>
     </div>
     <div class="updated" id="updated"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab on" data-tab="clubs">Clubs</button>
+    <button class="tab" data-tab="report">Bericht</button>
   </div>
 
   <div class="controls">
@@ -130,25 +123,34 @@ a{color:inherit}
       <button data-p="today">Heute</button>
       <button data-p="week" class="on">Woche</button>
       <button data-p="month">Monat</button>
+      <button data-p="custom">Eigener Zeitraum</button>
     </div>
-    <div class="sort">
-      <select id="sort">
-        <option value="rev">Sortieren: Umsatz</option>
-        <option value="occ">Sortieren: Auslastung</option>
-        <option value="name">Sortieren: Name</option>
-      </select>
+    <div class="daterange" id="daterange">
+      <label>von <input type="date" id="d-from"></label>
+      <label>bis <input type="date" id="d-to"></label>
     </div>
+  </div>
+  <div class="controls" id="clubs-controls">
+    <div class="sort"><select id="sort">
+      <option value="rev">Sortieren: Umsatz</option>
+      <option value="occ">Sortieren: Auslastung</option>
+      <option value="name">Sortieren: Name</option>
+    </select></div>
     <div class="search"><input id="search" type="search" placeholder="Club oder Bezirk suchen…"></div>
   </div>
+  <div class="rangelabel" id="rangelabel"></div>
 
-  <div class="kpis" id="kpis"></div>
-
-  <div class="section-h"><span id="list-title">Clubs nach geschätztem Umsatz</span></div>
-  <div class="list" id="list"></div>
-  <div class="legend">
-    <span><span class="sw" style="background:var(--teal)"></span>gemessen (live erfasst)</span>
-    <span><span class="sw" style="background:repeating-linear-gradient(45deg,var(--teal-dim) 0 3px,transparent 3px 6px)"></span>geschätzt (Altbestand)</span>
+  <div id="clubs-view">
+    <div class="kpis" id="kpis"></div>
+    <div class="section-h" id="list-title">Clubs nach geschätztem Umsatz</div>
+    <div class="list" id="list"></div>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--teal)"></span>gemessen (live erfasst)</span>
+      <span><span class="sw" style="background:repeating-linear-gradient(45deg,var(--teal-dim) 0 3px,transparent 3px 6px)"></span>geschätzt (Altbestand)</span>
+    </div>
   </div>
+
+  <div id="report-view" style="display:none"></div>
 
   <div class="foot" id="foot"></div>
 </div>
@@ -156,125 +158,199 @@ a{color:inherit}
 <div class="overlay" id="overlay"><div class="panel" id="panel"></div></div>
 
 <script>
-const PLABEL={today:"heute",week:"diese Woche",month:"diesen Monat"};
-const FALLBACK={updated_at:new Date().toISOString(),city:"Berlin",sample:true,periods:["today","week","month"],
-  venues:[{tenant_id:"x",name:"Beispiel-Club",district:"Berlin",courts:4,
-    metrics:{today:{occupancy:.7,rev_measured:300,rev_estimated:500,booked_hours:30,observed_days:1,ccy:"EUR"},
-             week:{occupancy:.66,rev_measured:2100,rev_estimated:2600,booked_hours:210,observed_days:7,ccy:"EUR"},
-             month:{occupancy:.62,rev_measured:9000,rev_estimated:9000,booked_hours:900,observed_days:30,ccy:"EUR"}},
-    by_type:{today:[{label:"Double · Indoor",courts:4,occupancy:.7,revenue:800}],week:[{label:"Double · Indoor",courts:4,occupancy:.66,revenue:4700}],month:[{label:"Double · Indoor",courts:4,occupancy:.62,revenue:18000}]},
-    by_duration:{today:{"1h":.3,"1,5h":.5,"2h":.2},week:{"1h":.3,"1,5h":.5,"2h":.2},month:{"1h":.3,"1,5h":.5,"2h":.2}},
-    events:[]}]};
+const FALLBACK={updated_at:new Date().toISOString(),city:"Berlin",sample:true,
+  date_min:new Date().toISOString().slice(0,10),date_max:new Date().toISOString().slice(0,10),
+  venues:[{tenant_id:"x",name:"Beispiel-Club",district:"Berlin",lat:52.52,lng:13.40,courts:4,
+    capacity:{"Double · Indoor":3120},court_types:[{label:"Double · Indoor",courts:4}],
+    daily:{[new Date().toISOString().slice(0,10)]:{rev_m:120,rev_e:300,measured_min:240,types:{"Double · Indoor":{b:600,r:420}},tod:{Abend:240},dur:{"1h":4}}},events:[]}]};
 
-let DATA=null, period="week", sortBy="rev", query="";
+let DATA=null, tab="clubs", preset="week", sortBy="rev", query="";
+let cFrom=null, cTo=null;
+const $=id=>document.getElementById(id);
 const eur=n=>"€"+Math.round(n).toLocaleString("de-DE");
 const pct=n=>Math.round(n*100)+"%";
-const $=id=>document.getElementById(id);
+const ddmm=iso=>{const[y,m,d]=iso.split("-");return d+"."+m+".";};
+const maxS=(a,b)=>a>b?a:b, minS=(a,b)=>a<b?a:b;
 
-function totalRev(v,p){const m=v.metrics[p];return m.rev_measured+m.rev_estimated;}
+function* eachDate(from,to){let[y,m,d]=from.split("-").map(Number);let cur=Date.UTC(y,m-1,d);
+  const[Y,M,D]=to.split("-").map(Number);const end=Date.UTC(Y,M-1,D);
+  while(cur<=end){yield new Date(cur).toISOString().slice(0,10);cur+=86400000;}}
+function weekdayOf(iso){const[y,m,d]=iso.split("-").map(Number);
+  return["So","Mo","Di","Mi","Do","Fr","Sa"][new Date(Date.UTC(y,m-1,d)).getUTCDay()];}
+function todayISO(){return new Date().toISOString().slice(0,10);}
 
-function renderKPIs(){
-  const vs=DATA.venues; let cap=0,book=0,rev=0,ev=0;
-  vs.forEach(v=>{const m=v.metrics[period];rev+=m.rev_measured+m.rev_estimated;book+=m.booked_hours;
-    cap+=(m.booked_hours/(m.occupancy||1));ev+=(v.events||[]).length;});
-  const occ=cap?book/cap:0;
-  const cards=[["Clubs erfasst",vs.length,""],["Ø Auslastung",pct(occ),""],
-    ["Umsatz · "+PLABEL[period],eur(rev),"acc"],["Events erkannt",ev,""]];
-  $("kpis").innerHTML=cards.map(c=>`<div class="kpi"><div class="l">${c[0]}</div>
-    <div class="v ${c[2]}">${c[1]}</div></div>`).join("");
+function currentRange(){
+  const dmin=DATA.date_min, dmax=DATA.date_max, t=todayISO();
+  if(preset==="custom") return [maxS(cFrom||dmin,dmin), minS(cTo||dmax,dmax)];
+  if(preset==="today")  return [maxS(t,dmin), minS(t,dmax)];
+  if(preset==="week"){const[y,m,d]=t.split("-").map(Number);const dt=new Date(Date.UTC(y,m-1,d));
+    const dow=(dt.getUTCDay()+6)%7;const mon=new Date(dt);mon.setUTCDate(dt.getUTCDate()-dow);
+    const sun=new Date(mon);sun.setUTCDate(mon.getUTCDate()+6);
+    return [maxS(mon.toISOString().slice(0,10),dmin), minS(sun.toISOString().slice(0,10),dmax)];}
+  if(preset==="month"){const[y,m]=t.split("-");const first=`${y}-${m}-01`;
+    const last=new Date(Date.UTC(+y,+m,0)).toISOString().slice(0,10);
+    return [maxS(first,dmin), minS(last,dmax)];}
+  return [dmin,dmax];
 }
 
-function renderList(){
-  let vs=DATA.venues.filter(v=>{
-    if(!query)return true;const q=query.toLowerCase();
-    return v.name.toLowerCase().includes(q)||(v.district||"").toLowerCase().includes(q);});
-  vs=vs.slice().sort((a,b)=>{
-    if(sortBy==="name")return a.name.localeCompare(b.name);
-    if(sortBy==="occ")return b.metrics[period].occupancy-a.metrics[period].occupancy;
-    return totalRev(b,period)-totalRev(a,period);});
-  const max=Math.max(1,...vs.map(v=>totalRev(v,period)));
+function computeRange(v,from,to){
+  let nDays=0,booked=0,rev_m=0,rev_e=0,mm=0;
+  const typeB={},typeR={},tod={},dur={},wd={};
+  for(const iso of eachDate(from,to)){const rec=v.daily[iso];if(!rec)continue;nDays++;
+    rev_m+=rec.rev_m||0;rev_e+=rec.rev_e||0;mm+=rec.measured_min||0;
+    const w=weekdayOf(iso);wd[w]=(wd[w]||0)+(rec.measured_min||0);
+    for(const k in rec.types){typeB[k]=(typeB[k]||0)+rec.types[k].b;typeR[k]=(typeR[k]||0)+rec.types[k].r;booked+=rec.types[k].b;}
+    for(const k in rec.tod) tod[k]=(tod[k]||0)+rec.tod[k];
+    for(const k in rec.dur) dur[k]=(dur[k]||0)+rec.dur[k];}
+  const cap1=Object.values(v.capacity||{}).reduce((a,b)=>a+b,0);
+  const typeCap={};for(const k in (v.capacity||{}))typeCap[k]=v.capacity[k]*nDays;
+  return {nDays,booked,cap:cap1*nDays,rev_m,rev_e,rev:rev_m+rev_e,mm,typeB,typeR,typeCap,tod,dur,wd};
+}
+
+function tbar(label,frac,right,color){return `<div class="tbar"><div class="t"><span>${label}</span>
+  <span class="r">${right}</span></div><div class="track"><div class="fill" style="width:${Math.round(frac*100)}%;background:${color}"></div></div></div>`;}
+function barShares(obj,order,color){const tot=order.reduce((a,k)=>a+(obj[k]||0),0);
+  if(tot<=0)return '<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
+  return order.map(k=>tbar(k,(obj[k]||0)/tot,Math.round((obj[k]||0)/tot*100)+"%",color)).join("");}
+
+const TODO=["Vormittag","Mittag","Nachmittag","Abend","Nachts"];
+const WDO=["Mo","Di","Mi","Do","Fr","Sa","So"];
+const DURO=["1h","1,5h","2h"];
+
+function renderRangeLabel(){const[f,t]=currentRange();const r=computeRange(DATA.venues[0]||{daily:{},capacity:{}},f,t);
+  let nd=0;for(const _ of eachDate(f,t))nd++;
+  $("rangelabel").textContent=`${ddmm(f)}–${ddmm(t)} · ${nd} Tag${nd===1?"":"e"}`;}
+
+/* ---------- Clubs-Ansicht ---------- */
+function renderKPIs(from,to){
+  let cap=0,book=0,rev=0,ev=0;
+  DATA.venues.forEach(v=>{const c=computeRange(v,from,to);cap+=c.cap;book+=c.booked;rev+=c.rev;
+    ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;});
+  const cards=[["Clubs erfasst",DATA.venues.length,""],["Ø Auslastung",pct(cap?book/cap:0),""],
+    ["Umsatz · Zeitraum",eur(rev),"acc"],["Events erkannt",ev,""]];
+  $("kpis").innerHTML=cards.map(c=>`<div class="kpi"><div class="l">${c[0]}</div><div class="v ${c[2]}">${c[1]}</div></div>`).join("");
+}
+function renderList(from,to){
+  let vs=DATA.venues.map(v=>({v,c:computeRange(v,from,to)}));
+  vs=vs.filter(x=>{if(!query)return true;const q=query.toLowerCase();
+    return x.v.name.toLowerCase().includes(q)||(x.v.district||"").toLowerCase().includes(q);});
+  vs.sort((a,b)=>sortBy==="name"?a.v.name.localeCompare(b.v.name):sortBy==="occ"
+    ?(b.c.cap?b.c.booked/b.c.cap:0)-(a.c.cap?a.c.booked/a.c.cap:0):b.c.rev-a.c.rev);
+  const max=Math.max(1,...vs.map(x=>x.c.rev));
   if(!vs.length){$("list").innerHTML='<div class="empty">Keine Clubs gefunden.</div>';return;}
-  $("list").innerHTML=vs.map((v,i)=>{
-    const m=v.metrics[period];const mw=m.rev_measured/max*100,ew=m.rev_estimated/max*100;
-    const idx=DATA.venues.indexOf(v);
-    return `<div class="row" onclick="openDetail(${idx})">
-      <span class="rank">${i+1}</span>
+  $("list").innerHTML=vs.map((x,i)=>{const c=x.c,occ=c.cap?c.booked/c.cap:0;
+    const mw=c.rev_m/max*100,ew=c.rev_e/max*100;const idx=DATA.venues.indexOf(x.v);
+    return `<div class="row" onclick="openDetail(${idx})"><span class="rank">${i+1}</span>
       <div style="min-width:0">
         <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline">
-          <span class="nm">${v.name}</span>
-          <span class="rev">${eur(totalRev(v,period))}</span>
-        </div>
+          <span class="nm">${x.v.name}</span><span class="rev">${eur(c.rev)}</span></div>
         <div style="display:flex;justify-content:space-between;gap:10px">
-          <span class="ds">${v.district||""}</span>
-          <span class="meta">${pct(m.occupancy)} Auslastung · ${v.courts} Courts</span>
-        </div>
+          <span class="ds">${x.v.district||""}</span>
+          <span class="meta">${pct(occ)} Auslastung · ${x.v.courts} Courts</span></div>
         <div class="bar"><div class="m" style="width:${mw}%"></div><div class="e" style="width:${ew}%"></div></div>
-      </div>
-      <span style="color:var(--faint);font-size:18px">›</span>
-    </div>`;}).join("");
+      </div><span style="color:var(--faint);font-size:18px">›</span></div>`;}).join("");
 }
-
-function tbar(label,frac,right,color){
-  return `<div class="tbar"><div class="t"><span>${label}</span><span class="r">${right}</span></div>
-    <div class="track"><div class="fill" style="width:${Math.round(frac*100)}%;background:${color}"></div></div></div>`;}
-
-function openDetail(idx){
-  const v=DATA.venues[idx],m=v.metrics[period];
-  const types=v.by_type[period]||[];const maxT=Math.max(1,...types.map(t=>t.revenue));
-  const dur=v.by_duration[period]||{};
-  const tod=(v.by_timeofday&&v.by_timeofday[period])||{};
-  const todOrder=["Vormittag","Mittag","Nachmittag","Abend","Nachts"];
-  const todSum=todOrder.reduce((a,k)=>a+(tod[k]||0),0);
-  const todHtml=todSum>0?todOrder.map(k=>tbar(k,tod[k]||0,Math.round((tod[k]||0)*100)+"%","var(--teal)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
-  const wd=(v.by_weekday&&v.by_weekday[period])||{};
-  const wdOrder=["Mo","Di","Mi","Do","Fr","Sa","So"];
-  const wdSum=wdOrder.reduce((a,k)=>a+(wd[k]||0),0);
-  const wdHtml=wdSum>0?wdOrder.map(k=>tbar(k,wd[k]||0,Math.round((wd[k]||0)*100)+"%","var(--blue)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
-  const typeHtml=types.length?types.map(t=>tbar(t.label,t.revenue/maxT,pct(t.occupancy)+" · "+eur(t.revenue),"var(--blue)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine Daten.</div>';
-  const durHtml=Object.keys(dur).length?["1h","1,5h","2h"].map(k=>tbar(k,dur[k]||0,Math.round((dur[k]||0)*100)+"%","var(--warn)")).join(""):'<div class="empty" style="padding:12px 0">Noch keine gemessenen Buchungen.</div>';
-  const evs=v.events||[];
-  const evHtml=evs.length?evs.map(e=>`<div class="ev"><span class="dot"></span><div>
-    <div class="n">${e.name} · ${e.date}</div><div class="nt">${e.note||""}</div></div></div>`).join(""):'<div class="empty" style="padding:12px 0">Keine Events erkannt.</div>';
-  $("panel").innerHTML=`
-    <button class="back" onclick="closeDetail()">‹ zurück</button>
-    <h2>${v.name}</h2>
-    <div class="dsub">${v.district||""} · ${v.courts} Courts · ${PLABEL[period]} · ${m.observed_days} beobachtete Tage</div>
+function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];const c=computeRange(v,from,to);
+  const occ=c.cap?c.booked/c.cap:0;
+  const types=(v.court_types||[]).map(t=>({label:t.label,courts:t.courts,
+    occ:c.typeCap[t.label]?(c.typeB[t.label]||0)/c.typeCap[t.label]:0,rev:c.typeR[t.label]||0}));
+  const maxT=Math.max(1,...types.map(t=>t.rev));
+  const typeHtml=types.length?types.map(t=>tbar(`${t.label} · ${t.courts} C`,t.rev/maxT,pct(t.occ)+" · "+eur(t.rev),"var(--blue)")).join(""):'<div class="empty">–</div>';
+  const evs=(v.events||[]).filter(e=>e.date>=from&&e.date<=to);
+  const evHtml=evs.length?evs.map(e=>`<div class="ev"><span class="dot"></span><div><div class="n">${e.name} · ${ddmm(e.date)}</div><div class="nt">${e.note||""}</div></div></div>`).join(""):'<div class="empty" style="padding:12px 0">Keine Events erkannt.</div>';
+  $("panel").innerHTML=`<button class="back" onclick="closeDetail()">‹ zurück</button>
+    <h2>${v.name}</h2><div class="dsub">${v.district||""} · ${v.courts} Courts · ${ddmm(from)}–${ddmm(to)} · ${c.nDays} beob. Tage</div>
     <div class="mcards">
-      <div class="mcard"><div class="l">Auslastung</div><div class="v">${pct(m.occupancy)}</div></div>
-      <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(m.rev_measured+m.rev_estimated)}</div>
-        <div class="x">${eur(m.rev_measured)} gemessen · ${eur(m.rev_estimated)} geschätzt</div></div>
-      <div class="mcard"><div class="l">Gebuchte Std.</div><div class="v">${Math.round(m.booked_hours)}</div></div>
+      <div class="mcard"><div class="l">Auslastung</div><div class="v">${pct(occ)}</div></div>
+      <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(c.rev)}</div><div class="x">${eur(c.rev_m)} gemessen · ${eur(c.rev_e)} geschätzt</div></div>
+      <div class="mcard"><div class="l">Gebuchte Std.</div><div class="v">${Math.round(c.booked/60)}</div></div>
     </div>
     <div class="dh">Nach Court-Typ · Auslastung &amp; Umsatz</div>${typeHtml}
-    <div class="dh">Nach Buchungslänge · Anteil</div>${durHtml}
-    <div class="dh">Nach Tageszeit · Anteil</div>${todHtml}
-    <div class="dh">Nach Wochentag · Anteil</div>${wdHtml}
+    <div class="dh">Nach Buchungslänge · Anteil</div>${barShares(c.dur,DURO,"var(--warn)")}
+    <div class="dh">Nach Tageszeit · Anteil</div>${barShares(c.tod,TODO,"var(--teal)")}
+    <div class="dh">Nach Wochentag · Anteil</div>${barShares(c.wd,WDO,"var(--blue)")}
     <div class="dh">Events &amp; Turniere</div>${evHtml}`;
   $("overlay").classList.add("on");document.body.style.overflow="hidden";
 }
 function closeDetail(){$("overlay").classList.remove("on");document.body.style.overflow="";}
 $("overlay").addEventListener("click",e=>{if(e.target===$("overlay"))closeDetail();});
 
-function renderAll(){renderKPIs();renderList();}
+/* ---------- Bericht-Ansicht (ganz Berlin) ---------- */
+function renderReport(from,to){
+  let cap=0,book=0,rev_m=0,rev_e=0,courts=0,ev=0;
+  const typeB={},typeR={},typeCap={},tod={},dur={},wd={};
+  const per=[];
+  DATA.venues.forEach(v=>{const c=computeRange(v,from,to);cap+=c.cap;book+=c.booked;rev_m+=c.rev_m;rev_e+=c.rev_e;
+    courts+=v.courts;ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;
+    for(const k in c.typeB){typeB[k]=(typeB[k]||0)+c.typeB[k];typeR[k]=(typeR[k]||0)+c.typeR[k];}
+    for(const k in c.typeCap)typeCap[k]=(typeCap[k]||0)+c.typeCap[k];
+    for(const k in c.tod)tod[k]=(tod[k]||0)+c.tod[k];
+    for(const k in c.dur)dur[k]=(dur[k]||0)+c.dur[k];
+    for(const k in c.wd)wd[k]=(wd[k]||0)+c.wd[k];
+    per.push({name:v.name,occ:c.cap?c.booked/c.cap:0,rev:c.rev});});
+  const occ=cap?book/cap:0, rev=rev_m+rev_e;
+  const types=Object.keys(typeCap).sort();
+  const maxTr=Math.max(1,...types.map(t=>typeR[t]||0));
+  const typeHtml=types.length?types.map(t=>tbar(t,(typeR[t]||0)/maxTr,
+    pct(typeCap[t]?(typeB[t]||0)/typeCap[t]:0)+" · "+eur(typeR[t]||0),"var(--blue)")).join(""):'<div class="empty">–</div>';
+  const topRev=[...per].sort((a,b)=>b.rev-a.rev).slice(0,5);
+  const topOcc=[...per].sort((a,b)=>b.occ-a.occ).slice(0,5);
+  const maxR=Math.max(1,...topRev.map(x=>x.rev));
+  $("report-view").innerHTML=`
+    <div class="kpis">
+      <div class="kpi"><div class="l">Clubs · Courts</div><div class="v">${DATA.venues.length} · ${courts}</div></div>
+      <div class="kpi"><div class="l">Ø Auslastung Berlin</div><div class="v">${pct(occ)}</div></div>
+      <div class="kpi"><div class="l">Umsatz gesamt</div><div class="v acc">${eur(rev)}</div><div class="x" style="font-size:11px;color:var(--faint);margin-top:3px">${eur(rev_m)} gemessen · ${eur(rev_e)} geschätzt</div></div>
+      <div class="kpi"><div class="l">Events erkannt</div><div class="v">${ev}</div></div>
+    </div>
+    <div class="two">
+      <div class="card"><h3>Auslastung &amp; Umsatz nach Court-Typ (ganz Berlin)</h3>${typeHtml}</div>
+      <div class="card"><h3>Buchungen nach Tageszeit</h3>${barShares(tod,TODO,"var(--teal)")}</div>
+    </div>
+    <div class="two">
+      <div class="card"><h3>Buchungen nach Wochentag</h3>${barShares(wd,WDO,"var(--blue)")}</div>
+      <div class="card"><h3>Buchungen nach Länge</h3>${barShares(dur,DURO,"var(--warn)")}</div>
+    </div>
+    <div class="two">
+      <div class="card"><h3>Top 5 nach Umsatz</h3>${topRev.map(x=>tbar(x.name,x.rev/maxR,eur(x.rev),"var(--teal)")).join("")||'<div class="empty">–</div>'}</div>
+      <div class="card"><h3>Top 5 nach Auslastung</h3>${topOcc.map(x=>tbar(x.name,x.occ,pct(x.occ),"var(--acc)")).join("")||'<div class="empty">–</div>'}</div>
+    </div>`;
+}
+
+function renderAll(){
+  const[from,to]=currentRange();
+  renderRangeLabel();
+  if(tab==="clubs"){$("clubs-view").style.display="";$("report-view").style.display="none";
+    $("clubs-controls").style.display="";renderKPIs(from,to);renderList(from,to);}
+  else{$("clubs-view").style.display="none";$("report-view").style.display="";
+    $("clubs-controls").style.display="none";renderReport(from,to);}
+}
 
 function init(){
-  const upd=new Date(DATA.updated_at);
-  $("updated").textContent="aktualisiert "+upd.toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  $("updated").textContent="aktualisiert "+new Date(DATA.updated_at).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
   if(DATA.sample)$("sample-badge").innerHTML='<span class="sample">Beispieldaten – echte Zahlen nach Einrichtung</span>';
-  $("foot").innerHTML="Zahlen sind Schätzungen aus öffentlich sichtbarer Verfügbarkeit (Snapshot-Vergleich alle 15 Min). "+
-    "»Gemessen« = während des Monitorings live erfasste Buchungen, »geschätzt« = Belegung, die schon vor Beobachtungsbeginn bestand. "+
-    "Auslastung bezieht sich nur auf beobachtete Tage.";
-  $("seg").addEventListener("click",e=>{if(e.target.dataset.p){period=e.target.dataset.p;
-    [...$("seg").children].forEach(b=>b.classList.toggle("on",b===e.target));renderAll();}});
-  $("sort").addEventListener("change",e=>{sortBy=e.target.value;renderList();});
-  $("search").addEventListener("input",e=>{query=e.target.value;renderList();});
+  $("foot").innerHTML="Zahlen sind Schätzungen aus öffentlich sichtbarer Verfügbarkeit (Snapshot-Vergleich). "+
+    "»Gemessen« = live erfasste Buchungen, »geschätzt« = Belegung vor Beobachtungsbeginn. "+
+    "Auslastung bezieht sich nur auf beobachtete Tage. Tageszeit/Wochentag/Länge basieren auf gemessenen Buchungen.";
+  // Datumsfelder
+  $("d-from").min=DATA.date_min;$("d-from").max=DATA.date_max;$("d-from").value=DATA.date_min;
+  $("d-to").min=DATA.date_min;$("d-to").max=DATA.date_max;$("d-to").value=DATA.date_max;
+  cFrom=DATA.date_min;cTo=DATA.date_max;
+
+  $("seg").addEventListener("click",e=>{if(!e.target.dataset.p)return;preset=e.target.dataset.p;
+    [...$("seg").children].forEach(b=>b.classList.toggle("on",b===e.target));
+    $("daterange").classList.toggle("on",preset==="custom");renderAll();});
+  $("d-from").addEventListener("change",e=>{cFrom=e.target.value;renderAll();});
+  $("d-to").addEventListener("change",e=>{cTo=e.target.value;renderAll();});
+  $("sort").addEventListener("change",e=>{sortBy=e.target.value;renderAll();});
+  $("search").addEventListener("input",e=>{query=e.target.value;renderAll();});
+  document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
+    tab=t.dataset.tab;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));renderAll();}));
   renderAll();
 }
 
-fetch("dashboard_data.json",{cache:"no-store"})
-  .then(r=>{if(!r.ok)throw 0;return r.json();})
-  .then(d=>{DATA=d;init();})
-  .catch(()=>{DATA=FALLBACK;init();});
+fetch("dashboard_data.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json();})
+  .then(d=>{DATA=d;init();}).catch(()=>{DATA=FALLBACK;init();});
 </script>
 </body>
 </html>
