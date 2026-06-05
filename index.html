@@ -362,8 +362,8 @@ function renderReport(from,to){
 let MAP=null,HEAT=null,MARKERS=null;
 function initMap(){
   MAP=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([52.515,13.40],11);
-  L.tileLayer('https://{s}.basemap.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    {attribution:'© OpenStreetMap · © CARTO',subdomains:'abcd',maxZoom:19}).addTo(MAP);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {attribution:'© OpenStreetMap',subdomains:'abc',maxZoom:19}).addTo(MAP);
   MARKERS=L.layerGroup().addTo(MAP);
 }
 function renderMap(from,to){
