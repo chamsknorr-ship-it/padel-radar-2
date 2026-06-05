@@ -105,7 +105,8 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
 @media(max-width:560px){.brand h1{font-size:20px}.row{grid-template-columns:22px 1fr auto;gap:10px;padding:12px}.kpi .v{font-size:22px}}
 
 #map{height:560px;border-radius:var(--r);border:1px solid var(--line);overflow:hidden;background:var(--bg2)}
-.leaflet-container{background:#0b0e12;font-family:var(--font)} .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.6)}
+.leaflet-container{background:#0b0e12;font-family:var(--font)}
+.leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.6)}
 .leaflet-control-zoom a{background:var(--bg2)!important;color:var(--txt)!important;border-color:var(--line)!important}
 .leaflet-control-zoom a:hover{background:var(--bg3)!important}
 .leaflet-bar{border-color:var(--line)!important;box-shadow:none!important}
@@ -319,7 +320,7 @@ $("overlay").addEventListener("click",e=>{if(e.target===$("overlay"))closeDetail
 /* ---------- Bericht-Ansicht (ganz Berlin) ---------- */
 function renderReport(from,to){
   let cap=0,book=0,rev_m=0,rev_e=0,courts=0,ev=0;
-  const typeB={},typeR={},typeCap={},tod={},dur={},wd={};
+  const typeB={},typeR={},typeCap={},tod={},dur={},wd={},vorlauf={},wdAdv={};
   const per=[];
   DATA.venues.forEach(v=>{const c=computeRange(v,from,to);cap+=c.cap;book+=c.booked;rev_m+=c.rev_m;rev_e+=c.rev_e;
     courts+=v.courts;ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;
@@ -328,12 +329,26 @@ function renderReport(from,to){
     for(const k in c.tod)tod[k]=(tod[k]||0)+c.tod[k];
     for(const k in c.dur)dur[k]=(dur[k]||0)+c.dur[k];
     for(const k in c.wd)wd[k]=(wd[k]||0)+c.wd[k];
+    for(const k in c.vorlauf)vorlauf[k]=(vorlauf[k]||0)+c.vorlauf[k];
+    for(const k in c.wdAdv){wdAdv[k]=wdAdv[k]||{s:0,n:0};wdAdv[k].s+=c.wdAdv[k].s;wdAdv[k].n+=c.wdAdv[k].n;}
     per.push({name:v.name,occ:c.cap?c.booked/c.cap:0,rev:c.rev});});
   const occ=cap?book/cap:0, rev=rev_m+rev_e;
   const types=Object.keys(typeCap).sort();
   const maxTr=Math.max(1,...types.map(t=>typeR[t]||0));
   const typeHtml=types.length?types.map(t=>tbar(t,(typeR[t]||0)/maxTr,
     pct(typeCap[t]?(typeB[t]||0)/typeCap[t]:0)+" · "+eur(typeR[t]||0),"var(--blue)")).join(""):'<div class="empty">–</div>';
+  // Wochentag mit Ø Vorlauf
+  const wtot=WDO.reduce((a,k)=>a+(wd[k]||0),0)||1;
+  const wdHtml=WDO.map(k=>{const avg=wdAdv[k]&&wdAdv[k].n>0?(wdAdv[k].s/wdAdv[k].n).toFixed(1):null;
+    const lbl=avg!==null?`${k} · Ø ${avg} T`:k;
+    return tbar(lbl,(wd[k]||0)/wtot,Math.round((wd[k]||0)/wtot*100)+"%","var(--blue)");}).join("")||
+    '<div class="empty">Noch keine gemessenen Buchungen.</div>';
+  // Vorlaufzeit
+  const VORO=["<2h","<6h","Gleicher Tag","1 Tag","2 Tage","3–7 Tage","8–14 Tage","15–30 Tage"];
+  const vtot=VORO.reduce((a,k)=>a+(vorlauf[k]||0),0);
+  const vorlaufHtml=vtot>0
+    ?VORO.map(k=>tbar(k,(vorlauf[k]||0)/vtot,Math.round((vorlauf[k]||0)/vtot*100)+"%","var(--acc)")).join("")
+    :'<div class="empty">Noch keine gemessenen Buchungen.</div>';
   const topRev=[...per].sort((a,b)=>b.rev-a.rev).slice(0,5);
   const topOcc=[...per].sort((a,b)=>b.occ-a.occ).slice(0,5);
   const maxR=Math.max(1,...topRev.map(x=>x.rev));
@@ -349,12 +364,15 @@ function renderReport(from,to){
       <div class="card"><h3>Buchungen nach Tageszeit</h3>${barShares(tod,TODO,"var(--teal)")}</div>
     </div>
     <div class="two">
-      <div class="card"><h3>Buchungen nach Wochentag</h3>${barShares(wd,WDO,"var(--blue)")}</div>
+      <div class="card"><h3>Buchungen nach Wochentag · mit Ø Vorlauf</h3>${wdHtml}</div>
       <div class="card"><h3>Buchungen nach Länge</h3>${barShares(dur,DURO,"var(--warn)")}</div>
     </div>
     <div class="two">
-      <div class="card"><h3>Top 5 nach Umsatz</h3>${topRev.map(x=>tbar(x.name,x.rev/maxR,eur(x.rev),"var(--teal)")).join("")||'<div class="empty">–</div>'}</div>
+      <div class="card"><h3>Vorlaufzeit · Anteil gemessener Buchungen</h3>${vorlaufHtml}</div>
       <div class="card"><h3>Top 5 nach Auslastung</h3>${topOcc.map(x=>tbar(x.name,x.occ,pct(x.occ),"var(--acc)")).join("")||'<div class="empty">–</div>'}</div>
+    </div>
+    <div class="two">
+      <div class="card"><h3>Top 5 nach Umsatz</h3>${topRev.map(x=>tbar(x.name,x.rev/maxR,eur(x.rev),"var(--teal)")).join("")||'<div class="empty">–</div>'}</div>
     </div>`;
 }
 
@@ -362,7 +380,7 @@ function renderReport(from,to){
 let MAP=null,HEAT=null,MARKERS=null;
 function initMap(){
   MAP=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([52.515,13.40],11);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     {attribution:'© OpenStreetMap',subdomains:'abc',maxZoom:19}).addTo(MAP);
   MARKERS=L.layerGroup().addTo(MAP);
 }
