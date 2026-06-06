@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T03:52+00:00",
+  "updated_at": "2026-06-06T04:08+00:00",
   "city": "Berlin",
   "date_min": "2026-06-04",
   "date_max": "2026-07-05",
@@ -21,6 +21,38 @@
         }
       ],
       "daily": {
+        "2026-06-19": {
+          "rev_m": 720.0,
+          "rev_e": 2646.0,
+          "measured_min": 1200.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 5610.0,
+              "r": 3366.0
+            }
+          },
+          "tod": {
+            "Nachts": 90,
+            "Vormittag": 360,
+            "Mittag": 60,
+            "Nachmittag": 210,
+            "Abend": 480
+          },
+          "dur": {
+            "1,5h": 5,
+            "1h": 2,
+            "2h": 5
+          },
+          "vorlauf": {
+            "8–14 Tage": 12
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 166.84,
+              "n": 12
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 90.0,
           "rev_e": 2070.0,
@@ -50,33 +82,32 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 324.0,
-          "rev_e": 1602.0,
-          "measured_min": 540.0,
+        "2026-06-09": {
+          "rev_m": 360.0,
+          "rev_e": 1476.0,
+          "measured_min": 600.0,
           "types": {
             "Double · Indoor": {
-              "b": 3210.0,
-              "r": 1926.0
+              "b": 3060.0,
+              "r": 1836.0
             }
           },
           "tod": {
-            "Mittag": 180,
-            "Vormittag": 300,
-            "Abend": 60
+            "Mittag": 150,
+            "Abend": 210,
+            "Vormittag": 240
           },
           "dur": {
-            "1,5h": 4,
-            "1h": 3
+            "1h": 7,
+            "1,5h": 2
           },
           "vorlauf": {
-            "2 Tage": 6,
-            "3–7 Tage": 1
+            "3–7 Tage": 9
           },
           "wd_adv": {
-            "Mo": {
-              "s": 19.43,
-              "n": 7
+            "Di": {
+              "s": 36.63,
+              "n": 9
             }
           }
         },
@@ -109,35 +140,7 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 234.0,
-          "rev_e": 1980.0,
-          "measured_min": 390.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 3690.0,
-              "r": 2214.0
-            }
-          },
-          "tod": {
-            "Vormittag": 300,
-            "Mittag": 90
-          },
-          "dur": {
-            "1,5h": 3,
-            "2h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 4
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 48.36,
-              "n": 4
-            }
-          }
-        },
-        "2026-06-10": {
+        "2026-06-15": {
           "rev_m": 126.0,
           "rev_e": 1908.0,
           "measured_min": 210.0,
@@ -148,20 +151,19 @@
             }
           },
           "tod": {
-            "Abend": 60,
-            "Nachmittag": 60,
-            "Vormittag": 90
+            "Vormittag": 150,
+            "Mittag": 60
           },
           "dur": {
-            "1h": 2,
-            "1,5h": 1
+            "1,5h": 1,
+            "1h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 3
+            "8–14 Tage": 3
           },
           "wd_adv": {
-            "Mi": {
-              "s": 14.98,
+            "Mo": {
+              "s": 29.02,
               "n": 3
             }
           }
@@ -190,6 +192,64 @@
             "Sa": {
               "s": 15.38,
               "n": 2
+            }
+          }
+        },
+        "2026-06-07": {
+          "rev_m": 252.0,
+          "rev_e": 576.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 1380.0,
+              "r": 828.0
+            }
+          },
+          "tod": {
+            "Abend": 180,
+            "Mittag": 120,
+            "Nachmittag": 120
+          },
+          "dur": {
+            "1,5h": 2,
+            "1h": 4
+          },
+          "vorlauf": {
+            "2 Tage": 2,
+            "1 Tag": 4
+          },
+          "wd_adv": {
+            "So": {
+              "s": 12.53,
+              "n": 6
+            }
+          }
+        },
+        "2026-06-17": {
+          "rev_m": 234.0,
+          "rev_e": 1980.0,
+          "measured_min": 390.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 3690.0,
+              "r": 2214.0
+            }
+          },
+          "tod": {
+            "Vormittag": 300,
+            "Mittag": 90
+          },
+          "dur": {
+            "1,5h": 3,
+            "2h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 4
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 48.36,
+              "n": 4
             }
           }
         },
@@ -283,122 +343,33 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 360.0,
-          "rev_e": 1476.0,
-          "measured_min": 600.0,
+        "2026-06-08": {
+          "rev_m": 324.0,
+          "rev_e": 1602.0,
+          "measured_min": 540.0,
           "types": {
             "Double · Indoor": {
-              "b": 3060.0,
-              "r": 1836.0
+              "b": 3210.0,
+              "r": 1926.0
             }
           },
           "tod": {
-            "Mittag": 150,
-            "Abend": 210,
-            "Vormittag": 240
+            "Mittag": 180,
+            "Vormittag": 300,
+            "Abend": 60
           },
           "dur": {
-            "1h": 7,
-            "1,5h": 2
+            "1,5h": 4,
+            "1h": 3
           },
           "vorlauf": {
-            "3–7 Tage": 9
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 36.63,
-              "n": 9
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 126.0,
-          "rev_e": 1908.0,
-          "measured_min": 210.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 3390.0,
-              "r": 2034.0
-            }
-          },
-          "tod": {
-            "Vormittag": 150,
-            "Mittag": 60
-          },
-          "dur": {
-            "1,5h": 1,
-            "1h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 3
+            "2 Tage": 6,
+            "3–7 Tage": 1
           },
           "wd_adv": {
             "Mo": {
-              "s": 29.02,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 252.0,
-          "rev_e": 576.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 1380.0,
-              "r": 828.0
-            }
-          },
-          "tod": {
-            "Abend": 180,
-            "Mittag": 120,
-            "Nachmittag": 120
-          },
-          "dur": {
-            "1,5h": 2,
-            "1h": 4
-          },
-          "vorlauf": {
-            "2 Tage": 2,
-            "1 Tag": 4
-          },
-          "wd_adv": {
-            "So": {
-              "s": 12.53,
-              "n": 6
-            }
-          }
-        },
-        "2026-06-19": {
-          "rev_m": 720.0,
-          "rev_e": 2646.0,
-          "measured_min": 1200.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 5610.0,
-              "r": 3366.0
-            }
-          },
-          "tod": {
-            "Nachts": 90,
-            "Vormittag": 360,
-            "Mittag": 60,
-            "Nachmittag": 210,
-            "Abend": 480
-          },
-          "dur": {
-            "1,5h": 5,
-            "1h": 2,
-            "2h": 5
-          },
-          "vorlauf": {
-            "8–14 Tage": 12
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 166.84,
-              "n": 12
+              "s": 19.43,
+              "n": 7
             }
           }
         },
@@ -427,6 +398,35 @@
             "Di": {
               "s": 66.12,
               "n": 6
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 126.0,
+          "rev_e": 1908.0,
+          "measured_min": 210.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 3390.0,
+              "r": 2034.0
+            }
+          },
+          "tod": {
+            "Abend": 60,
+            "Nachmittag": 60,
+            "Vormittag": 90
+          },
+          "dur": {
+            "1h": 2,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 3
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 14.98,
+              "n": 3
             }
           }
         }
@@ -461,6 +461,90 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 339.0,
+          "rev_e": 1171.4,
+          "measured_min": 720.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 1650.0,
+              "r": 763.0
+            },
+            "Single · Indoor": {
+              "b": 1350.0,
+              "r": 747.4
+            }
+          },
+          "tod": {
+            "Mittag": 120,
+            "Abend": 360,
+            "Vormittag": 240
+          },
+          "dur": {
+            "1h": 9,
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "Gleicher Tag": 9,
+            "<2h": 1,
+            "<6h": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 5.25,
+              "n": 11
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 0.0,
+          "rev_e": 2912.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 4680.0,
+              "r": 2080.0
+            },
+            "Single · Indoor": {
+              "b": 1560.0,
+              "r": 832.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 48.0,
+          "rev_e": 1216.5,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 2160.0,
+              "r": 940.4
+            },
+            "Single · Indoor": {
+              "b": 600.0,
+              "r": 324.2
+            }
+          },
+          "tod": {
+            "Vormittag": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 1
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 4.85,
+              "n": 1
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 270.7,
           "rev_e": 1239.7,
@@ -494,37 +578,36 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 316.4,
-          "rev_e": 1428.3,
-          "measured_min": 600.0,
+        "2026-06-09": {
+          "rev_m": 454.5,
+          "rev_e": 1233.8,
+          "measured_min": 780.0,
           "types": {
             "Double · Indoor": {
-              "b": 3000.0,
-              "r": 1420.1
+              "b": 2400.0,
+              "r": 1197.5
             },
             "Single · Indoor": {
-              "b": 600.0,
-              "r": 324.6
+              "b": 900.0,
+              "r": 490.7
             }
           },
           "tod": {
-            "Vormittag": 90,
-            "Nachmittag": 390,
-            "Mittag": 60,
-            "Abend": 60
+            "Vormittag": 120,
+            "Nachmittag": 180,
+            "Abend": 480
           },
           "dur": {
+            "2h": 3,
             "1,5h": 4,
-            "1h": 4
+            "1h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 4,
-            "2 Tage": 4
+            "3–7 Tage": 8
           },
           "wd_adv": {
-            "Mo": {
-              "s": 25.71,
+            "Di": {
+              "s": 33.76,
               "n": 8
             }
           }
@@ -565,64 +648,32 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 139.4,
-          "rev_e": 731.6,
-          "measured_min": 210.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 1170.0,
-              "r": 616.1
-            },
-            "Single · Indoor": {
-              "b": 450.0,
-              "r": 254.9
-            }
-          },
-          "tod": {
-            "Abend": 150,
-            "Nachmittag": 60
-          },
-          "dur": {
-            "1,5h": 1,
-            "1h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 3
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 37.07,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-10": {
-          "rev_m": 48.0,
-          "rev_e": 1216.5,
+        "2026-06-15": {
+          "rev_m": 60.0,
+          "rev_e": 620.2,
           "measured_min": 90.0,
           "types": {
-            "Double · Indoor": {
-              "b": 2160.0,
-              "r": 940.4
-            },
             "Single · Indoor": {
-              "b": 600.0,
-              "r": 324.2
+              "b": 300.0,
+              "r": 179.0
+            },
+            "Double · Indoor": {
+              "b": 1110.0,
+              "r": 501.3
             }
           },
           "tod": {
-            "Vormittag": 90
+            "Abend": 90
           },
           "dur": {
             "1,5h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 1
+            "8–14 Tage": 1
           },
           "wd_adv": {
-            "Mi": {
-              "s": 4.85,
+            "Mo": {
+              "s": 9.89,
               "n": 1
             }
           }
@@ -655,6 +706,38 @@
             "Sa": {
               "s": 16.59,
               "n": 2
+            }
+          }
+        },
+        "2026-06-17": {
+          "rev_m": 139.4,
+          "rev_e": 731.6,
+          "measured_min": 210.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 1170.0,
+              "r": 616.1
+            },
+            "Single · Indoor": {
+              "b": 450.0,
+              "r": 254.9
+            }
+          },
+          "tod": {
+            "Abend": 150,
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1,5h": 1,
+            "1h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 3
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 37.07,
+              "n": 3
             }
           }
         },
@@ -756,66 +839,67 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 454.5,
-          "rev_e": 1233.8,
-          "measured_min": 780.0,
+        "2026-06-08": {
+          "rev_m": 316.4,
+          "rev_e": 1428.3,
+          "measured_min": 600.0,
           "types": {
             "Double · Indoor": {
-              "b": 2400.0,
-              "r": 1197.5
+              "b": 3000.0,
+              "r": 1420.1
             },
             "Single · Indoor": {
-              "b": 900.0,
-              "r": 490.7
+              "b": 600.0,
+              "r": 324.6
             }
           },
           "tod": {
-            "Vormittag": 120,
-            "Nachmittag": 180,
-            "Abend": 480
+            "Vormittag": 90,
+            "Nachmittag": 390,
+            "Mittag": 60,
+            "Abend": 60
           },
           "dur": {
-            "2h": 3,
             "1,5h": 4,
-            "1h": 1
+            "1h": 4
           },
           "vorlauf": {
-            "3–7 Tage": 8
+            "3–7 Tage": 4,
+            "2 Tage": 4
           },
           "wd_adv": {
-            "Di": {
-              "s": 33.76,
+            "Mo": {
+              "s": 25.71,
               "n": 8
             }
           }
         },
-        "2026-06-15": {
-          "rev_m": 60.0,
-          "rev_e": 620.2,
-          "measured_min": 90.0,
+        "2026-06-16": {
+          "rev_m": 40.0,
+          "rev_e": 877.1,
+          "measured_min": 60.0,
           "types": {
             "Single · Indoor": {
-              "b": 300.0,
-              "r": 179.0
+              "b": 540.0,
+              "r": 301.3
             },
             "Double · Indoor": {
-              "b": 1110.0,
-              "r": 501.3
+              "b": 1230.0,
+              "r": 615.8
             }
           },
           "tod": {
-            "Abend": 90
+            "Abend": 60
           },
           "dur": {
-            "1,5h": 1
+            "1h": 1
           },
           "vorlauf": {
             "8–14 Tage": 1
           },
           "wd_adv": {
-            "Mo": {
-              "s": 9.89,
+            "Di": {
+              "s": 11.9,
               "n": 1
             }
           }
@@ -853,90 +937,6 @@
               "n": 8
             }
           }
-        },
-        "2026-06-19": {
-          "rev_m": 0.0,
-          "rev_e": 2912.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 4680.0,
-              "r": 2080.0
-            },
-            "Single · Indoor": {
-              "b": 1560.0,
-              "r": 832.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-05": {
-          "rev_m": 339.0,
-          "rev_e": 1171.4,
-          "measured_min": 720.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 1650.0,
-              "r": 763.0
-            },
-            "Single · Indoor": {
-              "b": 1350.0,
-              "r": 747.4
-            }
-          },
-          "tod": {
-            "Mittag": 120,
-            "Abend": 360,
-            "Vormittag": 240
-          },
-          "dur": {
-            "1h": 9,
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "Gleicher Tag": 9,
-            "<2h": 1,
-            "<6h": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 5.25,
-              "n": 11
-            }
-          }
-        },
-        "2026-06-16": {
-          "rev_m": 40.0,
-          "rev_e": 877.1,
-          "measured_min": 60.0,
-          "types": {
-            "Single · Indoor": {
-              "b": 540.0,
-              "r": 301.3
-            },
-            "Double · Indoor": {
-              "b": 1230.0,
-              "r": 615.8
-            }
-          },
-          "tod": {
-            "Abend": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 11.9,
-              "n": 1
-            }
-          }
         }
       },
       "events": []
@@ -963,159 +963,6 @@
         }
       ],
       "daily": {
-        "2026-07-03": {
-          "rev_m": 191.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 178.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 389.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-22": {
-          "rev_m": 191.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 178.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 235.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-10": {
-          "rev_m": 374.7,
-          "rev_e": 776.0,
-          "measured_min": 690.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 2070.0,
-              "r": 1078.0
-            },
-            "Single · Outdoor": {
-              "b": 120.0,
-              "r": 72.7
-            }
-          },
-          "tod": {
-            "Abend": 210,
-            "Nachmittag": 90,
-            "Nachts": 390
-          },
-          "dur": {
-            "1,5h": 3,
-            "1h": 14
-          },
-          "vorlauf": {
-            "3–7 Tage": 17
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 83.45,
-              "n": 17
-            }
-          }
-        },
-        "2026-06-13": {
-          "rev_m": 275.7,
-          "rev_e": 295.4,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 840.0,
-              "r": 551.4
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "8–14 Tage": 14
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 109.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-14": {
-          "rev_m": 236.3,
-          "rev_e": 413.7,
-          "measured_min": 360.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 960.0,
-              "r": 630.3
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 360
-          },
-          "dur": {
-            "1h": 12
-          },
-          "vorlauf": {
-            "8–14 Tage": 12
-          },
-          "wd_adv": {
-            "So": {
-              "s": 105.48,
-              "n": 12
-            }
-          }
-        },
         "2026-06-29": {
           "rev_m": 191.7,
           "rev_e": 0.0,
@@ -1179,27 +1026,69 @@
             }
           }
         },
-        "2026-06-04": {
-          "rev_m": 535.6,
-          "rev_e": 39.6,
-          "measured_min": 810.0,
+        "2026-06-15": {
+          "rev_m": 250.7,
+          "rev_e": 225.0,
+          "measured_min": 510.0,
           "types": {
             "Double · Outdoor": {
-              "b": 870.0,
-              "r": 575.2
+              "b": 900.0,
+              "r": 461.9
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
             }
           },
           "tod": {
-            "Abend": 810
+            "Nachts": 420,
+            "Nachmittag": 90
           },
           "dur": {
-            "1,5h": 5,
-            "1h": 6
+            "1h": 14,
+            "1,5h": 1
           },
-          "vorlauf": {},
-          "wd_adv": {}
+          "vorlauf": {
+            "8–14 Tage": 15
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 147.3,
+              "n": 15
+            }
+          }
         },
-        "2026-07-01": {
+        "2026-06-13": {
+          "rev_m": 275.7,
+          "rev_e": 295.4,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 840.0,
+              "r": 551.4
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "8–14 Tage": 14
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 109.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-07-03": {
           "rev_m": 191.7,
           "rev_e": 0.0,
           "measured_min": 420.0,
@@ -1223,8 +1112,103 @@
             "15–30 Tage": 14
           },
           "wd_adv": {
-            "Mi": {
-              "s": 361.06,
+            "Fr": {
+              "s": 389.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-07-02": {
+          "rev_m": 191.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 178.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 375.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-08": {
+          "rev_m": 727.8,
+          "rev_e": 718.2,
+          "measured_min": 1260.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 2550.0,
+              "r": 1385.4
+            },
+            "Single · Outdoor": {
+              "b": 120.0,
+              "r": 60.5
+            }
+          },
+          "tod": {
+            "Nachmittag": 360,
+            "Abend": 420,
+            "Nachts": 390,
+            "Mittag": 90
+          },
+          "dur": {
+            "1,5h": 9,
+            "1h": 14
+          },
+          "vorlauf": {
+            "3–7 Tage": 4,
+            "2 Tage": 19
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 66.75,
+              "n": 23
+            }
+          }
+        },
+        "2026-06-28": {
+          "rev_m": 275.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 256.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "So": {
+              "s": 319.06,
               "n": 14
             }
           }
@@ -1266,6 +1250,451 @@
             }
           }
         },
+        "2026-06-19": {
+          "rev_m": 191.7,
+          "rev_e": 46.8,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 480.0,
+              "r": 224.8
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "8–14 Tage": 14
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 193.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-21": {
+          "rev_m": 275.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 256.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "So": {
+              "s": 221.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-17": {
+          "rev_m": 191.7,
+          "rev_e": 225.9,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 810.0,
+              "r": 403.9
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "8–14 Tage": 14
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 165.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-07-01": {
+          "rev_m": 191.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 178.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 361.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-18": {
+          "rev_m": 191.5,
+          "rev_e": 749.1,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1740.0,
+              "r": 926.9
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "8–14 Tage": 14
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 179.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-07-05": {
+          "rev_m": 0.0,
+          "rev_e": 275.7,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 256.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-16": {
+          "rev_m": 295.9,
+          "rev_e": 242.0,
+          "measured_min": 570.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 990.0,
+              "r": 524.2
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 390,
+            "Abend": 180
+          },
+          "dur": {
+            "1h": 13,
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 15
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 161.95,
+              "n": 15
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 374.7,
+          "rev_e": 776.0,
+          "measured_min": 690.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 2070.0,
+              "r": 1078.0
+            },
+            "Single · Outdoor": {
+              "b": 120.0,
+              "r": 72.7
+            }
+          },
+          "tod": {
+            "Abend": 210,
+            "Nachmittag": 90,
+            "Nachts": 390
+          },
+          "dur": {
+            "1,5h": 3,
+            "1h": 14
+          },
+          "vorlauf": {
+            "3–7 Tage": 17
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 83.45,
+              "n": 17
+            }
+          }
+        },
+        "2026-06-04": {
+          "rev_m": 535.6,
+          "rev_e": 39.6,
+          "measured_min": 810.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 870.0,
+              "r": 575.2
+            }
+          },
+          "tod": {
+            "Abend": 810
+          },
+          "dur": {
+            "1,5h": 5,
+            "1h": 6
+          },
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-30": {
+          "rev_m": 191.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 178.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 347.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-23": {
+          "rev_m": 191.7,
+          "rev_e": 49.3,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 480.0,
+              "r": 227.3
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 249.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-11": {
+          "rev_m": 449.0,
+          "rev_e": 589.5,
+          "measured_min": 840.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1950.0,
+              "r": 1024.9
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Abend": 180,
+            "Nachts": 420,
+            "Vormittag": 90,
+            "Nachmittag": 150
+          },
+          "dur": {
+            "1,5h": 4,
+            "1h": 15
+          },
+          "vorlauf": {
+            "3–7 Tage": 19
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 111.1,
+              "n": 19
+            }
+          }
+        },
+        "2026-06-24": {
+          "rev_m": 191.7,
+          "rev_e": 63.2,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 510.0,
+              "r": 241.2
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 263.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-06": {
+          "rev_m": 2362.5,
+          "rev_e": 768.6,
+          "measured_min": 3600.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 4620.0,
+              "r": 3032.7
+            },
+            "Single · Outdoor": {
+              "b": 150.0,
+              "r": 98.4
+            }
+          },
+          "tod": {
+            "Vormittag": 1470,
+            "Mittag": 840,
+            "Nachts": 480,
+            "Nachmittag": 720,
+            "Abend": 90
+          },
+          "dur": {
+            "1,5h": 26,
+            "2h": 2,
+            "1h": 22
+          },
+          "vorlauf": {
+            "1 Tag": 7,
+            "Gleicher Tag": 43
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 40.46,
+              "n": 50
+            }
+          }
+        },
+        "2026-06-22": {
+          "rev_m": 191.7,
+          "rev_e": 0.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 178.0
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 13.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 235.06,
+              "n": 14
+            }
+          }
+        },
         "2026-06-26": {
           "rev_m": 1821.7,
           "rev_e": 0.0,
@@ -1295,6 +1724,102 @@
             "Fr": {
               "s": 586.18,
               "n": 28
+            }
+          }
+        },
+        "2026-06-27": {
+          "rev_m": 275.7,
+          "rev_e": 157.6,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 630.0,
+              "r": 413.6
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 420
+          },
+          "dur": {
+            "1h": 14
+          },
+          "vorlauf": {
+            "15–30 Tage": 14
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 305.06,
+              "n": 14
+            }
+          }
+        },
+        "2026-06-07": {
+          "rev_m": 1003.7,
+          "rev_e": 1183.1,
+          "measured_min": 1530.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 3300.0,
+              "r": 2167.1
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 390,
+            "Mittag": 360,
+            "Vormittag": 270,
+            "Nachmittag": 510
+          },
+          "dur": {
+            "1h": 15,
+            "1,5h": 10,
+            "2h": 1
+          },
+          "vorlauf": {
+            "1 Tag": 22,
+            "2 Tage": 4
+          },
+          "wd_adv": {
+            "So": {
+              "s": 47.51,
+              "n": 26
+            }
+          }
+        },
+        "2026-06-14": {
+          "rev_m": 236.3,
+          "rev_e": 413.7,
+          "measured_min": 360.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 960.0,
+              "r": 630.3
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.7
+            }
+          },
+          "tod": {
+            "Nachts": 360
+          },
+          "dur": {
+            "1h": 12
+          },
+          "vorlauf": {
+            "8–14 Tage": 12
+          },
+          "wd_adv": {
+            "So": {
+              "s": 105.48,
+              "n": 12
             }
           }
         },
@@ -1361,121 +1886,6 @@
             }
           }
         },
-        "2026-07-05": {
-          "rev_m": 0.0,
-          "rev_e": 275.7,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 256.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-16": {
-          "rev_m": 295.9,
-          "rev_e": 242.0,
-          "measured_min": 570.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 990.0,
-              "r": 524.2
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 390,
-            "Abend": 180
-          },
-          "dur": {
-            "1h": 13,
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 15
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 161.95,
-              "n": 15
-            }
-          }
-        },
-        "2026-06-11": {
-          "rev_m": 449.0,
-          "rev_e": 589.5,
-          "measured_min": 840.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1950.0,
-              "r": 1024.9
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Abend": 180,
-            "Nachts": 420,
-            "Vormittag": 90,
-            "Nachmittag": 150
-          },
-          "dur": {
-            "1,5h": 4,
-            "1h": 15
-          },
-          "vorlauf": {
-            "3–7 Tage": 19
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 111.1,
-              "n": 19
-            }
-          }
-        },
-        "2026-06-23": {
-          "rev_m": 191.7,
-          "rev_e": 49.3,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 480.0,
-              "r": 227.3
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 249.06,
-              "n": 14
-            }
-          }
-        },
         "2026-07-04": {
           "rev_m": 275.7,
           "rev_e": 4414.8,
@@ -1502,126 +1912,6 @@
           "wd_adv": {
             "Sa": {
               "s": 403.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-18": {
-          "rev_m": 191.5,
-          "rev_e": 749.1,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1740.0,
-              "r": 926.9
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "8–14 Tage": 14
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 179.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-24": {
-          "rev_m": 191.7,
-          "rev_e": 63.2,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 510.0,
-              "r": 241.2
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 263.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-27": {
-          "rev_m": 275.7,
-          "rev_e": 157.6,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 630.0,
-              "r": 413.6
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 305.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-19": {
-          "rev_m": 191.7,
-          "rev_e": 46.8,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 480.0,
-              "r": 224.8
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "8–14 Tage": 14
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 193.06,
               "n": 14
             }
           }
@@ -1655,296 +1945,6 @@
               "n": 14
             }
           }
-        },
-        "2026-06-28": {
-          "rev_m": 275.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 256.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "So": {
-              "s": 319.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-08": {
-          "rev_m": 727.8,
-          "rev_e": 718.2,
-          "measured_min": 1260.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 2550.0,
-              "r": 1385.4
-            },
-            "Single · Outdoor": {
-              "b": 120.0,
-              "r": 60.5
-            }
-          },
-          "tod": {
-            "Nachmittag": 360,
-            "Abend": 420,
-            "Nachts": 390,
-            "Mittag": 90
-          },
-          "dur": {
-            "1,5h": 9,
-            "1h": 14
-          },
-          "vorlauf": {
-            "3–7 Tage": 4,
-            "2 Tage": 19
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 66.75,
-              "n": 23
-            }
-          }
-        },
-        "2026-06-30": {
-          "rev_m": 191.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 178.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 347.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-06": {
-          "rev_m": 2362.5,
-          "rev_e": 768.6,
-          "measured_min": 3600.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 4620.0,
-              "r": 3032.7
-            },
-            "Single · Outdoor": {
-              "b": 150.0,
-              "r": 98.4
-            }
-          },
-          "tod": {
-            "Vormittag": 1470,
-            "Mittag": 840,
-            "Nachts": 480,
-            "Nachmittag": 720,
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 26,
-            "2h": 2,
-            "1h": 22
-          },
-          "vorlauf": {
-            "1 Tag": 7,
-            "Gleicher Tag": 43
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 40.46,
-              "n": 50
-            }
-          }
-        },
-        "2026-06-17": {
-          "rev_m": 191.7,
-          "rev_e": 225.9,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 810.0,
-              "r": 403.9
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "8–14 Tage": 14
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 165.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-21": {
-          "rev_m": 275.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 256.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "So": {
-              "s": 221.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-07-02": {
-          "rev_m": 191.7,
-          "rev_e": 0.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 178.0
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420
-          },
-          "dur": {
-            "1h": 14
-          },
-          "vorlauf": {
-            "15–30 Tage": 14
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 375.06,
-              "n": 14
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 250.7,
-          "rev_e": 225.0,
-          "measured_min": 510.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 900.0,
-              "r": 461.9
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 13.7
-            }
-          },
-          "tod": {
-            "Nachts": 420,
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1h": 14,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 15
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 147.3,
-              "n": 15
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 1003.7,
-          "rev_e": 1183.1,
-          "measured_min": 1530.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 3300.0,
-              "r": 2167.1
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.7
-            }
-          },
-          "tod": {
-            "Nachts": 390,
-            "Mittag": 360,
-            "Vormittag": 270,
-            "Nachmittag": 510
-          },
-          "dur": {
-            "1h": 15,
-            "1,5h": 10,
-            "2h": 1
-          },
-          "vorlauf": {
-            "1 Tag": 22,
-            "2 Tage": 4
-          },
-          "wd_adv": {
-            "So": {
-              "s": 47.51,
-              "n": 26
-            }
-          }
         }
       },
       "events": []
@@ -1976,6 +1976,78 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 231.7,
+          "rev_e": 536.6,
+          "measured_min": 540.0,
+          "types": {
+            "Single · Indoor": {
+              "b": 600.0,
+              "r": 299.8
+            },
+            "Double · Indoor": {
+              "b": 1200.0,
+              "r": 468.5
+            }
+          },
+          "tod": {
+            "Vormittag": 180,
+            "Nachmittag": 60,
+            "Mittag": 120,
+            "Abend": 180
+          },
+          "dur": {
+            "1,5h": 4,
+            "1h": 3
+          },
+          "vorlauf": {
+            "Gleicher Tag": 3,
+            "<6h": 2,
+            "<2h": 2
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 2.07,
+              "n": 7
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 398.8,
+          "rev_e": 2660.3,
+          "measured_min": 600.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 3690.0,
+              "r": 1532.3
+            },
+            "Double · Outdoor": {
+              "b": 1560.0,
+              "r": 763.4
+            },
+            "Single · Indoor": {
+              "b": 1560.0,
+              "r": 763.4
+            }
+          },
+          "tod": {
+            "Nachmittag": 480,
+            "Abend": 120
+          },
+          "dur": {
+            "1,5h": 2,
+            "2h": 3
+          },
+          "vorlauf": {
+            "8–14 Tage": 5
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 69.88,
+              "n": 5
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 284.6,
           "rev_e": 886.7,
@@ -2009,6 +2081,42 @@
             "Do": {
               "s": 38.17,
               "n": 6
+            }
+          }
+        },
+        "2026-06-09": {
+          "rev_m": 72.6,
+          "rev_e": 1499.2,
+          "measured_min": 150.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1140.0,
+              "r": 592.2
+            },
+            "Single · Indoor": {
+              "b": 720.0,
+              "r": 346.4
+            },
+            "Double · Indoor": {
+              "b": 1560.0,
+              "r": 633.2
+            }
+          },
+          "tod": {
+            "Mittag": 90,
+            "Vormittag": 60
+          },
+          "dur": {
+            "1,5h": 1,
+            "1h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 2
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 8.6,
+              "n": 2
             }
           }
         },
@@ -2052,65 +2160,39 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 168.6,
-          "rev_e": 426.0,
-          "measured_min": 330.0,
+        "2026-06-15": {
+          "rev_m": 21.9,
+          "rev_e": 793.9,
+          "measured_min": 60.0,
           "types": {
             "Double · Indoor": {
-              "b": 660.0,
-              "r": 296.6
-            },
-            "Double · Outdoor": {
-              "b": 360.0,
-              "r": 207.2
+              "b": 810.0,
+              "r": 390.0
             },
             "Single · Indoor": {
-              "b": 180.0,
-              "r": 90.9
+              "b": 450.0,
+              "r": 217.4
+            },
+            "Double · Outdoor": {
+              "b": 420.0,
+              "r": 208.4
             }
           },
           "tod": {
-            "Abend": 270,
             "Nachmittag": 60
           },
           "dur": {
-            "1,5h": 1,
-            "1h": 2,
-            "2h": 1
+            "1h": 1
           },
           "vorlauf": {
-            "8–14 Tage": 4
+            "8–14 Tage": 1
           },
           "wd_adv": {
-            "Mi": {
-              "s": 49.0,
-              "n": 4
+            "Mo": {
+              "s": 9.94,
+              "n": 1
             }
           }
-        },
-        "2026-06-10": {
-          "rev_m": 0.0,
-          "rev_e": 1726.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1050.0,
-              "r": 506.9
-            },
-            "Single · Indoor": {
-              "b": 810.0,
-              "r": 383.6
-            },
-            "Double · Indoor": {
-              "b": 1950.0,
-              "r": 835.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
         },
         "2026-06-13": {
           "rev_m": 115.6,
@@ -2146,6 +2228,53 @@
             "Sa": {
               "s": 24.93,
               "n": 3
+            }
+          }
+        },
+        "2026-06-04": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-17": {
+          "rev_m": 168.6,
+          "rev_e": 426.0,
+          "measured_min": 330.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 660.0,
+              "r": 296.6
+            },
+            "Double · Outdoor": {
+              "b": 360.0,
+              "r": 207.2
+            },
+            "Single · Indoor": {
+              "b": 180.0,
+              "r": 90.9
+            }
+          },
+          "tod": {
+            "Abend": 270,
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1,5h": 1,
+            "1h": 2,
+            "2h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 4
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 49.0,
+              "n": 4
             }
           }
         },
@@ -2263,72 +2392,59 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 72.6,
-          "rev_e": 1499.2,
-          "measured_min": 150.0,
+        "2026-06-10": {
+          "rev_m": 0.0,
+          "rev_e": 1726.0,
+          "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1140.0,
-              "r": 592.2
+              "b": 1050.0,
+              "r": 506.9
             },
             "Single · Indoor": {
-              "b": 720.0,
-              "r": 346.4
+              "b": 810.0,
+              "r": 383.6
             },
             "Double · Indoor": {
-              "b": 1560.0,
-              "r": 633.2
+              "b": 1950.0,
+              "r": 835.5
             }
           },
-          "tod": {
-            "Mittag": 90,
-            "Vormittag": 60
-          },
-          "dur": {
-            "1,5h": 1,
-            "1h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 8.6,
-              "n": 2
-            }
-          }
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
-        "2026-06-15": {
-          "rev_m": 21.9,
-          "rev_e": 793.9,
-          "measured_min": 60.0,
+        "2026-06-16": {
+          "rev_m": 60.0,
+          "rev_e": 726.5,
+          "measured_min": 90.0,
           "types": {
             "Double · Indoor": {
-              "b": 810.0,
-              "r": 390.0
+              "b": 720.0,
+              "r": 359.4
             },
             "Single · Indoor": {
               "b": 450.0,
-              "r": 217.4
+              "r": 220.9
             },
             "Double · Outdoor": {
               "b": 420.0,
-              "r": 208.4
+              "r": 206.2
             }
           },
           "tod": {
-            "Nachmittag": 60
+            "Abend": 90
           },
           "dur": {
-            "1h": 1
+            "1,5h": 1
           },
           "vorlauf": {
             "8–14 Tage": 1
           },
           "wd_adv": {
-            "Mo": {
-              "s": 9.94,
+            "Di": {
+              "s": 11.94,
               "n": 1
             }
           }
@@ -2372,122 +2488,6 @@
               "n": 12
             }
           }
-        },
-        "2026-06-04": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 398.8,
-          "rev_e": 2660.3,
-          "measured_min": 600.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 3690.0,
-              "r": 1532.3
-            },
-            "Double · Outdoor": {
-              "b": 1560.0,
-              "r": 763.4
-            },
-            "Single · Indoor": {
-              "b": 1560.0,
-              "r": 763.4
-            }
-          },
-          "tod": {
-            "Nachmittag": 480,
-            "Abend": 120
-          },
-          "dur": {
-            "1,5h": 2,
-            "2h": 3
-          },
-          "vorlauf": {
-            "8–14 Tage": 5
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 69.88,
-              "n": 5
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 231.7,
-          "rev_e": 536.6,
-          "measured_min": 540.0,
-          "types": {
-            "Single · Indoor": {
-              "b": 600.0,
-              "r": 299.8
-            },
-            "Double · Indoor": {
-              "b": 1200.0,
-              "r": 468.5
-            }
-          },
-          "tod": {
-            "Vormittag": 180,
-            "Nachmittag": 60,
-            "Mittag": 120,
-            "Abend": 180
-          },
-          "dur": {
-            "1,5h": 4,
-            "1h": 3
-          },
-          "vorlauf": {
-            "Gleicher Tag": 3,
-            "<6h": 2,
-            "<2h": 2
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 2.07,
-              "n": 7
-            }
-          }
-        },
-        "2026-06-16": {
-          "rev_m": 60.0,
-          "rev_e": 726.5,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 720.0,
-              "r": 359.4
-            },
-            "Single · Indoor": {
-              "b": 450.0,
-              "r": 220.9
-            },
-            "Double · Outdoor": {
-              "b": 420.0,
-              "r": 206.2
-            }
-          },
-          "tod": {
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 11.94,
-              "n": 1
-            }
-          }
         }
       },
       "events": []
@@ -2514,6 +2514,72 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 422.8,
+          "rev_e": 581.9,
+          "measured_min": 660.0,
+          "types": {
+            "Single · Indoor": {
+              "b": 360.0,
+              "r": 230.8
+            },
+            "Double · Indoor": {
+              "b": 1260.0,
+              "r": 773.9
+            }
+          },
+          "tod": {
+            "Mittag": 150,
+            "Abend": 510
+          },
+          "dur": {
+            "1,5h": 4,
+            "1h": 5
+          },
+          "vorlauf": {
+            "Gleicher Tag": 7,
+            "1 Tag": 1,
+            "<6h": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 4.56,
+              "n": 9
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 152.0,
+          "rev_e": 1838.3,
+          "measured_min": 240.0,
+          "types": {
+            "Single · Indoor": {
+              "b": 1530.0,
+              "r": 959.9
+            },
+            "Double · Indoor": {
+              "b": 2070.0,
+              "r": 1030.4
+            }
+          },
+          "tod": {
+            "Vormittag": 180,
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1,5h": 2,
+            "1h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 3
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 14.71,
+              "n": 3
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 194.0,
           "rev_e": 1304.8,
@@ -2546,37 +2612,36 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 390.7,
-          "rev_e": 1745.7,
-          "measured_min": 690.0,
+        "2026-06-09": {
+          "rev_m": 184.0,
+          "rev_e": 1905.3,
+          "measured_min": 300.0,
           "types": {
-            "Double · Indoor": {
-              "b": 2400.0,
-              "r": 1255.0
-            },
             "Single · Indoor": {
-              "b": 1410.0,
-              "r": 881.4
+              "b": 1500.0,
+              "r": 927.2
+            },
+            "Double · Indoor": {
+              "b": 2220.0,
+              "r": 1162.2
             }
           },
           "tod": {
-            "Abend": 90,
-            "Mittag": 330,
-            "Vormittag": 270
+            "Abend": 150,
+            "Mittag": 90,
+            "Nachmittag": 60
           },
           "dur": {
-            "1,5h": 7,
-            "1h": 1
+            "1,5h": 2,
+            "1h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 2,
-            "2 Tage": 6
+            "3–7 Tage": 4
           },
           "wd_adv": {
-            "Mo": {
-              "s": 25.06,
-              "n": 8
+            "Di": {
+              "s": 16.3,
+              "n": 4
             }
           }
         },
@@ -2616,35 +2681,33 @@
             }
           }
         },
-        "2026-06-10": {
-          "rev_m": 152.0,
-          "rev_e": 1838.3,
-          "measured_min": 240.0,
+        "2026-06-15": {
+          "rev_m": 42.0,
+          "rev_e": 2612.0,
+          "measured_min": 90.0,
           "types": {
-            "Single · Indoor": {
-              "b": 1530.0,
-              "r": 959.9
-            },
             "Double · Indoor": {
-              "b": 2070.0,
-              "r": 1030.4
+              "b": 3450.0,
+              "r": 1610.0
+            },
+            "Single · Indoor": {
+              "b": 1740.0,
+              "r": 1044.0
             }
           },
           "tod": {
-            "Vormittag": 180,
-            "Nachmittag": 60
+            "Nachmittag": 90
           },
           "dur": {
-            "1,5h": 2,
-            "1h": 1
+            "1,5h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 3
+            "8–14 Tage": 1
           },
           "wd_adv": {
-            "Mi": {
-              "s": 14.71,
-              "n": 3
+            "Mo": {
+              "s": 9.67,
+              "n": 1
             }
           }
         },
@@ -2751,66 +2814,37 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 184.0,
-          "rev_e": 1905.3,
-          "measured_min": 300.0,
+        "2026-06-08": {
+          "rev_m": 390.7,
+          "rev_e": 1745.7,
+          "measured_min": 690.0,
           "types": {
-            "Single · Indoor": {
-              "b": 1500.0,
-              "r": 927.2
-            },
             "Double · Indoor": {
-              "b": 2220.0,
-              "r": 1162.2
+              "b": 2400.0,
+              "r": 1255.0
+            },
+            "Single · Indoor": {
+              "b": 1410.0,
+              "r": 881.4
             }
           },
           "tod": {
-            "Abend": 150,
-            "Mittag": 90,
-            "Nachmittag": 60
+            "Abend": 90,
+            "Mittag": 330,
+            "Vormittag": 270
           },
           "dur": {
-            "1,5h": 2,
-            "1h": 2
+            "1,5h": 7,
+            "1h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 4
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 16.3,
-              "n": 4
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 42.0,
-          "rev_e": 2612.0,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 3450.0,
-              "r": 1610.0
-            },
-            "Single · Indoor": {
-              "b": 1740.0,
-              "r": 1044.0
-            }
-          },
-          "tod": {
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
+            "3–7 Tage": 2,
+            "2 Tage": 6
           },
           "wd_adv": {
             "Mo": {
-              "s": 9.67,
-              "n": 1
+              "s": 25.06,
+              "n": 8
             }
           }
         },
@@ -2848,40 +2882,6 @@
               "n": 6
             }
           }
-        },
-        "2026-06-05": {
-          "rev_m": 422.8,
-          "rev_e": 581.9,
-          "measured_min": 660.0,
-          "types": {
-            "Single · Indoor": {
-              "b": 360.0,
-              "r": 230.8
-            },
-            "Double · Indoor": {
-              "b": 1260.0,
-              "r": 773.9
-            }
-          },
-          "tod": {
-            "Mittag": 150,
-            "Abend": 510
-          },
-          "dur": {
-            "1,5h": 4,
-            "1h": 5
-          },
-          "vorlauf": {
-            "Gleicher Tag": 7,
-            "1 Tag": 1,
-            "<6h": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 4.56,
-              "n": 9
-            }
-          }
         }
       },
       "events": []
@@ -2903,6 +2903,51 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 0.0,
+          "rev_e": 612.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1020.0,
+              "r": 612.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-19": {
+          "rev_m": 707.8,
+          "rev_e": 2052.0,
+          "measured_min": 1020.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 4440.0,
+              "r": 2759.8
+            }
+          },
+          "tod": {
+            "Mittag": 180,
+            "Nachmittag": 750,
+            "Abend": 90
+          },
+          "dur": {
+            "2h": 5,
+            "1,5h": 3,
+            "1h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 9
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 125.38,
+              "n": 9
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 54.0,
           "rev_e": 828.0,
@@ -2929,33 +2974,29 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 159.0,
-          "rev_e": 366.3,
-          "measured_min": 240.0,
+        "2026-06-09": {
+          "rev_m": 54.0,
+          "rev_e": 596.8,
+          "measured_min": 90.0,
           "types": {
             "Double · Outdoor": {
-              "b": 840.0,
-              "r": 525.3
+              "b": 1080.0,
+              "r": 650.8
             }
           },
           "tod": {
-            "Nachmittag": 60,
-            "Abend": 90,
             "Vormittag": 90
           },
           "dur": {
-            "1h": 1,
-            "1,5h": 2
+            "1,5h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 2,
-            "2 Tage": 1
+            "3–7 Tage": 1
           },
           "wd_adv": {
-            "Mo": {
-              "s": 10.35,
-              "n": 3
+            "Di": {
+              "s": 3.73,
+              "n": 1
             }
           }
         },
@@ -2990,6 +3031,59 @@
             }
           }
         },
+        "2026-06-15": {
+          "rev_m": 76.3,
+          "rev_e": 1314.1,
+          "measured_min": 120.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 2250.0,
+              "r": 1390.4
+            }
+          },
+          "tod": {
+            "Mittag": 120
+          },
+          "dur": {
+            "2h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 10.22,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-13": {
+          "rev_m": 105.0,
+          "rev_e": 1638.0,
+          "measured_min": 150.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 2490.0,
+              "r": 1743.0
+            }
+          },
+          "tod": {
+            "Abend": 150
+          },
+          "dur": {
+            "1h": 1,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 16.86,
+              "n": 2
+            }
+          }
+        },
         "2026-06-17": {
           "rev_m": 157.8,
           "rev_e": 1014.7,
@@ -3018,58 +3112,33 @@
             }
           }
         },
-        "2026-06-10": {
-          "rev_m": 99.0,
-          "rev_e": 710.1,
-          "measured_min": 150.0,
+        "2026-06-07": {
+          "rev_m": 168.0,
+          "rev_e": 1470.0,
+          "measured_min": 240.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1320.0,
-              "r": 809.1
+              "b": 2340.0,
+              "r": 1638.0
             }
           },
           "tod": {
-            "Vormittag": 60,
-            "Abend": 90
+            "Mittag": 90,
+            "Vormittag": 90,
+            "Abend": 60
           },
           "dur": {
-            "1h": 1,
-            "1,5h": 1
+            "1,5h": 2,
+            "1h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 2
+            "2 Tage": 2,
+            "1 Tag": 1
           },
           "wd_adv": {
-            "Mi": {
-              "s": 9.69,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-13": {
-          "rev_m": 105.0,
-          "rev_e": 1638.0,
-          "measured_min": 150.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 2490.0,
-              "r": 1743.0
-            }
-          },
-          "tod": {
-            "Abend": 150
-          },
-          "dur": {
-            "1h": 1,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 16.86,
-              "n": 2
+            "So": {
+              "s": 6.03,
+              "n": 3
             }
           }
         },
@@ -3158,132 +3227,35 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 54.0,
-          "rev_e": 596.8,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1080.0,
-              "r": 650.8
-            }
-          },
-          "tod": {
-            "Vormittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 1
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 3.73,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 76.3,
-          "rev_e": 1314.1,
-          "measured_min": 120.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 2250.0,
-              "r": 1390.4
-            }
-          },
-          "tod": {
-            "Mittag": 120
-          },
-          "dur": {
-            "2h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 10.22,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 168.0,
-          "rev_e": 1470.0,
+        "2026-06-08": {
+          "rev_m": 159.0,
+          "rev_e": 366.3,
           "measured_min": 240.0,
           "types": {
             "Double · Outdoor": {
-              "b": 2340.0,
-              "r": 1638.0
+              "b": 840.0,
+              "r": 525.3
             }
           },
           "tod": {
-            "Mittag": 90,
-            "Vormittag": 90,
-            "Abend": 60
+            "Nachmittag": 60,
+            "Abend": 90,
+            "Vormittag": 90
           },
           "dur": {
-            "1,5h": 2,
-            "1h": 1
+            "1h": 1,
+            "1,5h": 2
           },
           "vorlauf": {
-            "2 Tage": 2,
-            "1 Tag": 1
+            "3–7 Tage": 2,
+            "2 Tage": 1
           },
           "wd_adv": {
-            "So": {
-              "s": 6.03,
+            "Mo": {
+              "s": 10.35,
               "n": 3
             }
           }
-        },
-        "2026-06-19": {
-          "rev_m": 707.8,
-          "rev_e": 2052.0,
-          "measured_min": 1020.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 4440.0,
-              "r": 2759.8
-            }
-          },
-          "tod": {
-            "Mittag": 180,
-            "Nachmittag": 750,
-            "Abend": 90
-          },
-          "dur": {
-            "2h": 5,
-            "1,5h": 3,
-            "1h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 9
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 125.38,
-              "n": 9
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 0.0,
-          "rev_e": 612.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1020.0,
-              "r": 612.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
         },
         "2026-06-16": {
           "rev_m": 0.0,
@@ -3299,6 +3271,34 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 99.0,
+          "rev_e": 710.1,
+          "measured_min": 150.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1320.0,
+              "r": 809.1
+            }
+          },
+          "tod": {
+            "Vormittag": 60,
+            "Abend": 90
+          },
+          "dur": {
+            "1h": 1,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 2
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 9.69,
+              "n": 2
+            }
+          }
         }
       },
       "events": [
@@ -3336,6 +3336,86 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 93.8,
+          "rev_e": 814.2,
+          "measured_min": 150.0,
+          "types": {
+            "Double · Indoor": {
+              "b": 690.0,
+              "r": 453.0
+            },
+            "Double · Outdoor": {
+              "b": 660.0,
+              "r": 455.0
+            }
+          },
+          "tod": {
+            "Abend": 150
+          },
+          "dur": {
+            "1h": 1,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "Gleicher Tag": 2
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 0.77,
+              "n": 2
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 56.8,
+          "rev_e": 1771.0,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1620.0,
+              "r": 1229.8
+            },
+            "Double · Indoor": {
+              "b": 780.0,
+              "r": 598.0
+            }
+          },
+          "tod": {
+            "Abend": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 13.79,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 0.0,
+          "rev_e": 930.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 870.0,
+              "r": 642.9
+            },
+            "Double · Indoor": {
+              "b": 390.0,
+              "r": 287.6
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
         "2026-06-11": {
           "rev_m": 56.4,
           "rev_e": 866.7,
@@ -3366,33 +3446,33 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 112.8,
-          "rev_e": 1464.8,
+        "2026-06-09": {
+          "rev_m": 112.9,
+          "rev_e": 1520.8,
           "measured_min": 180.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1680.0,
-              "r": 1051.8
+              "b": 1770.0,
+              "r": 1107.5
             },
             "Double · Indoor": {
               "b": 840.0,
-              "r": 525.8
+              "r": 526.2
             }
           },
           "tod": {
-            "Nachmittag": 180
+            "Nachmittag": 90,
+            "Abend": 90
           },
           "dur": {
             "1,5h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 1,
-            "2 Tage": 1
+            "3–7 Tage": 2
           },
           "wd_adv": {
-            "Mo": {
-              "s": 5.81,
+            "Di": {
+              "s": 8.4,
               "n": 2
             }
           }
@@ -3429,43 +3509,36 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 0.0,
-          "rev_e": 922.3,
-          "measured_min": 0.0,
+        "2026-06-15": {
+          "rev_m": 169.5,
+          "rev_e": 929.8,
+          "measured_min": 270.0,
           "types": {
             "Double · Outdoor": {
-              "b": 840.0,
-              "r": 630.7
+              "b": 1110.0,
+              "r": 805.4
             },
             "Double · Indoor": {
               "b": 390.0,
-              "r": 291.6
+              "r": 293.8
             }
           },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-10": {
-          "rev_m": 0.0,
-          "rev_e": 930.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 870.0,
-              "r": 642.9
-            },
-            "Double · Indoor": {
-              "b": 390.0,
-              "r": 287.6
-            }
+          "tod": {
+            "Abend": 90,
+            "Nachmittag": 180
           },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
+          "dur": {
+            "1,5h": 3
+          },
+          "vorlauf": {
+            "8–14 Tage": 3
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 30.97,
+              "n": 3
+            }
+          }
         },
         "2026-06-13": {
           "rev_m": 168.4,
@@ -3496,6 +3569,35 @@
               "n": 3
             }
           }
+        },
+        "2026-06-04": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-17": {
+          "rev_m": 0.0,
+          "rev_e": 922.3,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 840.0,
+              "r": 630.7
+            },
+            "Double · Indoor": {
+              "b": 390.0,
+              "r": 291.6
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
         "2026-06-14": {
           "rev_m": 392.8,
@@ -3579,165 +3681,33 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 112.9,
-          "rev_e": 1520.8,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1770.0,
-              "r": 1107.5
-            },
-            "Double · Indoor": {
-              "b": 840.0,
-              "r": 526.2
-            }
-          },
-          "tod": {
-            "Nachmittag": 90,
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 8.4,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 169.5,
-          "rev_e": 929.8,
-          "measured_min": 270.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1110.0,
-              "r": 805.4
-            },
-            "Double · Indoor": {
-              "b": 390.0,
-              "r": 293.8
-            }
-          },
-          "tod": {
-            "Abend": 90,
-            "Nachmittag": 180
-          },
-          "dur": {
-            "1,5h": 3
-          },
-          "vorlauf": {
-            "8–14 Tage": 3
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 30.97,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 105.5,
-          "rev_e": 1450.3,
+        "2026-06-08": {
+          "rev_m": 112.8,
+          "rev_e": 1464.8,
           "measured_min": 180.0,
           "types": {
             "Double · Outdoor": {
               "b": 1680.0,
-              "r": 992.8
+              "r": 1051.8
             },
             "Double · Indoor": {
-              "b": 930.0,
-              "r": 563.1
+              "b": 840.0,
+              "r": 525.8
             }
           },
           "tod": {
-            "Vormittag": 180
+            "Nachmittag": 180
           },
           "dur": {
             "1,5h": 2
           },
           "vorlauf": {
-            "1 Tag": 2
+            "3–7 Tage": 1,
+            "2 Tage": 1
           },
           "wd_adv": {
-            "So": {
-              "s": 3.37,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-04": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 56.8,
-          "rev_e": 1771.0,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1620.0,
-              "r": 1229.8
-            },
-            "Double · Indoor": {
-              "b": 780.0,
-              "r": 598.0
-            }
-          },
-          "tod": {
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 13.79,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 93.8,
-          "rev_e": 814.2,
-          "measured_min": 150.0,
-          "types": {
-            "Double · Indoor": {
-              "b": 690.0,
-              "r": 453.0
-            },
-            "Double · Outdoor": {
-              "b": 660.0,
-              "r": 455.0
-            }
-          },
-          "tod": {
-            "Abend": 150
-          },
-          "dur": {
-            "1h": 1,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "Gleicher Tag": 2
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 0.77,
+            "Mo": {
+              "s": 5.81,
               "n": 2
             }
           }
@@ -3771,6 +3741,36 @@
               "n": 1
             }
           }
+        },
+        "2026-06-07": {
+          "rev_m": 105.5,
+          "rev_e": 1450.3,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1680.0,
+              "r": 992.8
+            },
+            "Double · Indoor": {
+              "b": 930.0,
+              "r": 563.1
+            }
+          },
+          "tod": {
+            "Vormittag": 180
+          },
+          "dur": {
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "1 Tag": 2
+          },
+          "wd_adv": {
+            "So": {
+              "s": 3.37,
+              "n": 2
+            }
+          }
         }
       },
       "events": []
@@ -3792,6 +3792,63 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 227.8,
+          "rev_e": 182.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 750.0,
+              "r": 409.8
+            }
+          },
+          "tod": {
+            "Abend": 180,
+            "Mittag": 150,
+            "Nachmittag": 90
+          },
+          "dur": {
+            "1h": 4,
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "Gleicher Tag": 1,
+            "<6h": 5
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 1.74,
+              "n": 6
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 114.0,
+          "rev_e": 215.7,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 660.0,
+              "r": 329.7
+            }
+          },
+          "tod": {
+            "Nachmittag": 180
+          },
+          "dur": {
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "15–30 Tage": 1,
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 28.04,
+              "n": 2
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 116.5,
           "rev_e": 804.0,
@@ -3821,33 +3878,32 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 236.6,
-          "rev_e": 731.5,
-          "measured_min": 570.0,
+        "2026-06-09": {
+          "rev_m": 125.8,
+          "rev_e": 762.1,
+          "measured_min": 300.0,
           "types": {
             "Double · Outdoor": {
-              "b": 2340.0,
-              "r": 968.0
+              "b": 2520.0,
+              "r": 887.9
             }
           },
           "tod": {
-            "Vormittag": 330,
-            "Abend": 120,
+            "Mittag": 90,
+            "Vormittag": 90,
             "Nachmittag": 120
           },
           "dur": {
-            "1,5h": 3,
-            "1h": 5
+            "1,5h": 2,
+            "1h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 2,
-            "2 Tage": 6
+            "3–7 Tage": 4
           },
           "wd_adv": {
-            "Mo": {
-              "s": 23.2,
-              "n": 8
+            "Di": {
+              "s": 16.66,
+              "n": 4
             }
           }
         },
@@ -3882,29 +3938,59 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 22.5,
-          "rev_e": 605.4,
-          "measured_min": 90.0,
+        "2026-06-15": {
+          "rev_m": 79.5,
+          "rev_e": 504.0,
+          "measured_min": 180.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1860.0,
-              "r": 627.9
+              "b": 1530.0,
+              "r": 583.5
             }
           },
           "tod": {
-            "Vormittag": 90
+            "Vormittag": 90,
+            "Abend": 90
           },
           "dur": {
-            "1,5h": 1
+            "1,5h": 2
           },
           "vorlauf": {
-            "8–14 Tage": 1
+            "8–14 Tage": 2
           },
           "wd_adv": {
-            "Mi": {
-              "s": 11.79,
-              "n": 1
+            "Mo": {
+              "s": 20.15,
+              "n": 2
+            }
+          }
+        },
+        "2026-06-13": {
+          "rev_m": 152.0,
+          "rev_e": 874.0,
+          "measured_min": 240.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1620.0,
+              "r": 1026.0
+            }
+          },
+          "tod": {
+            "Vormittag": 90,
+            "Mittag": 60,
+            "Nachmittag": 90
+          },
+          "dur": {
+            "1,5h": 2,
+            "1h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 3
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 24.23,
+              "n": 3
             }
           }
         },
@@ -3935,58 +4021,59 @@
             }
           }
         },
-        "2026-06-10": {
-          "rev_m": 67.8,
-          "rev_e": 645.3,
-          "measured_min": 270.0,
+        "2026-06-17": {
+          "rev_m": 22.5,
+          "rev_e": 605.4,
+          "measured_min": 90.0,
           "types": {
             "Double · Outdoor": {
-              "b": 2190.0,
-              "r": 713.1
+              "b": 1860.0,
+              "r": 627.9
             }
           },
           "tod": {
-            "Vormittag": 270
+            "Vormittag": 90
           },
           "dur": {
-            "1,5h": 3
+            "1,5h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 3
+            "8–14 Tage": 1
           },
           "wd_adv": {
             "Mi": {
-              "s": 15.07,
-              "n": 3
+              "s": 11.79,
+              "n": 1
             }
           }
         },
-        "2026-06-13": {
-          "rev_m": 152.0,
-          "rev_e": 874.0,
-          "measured_min": 240.0,
+        "2026-06-07": {
+          "rev_m": 247.0,
+          "rev_e": 1577.0,
+          "measured_min": 390.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1620.0,
-              "r": 1026.0
+              "b": 2880.0,
+              "r": 1824.0
             }
           },
           "tod": {
-            "Vormittag": 90,
             "Mittag": 60,
-            "Nachmittag": 90
+            "Vormittag": 270,
+            "Nachmittag": 60
           },
           "dur": {
-            "1,5h": 2,
-            "1h": 1
+            "1h": 5,
+            "1,5h": 1
           },
           "vorlauf": {
-            "8–14 Tage": 3
+            "2 Tage": 2,
+            "1 Tag": 4
           },
           "wd_adv": {
-            "Sa": {
-              "s": 24.23,
-              "n": 3
+            "So": {
+              "s": 11.65,
+              "n": 6
             }
           }
         },
@@ -4089,146 +4176,33 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-09": {
-          "rev_m": 125.8,
-          "rev_e": 762.1,
-          "measured_min": 300.0,
+        "2026-06-08": {
+          "rev_m": 236.6,
+          "rev_e": 731.5,
+          "measured_min": 570.0,
           "types": {
             "Double · Outdoor": {
-              "b": 2520.0,
-              "r": 887.9
+              "b": 2340.0,
+              "r": 968.0
             }
           },
           "tod": {
-            "Mittag": 90,
-            "Vormittag": 90,
+            "Vormittag": 330,
+            "Abend": 120,
             "Nachmittag": 120
           },
           "dur": {
-            "1,5h": 2,
-            "1h": 2
+            "1,5h": 3,
+            "1h": 5
           },
           "vorlauf": {
-            "3–7 Tage": 4
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 16.66,
-              "n": 4
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 79.5,
-          "rev_e": 504.0,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1530.0,
-              "r": 583.5
-            }
-          },
-          "tod": {
-            "Vormittag": 90,
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
+            "3–7 Tage": 2,
+            "2 Tage": 6
           },
           "wd_adv": {
             "Mo": {
-              "s": 20.15,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 247.0,
-          "rev_e": 1577.0,
-          "measured_min": 390.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 2880.0,
-              "r": 1824.0
-            }
-          },
-          "tod": {
-            "Mittag": 60,
-            "Vormittag": 270,
-            "Nachmittag": 60
-          },
-          "dur": {
-            "1h": 5,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "2 Tage": 2,
-            "1 Tag": 4
-          },
-          "wd_adv": {
-            "So": {
-              "s": 11.65,
-              "n": 6
-            }
-          }
-        },
-        "2026-06-19": {
-          "rev_m": 114.0,
-          "rev_e": 215.7,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 660.0,
-              "r": 329.7
-            }
-          },
-          "tod": {
-            "Nachmittag": 180
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "15–30 Tage": 1,
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 28.04,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 227.8,
-          "rev_e": 182.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 750.0,
-              "r": 409.8
-            }
-          },
-          "tod": {
-            "Abend": 180,
-            "Mittag": 150,
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1h": 4,
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "Gleicher Tag": 1,
-            "<6h": 5
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 1.74,
-              "n": 6
+              "s": 23.2,
+              "n": 8
             }
           }
         },
@@ -4246,6 +4220,32 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 67.8,
+          "rev_e": 645.3,
+          "measured_min": 270.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 2190.0,
+              "r": 713.1
+            }
+          },
+          "tod": {
+            "Vormittag": 270
+          },
+          "dur": {
+            "1,5h": 3
+          },
+          "vorlauf": {
+            "3–7 Tage": 3
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 15.07,
+              "n": 3
+            }
+          }
         }
       },
       "events": []
@@ -4272,136 +4272,6 @@
         }
       ],
       "daily": {
-        "2026-07-03": {
-          "rev_m": 0.0,
-          "rev_e": 65.1,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 120.0,
-              "r": 65.1
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-22": {
-          "rev_m": 0.0,
-          "rev_e": 253.4,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 420.0,
-              "r": 219.9
-            },
-            "Single · Outdoor": {
-              "b": 60.0,
-              "r": 33.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-10": {
-          "rev_m": 191.4,
-          "rev_e": 356.6,
-          "measured_min": 330.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 840.0,
-              "r": 442.9
-            },
-            "Single · Outdoor": {
-              "b": 180.0,
-              "r": 105.1
-            }
-          },
-          "tod": {
-            "Nachmittag": 60,
-            "Mittag": 90,
-            "Vormittag": 90,
-            "Abend": 90
-          },
-          "dur": {
-            "1h": 1,
-            "1,5h": 3
-          },
-          "vorlauf": {
-            "3–7 Tage": 4
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 20.2,
-              "n": 4
-            }
-          }
-        },
-        "2026-06-13": {
-          "rev_m": 120.0,
-          "rev_e": 678.4,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1110.0,
-              "r": 738.6
-            },
-            "Single · Outdoor": {
-              "b": 90.0,
-              "r": 59.8
-            }
-          },
-          "tod": {
-            "Vormittag": 180
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 15.72,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-14": {
-          "rev_m": 139.7,
-          "rev_e": 378.8,
-          "measured_min": 210.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 690.0,
-              "r": 458.7
-            },
-            "Single · Outdoor": {
-              "b": 90.0,
-              "r": 59.8
-            }
-          },
-          "tod": {
-            "Mittag": 120,
-            "Vormittag": 90
-          },
-          "dur": {
-            "2h": 1,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "So": {
-              "s": 18.34,
-              "n": 2
-            }
-          }
-        },
         "2026-06-29": {
           "rev_m": 0.0,
           "rev_e": 49.3,
@@ -4436,47 +4306,134 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-04": {
-          "rev_m": 180.0,
-          "rev_e": 0.0,
-          "measured_min": 270.0,
+        "2026-06-15": {
+          "rev_m": 0.0,
+          "rev_e": 319.5,
+          "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 180.0,
-              "r": 120.0
+              "b": 630.0,
+              "r": 319.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-13": {
+          "rev_m": 120.0,
+          "rev_e": 678.4,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1110.0,
+              "r": 738.6
             },
             "Single · Outdoor": {
               "b": 90.0,
-              "r": 60.0
+              "r": 59.8
             }
           },
           "tod": {
-            "Abend": 210,
-            "Nachts": 60
+            "Vormittag": 180
           },
           "dur": {
-            "2h": 1,
-            "1h": 1,
-            "1,5h": 1
+            "1,5h": 2
           },
           "vorlauf": {
-            "<2h": 1
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 15.72,
+              "n": 2
+            }
+          }
+        },
+        "2026-07-03": {
+          "rev_m": 0.0,
+          "rev_e": 65.1,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 120.0,
+              "r": 65.1
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-02": {
+          "rev_m": 40.0,
+          "rev_e": 160.8,
+          "measured_min": 60.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 360.0,
+              "r": 200.8
+            }
+          },
+          "tod": {
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1h": 1
+          },
+          "vorlauf": {
+            "15–30 Tage": 1
           },
           "wd_adv": {
             "Do": {
-              "s": 0.07,
+              "s": 27.37,
               "n": 1
             }
           }
         },
-        "2026-07-01": {
+        "2026-06-08": {
+          "rev_m": 42.5,
+          "rev_e": 522.6,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 840.0,
+              "r": 424.2
+            },
+            "Single · Outdoor": {
+              "b": 270.0,
+              "r": 140.9
+            }
+          },
+          "tod": {
+            "Vormittag": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "2 Tage": 1
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 2.69,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-28": {
           "rev_m": 0.0,
-          "rev_e": 49.3,
+          "rev_e": 119.5,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 90.0,
-              "r": 49.3
+              "b": 150.0,
+              "r": 99.6
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.9
             }
           },
           "tod": {},
@@ -4519,6 +4476,358 @@
             }
           }
         },
+        "2026-06-19": {
+          "rev_m": 57.6,
+          "rev_e": 485.5,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 750.0,
+              "r": 390.0
+            },
+            "Single · Outdoor": {
+              "b": 300.0,
+              "r": 153.1
+            }
+          },
+          "tod": {
+            "Nachmittag": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "15–30 Tage": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 14.08,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-21": {
+          "rev_m": 0.0,
+          "rev_e": 239.1,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 330.0,
+              "r": 219.2
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.9
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-17": {
+          "rev_m": 0.0,
+          "rev_e": 544.3,
+          "measured_min": 0.0,
+          "types": {
+            "Single · Outdoor": {
+              "b": 90.0,
+              "r": 49.3
+            },
+            "Double · Outdoor": {
+              "b": 960.0,
+              "r": 495.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-01": {
+          "rev_m": 0.0,
+          "rev_e": 49.3,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 90.0,
+              "r": 49.3
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-18": {
+          "rev_m": 0.0,
+          "rev_e": 369.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 570.0,
+              "r": 288.9
+            },
+            "Single · Outdoor": {
+              "b": 150.0,
+              "r": 80.6
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-05": {
+          "rev_m": 0.0,
+          "rev_e": 59.8,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 60.0,
+              "r": 39.8
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.9
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-16": {
+          "rev_m": 0.0,
+          "rev_e": 358.3,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 570.0,
+              "r": 288.9
+            },
+            "Single · Outdoor": {
+              "b": 120.0,
+              "r": 69.4
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 191.4,
+          "rev_e": 356.6,
+          "measured_min": 330.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 840.0,
+              "r": 442.9
+            },
+            "Single · Outdoor": {
+              "b": 180.0,
+              "r": 105.1
+            }
+          },
+          "tod": {
+            "Nachmittag": 60,
+            "Mittag": 90,
+            "Vormittag": 90,
+            "Abend": 90
+          },
+          "dur": {
+            "1h": 1,
+            "1,5h": 3
+          },
+          "vorlauf": {
+            "3–7 Tage": 4
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 20.2,
+              "n": 4
+            }
+          }
+        },
+        "2026-06-04": {
+          "rev_m": 180.0,
+          "rev_e": 0.0,
+          "measured_min": 270.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 180.0,
+              "r": 120.0
+            },
+            "Single · Outdoor": {
+              "b": 90.0,
+              "r": 60.0
+            }
+          },
+          "tod": {
+            "Abend": 210,
+            "Nachts": 60
+          },
+          "dur": {
+            "2h": 1,
+            "1h": 1,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "<2h": 1
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 0.07,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-30": {
+          "rev_m": 0.0,
+          "rev_e": 114.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 210.0,
+              "r": 114.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-23": {
+          "rev_m": 40.0,
+          "rev_e": 159.4,
+          "measured_min": 60.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 360.0,
+              "r": 199.4
+            }
+          },
+          "tod": {
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1h": 1
+          },
+          "vorlauf": {
+            "15–30 Tage": 1
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 17.86,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-11": {
+          "rev_m": 140.0,
+          "rev_e": 373.0,
+          "measured_min": 210.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 660.0,
+              "r": 345.4
+            },
+            "Single · Outdoor": {
+              "b": 270.0,
+              "r": 167.6
+            }
+          },
+          "tod": {
+            "Nachmittag": 60,
+            "Abend": 150
+          },
+          "dur": {
+            "1h": 2,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 3
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 20.69,
+              "n": 3
+            }
+          }
+        },
+        "2026-06-24": {
+          "rev_m": 0.0,
+          "rev_e": 237.4,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 203.5
+            },
+            "Single · Outdoor": {
+              "b": 60.0,
+              "r": 33.8
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-06": {
+          "rev_m": 279.2,
+          "rev_e": 1496.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1800.0,
+              "r": 1196.5
+            },
+            "Single · Outdoor": {
+              "b": 870.0,
+              "r": 578.6
+            }
+          },
+          "tod": {
+            "Abend": 330,
+            "Vormittag": 90
+          },
+          "dur": {
+            "1,5h": 2,
+            "2h": 1,
+            "1h": 2
+          },
+          "vorlauf": {
+            "1 Tag": 4,
+            "Gleicher Tag": 1
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 6.31,
+              "n": 5
+            }
+          }
+        },
+        "2026-06-22": {
+          "rev_m": 0.0,
+          "rev_e": 253.4,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 420.0,
+              "r": 219.9
+            },
+            "Single · Outdoor": {
+              "b": 60.0,
+              "r": 33.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
         "2026-06-26": {
           "rev_m": 0.0,
           "rev_e": 290.3,
@@ -4537,6 +4846,89 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
+        },
+        "2026-06-27": {
+          "rev_m": 0.0,
+          "rev_e": 119.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 150.0,
+              "r": 99.6
+            },
+            "Single · Outdoor": {
+              "b": 30.0,
+              "r": 19.9
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-07": {
+          "rev_m": 199.4,
+          "rev_e": 1437.3,
+          "measured_min": 300.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1710.0,
+              "r": 1138.5
+            },
+            "Single · Outdoor": {
+              "b": 750.0,
+              "r": 498.3
+            }
+          },
+          "tod": {
+            "Vormittag": 120,
+            "Abend": 180
+          },
+          "dur": {
+            "1h": 5
+          },
+          "vorlauf": {
+            "1 Tag": 3,
+            "2 Tage": 2
+          },
+          "wd_adv": {
+            "So": {
+              "s": 9.87,
+              "n": 5
+            }
+          }
+        },
+        "2026-06-14": {
+          "rev_m": 139.7,
+          "rev_e": 378.8,
+          "measured_min": 210.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 690.0,
+              "r": 458.7
+            },
+            "Single · Outdoor": {
+              "b": 90.0,
+              "r": 59.8
+            }
+          },
+          "tod": {
+            "Mittag": 120,
+            "Vormittag": 90
+          },
+          "dur": {
+            "2h": 1,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "So": {
+              "s": 18.34,
+              "n": 2
+            }
+          }
         },
         "2026-06-12": {
           "rev_m": 103.4,
@@ -4588,102 +4980,6 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-07-05": {
-          "rev_m": 0.0,
-          "rev_e": 59.8,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 60.0,
-              "r": 39.8
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.9
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-16": {
-          "rev_m": 0.0,
-          "rev_e": 358.3,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 570.0,
-              "r": 288.9
-            },
-            "Single · Outdoor": {
-              "b": 120.0,
-              "r": 69.4
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-11": {
-          "rev_m": 140.0,
-          "rev_e": 373.0,
-          "measured_min": 210.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 660.0,
-              "r": 345.4
-            },
-            "Single · Outdoor": {
-              "b": 270.0,
-              "r": 167.6
-            }
-          },
-          "tod": {
-            "Nachmittag": 60,
-            "Abend": 150
-          },
-          "dur": {
-            "1h": 2,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 3
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 20.69,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-23": {
-          "rev_m": 40.0,
-          "rev_e": 159.4,
-          "measured_min": 60.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 360.0,
-              "r": 199.4
-            }
-          },
-          "tod": {
-            "Nachmittag": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 1
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 17.86,
-              "n": 1
-            }
-          }
-        },
         "2026-07-04": {
           "rev_m": 0.0,
           "rev_e": 418.5,
@@ -4702,93 +4998,6 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
-        },
-        "2026-06-18": {
-          "rev_m": 0.0,
-          "rev_e": 369.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 570.0,
-              "r": 288.9
-            },
-            "Single · Outdoor": {
-              "b": 150.0,
-              "r": 80.6
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-24": {
-          "rev_m": 0.0,
-          "rev_e": 237.4,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 203.5
-            },
-            "Single · Outdoor": {
-              "b": 60.0,
-              "r": 33.8
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-27": {
-          "rev_m": 0.0,
-          "rev_e": 119.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 150.0,
-              "r": 99.6
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.9
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 57.6,
-          "rev_e": 485.5,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 750.0,
-              "r": 390.0
-            },
-            "Single · Outdoor": {
-              "b": 300.0,
-              "r": 153.1
-            }
-          },
-          "tod": {
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 14.08,
-              "n": 1
-            }
-          }
         },
         "2026-06-25": {
           "rev_m": 40.0,
@@ -4815,215 +5024,6 @@
               "n": 1
             }
           }
-        },
-        "2026-06-28": {
-          "rev_m": 0.0,
-          "rev_e": 119.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 150.0,
-              "r": 99.6
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.9
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-08": {
-          "rev_m": 42.5,
-          "rev_e": 522.6,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 840.0,
-              "r": 424.2
-            },
-            "Single · Outdoor": {
-              "b": 270.0,
-              "r": 140.9
-            }
-          },
-          "tod": {
-            "Vormittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "2 Tage": 1
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 2.69,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-30": {
-          "rev_m": 0.0,
-          "rev_e": 114.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 210.0,
-              "r": 114.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-06": {
-          "rev_m": 279.2,
-          "rev_e": 1496.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1800.0,
-              "r": 1196.5
-            },
-            "Single · Outdoor": {
-              "b": 870.0,
-              "r": 578.6
-            }
-          },
-          "tod": {
-            "Abend": 330,
-            "Vormittag": 90
-          },
-          "dur": {
-            "1,5h": 2,
-            "2h": 1,
-            "1h": 2
-          },
-          "vorlauf": {
-            "1 Tag": 4,
-            "Gleicher Tag": 1
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 6.31,
-              "n": 5
-            }
-          }
-        },
-        "2026-06-17": {
-          "rev_m": 0.0,
-          "rev_e": 544.3,
-          "measured_min": 0.0,
-          "types": {
-            "Single · Outdoor": {
-              "b": 90.0,
-              "r": 49.3
-            },
-            "Double · Outdoor": {
-              "b": 960.0,
-              "r": 495.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-21": {
-          "rev_m": 0.0,
-          "rev_e": 239.1,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 330.0,
-              "r": 219.2
-            },
-            "Single · Outdoor": {
-              "b": 30.0,
-              "r": 19.9
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-07-02": {
-          "rev_m": 40.0,
-          "rev_e": 160.8,
-          "measured_min": 60.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 360.0,
-              "r": 200.8
-            }
-          },
-          "tod": {
-            "Nachmittag": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 1
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 27.37,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 0.0,
-          "rev_e": 319.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 630.0,
-              "r": 319.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-07": {
-          "rev_m": 199.4,
-          "rev_e": 1437.3,
-          "measured_min": 300.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1710.0,
-              "r": 1138.5
-            },
-            "Single · Outdoor": {
-              "b": 750.0,
-              "r": 498.3
-            }
-          },
-          "tod": {
-            "Vormittag": 120,
-            "Abend": 180
-          },
-          "dur": {
-            "1h": 5
-          },
-          "vorlauf": {
-            "1 Tag": 3,
-            "2 Tage": 2
-          },
-          "wd_adv": {
-            "So": {
-              "s": 9.87,
-              "n": 5
-            }
-          }
         }
       },
       "events": []
@@ -5045,6 +5045,89 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 192.3,
+          "rev_e": 436.3,
+          "measured_min": 450.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1560.0,
+              "r": 628.6
+            }
+          },
+          "tod": {
+            "Mittag": 210,
+            "Abend": 180,
+            "Vormittag": 60
+          },
+          "dur": {
+            "1,5h": 1,
+            "1h": 6
+          },
+          "vorlauf": {
+            "Gleicher Tag": 4,
+            "<6h": 2,
+            "<2h": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 2.8,
+              "n": 7
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 98.8,
+          "rev_e": 0.0,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 180.0,
+              "r": 98.8
+            }
+          },
+          "tod": {
+            "Mittag": 180
+          },
+          "dur": {
+            "2h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 14.0,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 38.0,
+          "rev_e": 592.7,
+          "measured_min": 60.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1740.0,
+              "r": 630.7
+            }
+          },
+          "tod": {
+            "Nachmittag": 60
+          },
+          "dur": {
+            "1h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 1
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 5.14,
+              "n": 1
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 91.0,
           "rev_e": 231.8,
@@ -5073,31 +5156,31 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 99.5,
-          "rev_e": 312.3,
-          "measured_min": 360.0,
+        "2026-06-09": {
+          "rev_m": 92.0,
+          "rev_e": 627.9,
+          "measured_min": 240.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1290.0,
-              "r": 411.8
+              "b": 1710.0,
+              "r": 720.0
             }
           },
           "tod": {
-            "Vormittag": 180,
-            "Mittag": 180
+            "Vormittag": 150,
+            "Nachmittag": 90
           },
           "dur": {
-            "1,5h": 4
+            "1h": 1,
+            "1,5h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 2,
-            "2 Tage": 2
+            "3–7 Tage": 3
           },
           "wd_adv": {
-            "Mo": {
-              "s": 12.42,
-              "n": 4
+            "Di": {
+              "s": 11.93,
+              "n": 3
             }
           }
         },
@@ -5130,6 +5213,71 @@
               "n": 8
             }
           }
+        },
+        "2026-06-15": {
+          "rev_m": 22.5,
+          "rev_e": 104.3,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 360.0,
+              "r": 126.8
+            }
+          },
+          "tod": {
+            "Vormittag": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 9.51,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-13": {
+          "rev_m": 266.0,
+          "rev_e": 551.0,
+          "measured_min": 420.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1290.0,
+              "r": 817.0
+            }
+          },
+          "tod": {
+            "Vormittag": 120,
+            "Mittag": 120,
+            "Nachmittag": 180
+          },
+          "dur": {
+            "2h": 3,
+            "1h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 4
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 32.56,
+              "n": 4
+            }
+          }
+        },
+        "2026-06-04": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
         "2026-06-17": {
           "rev_m": 0.0,
@@ -5170,61 +5318,6 @@
             "So": {
               "s": 79.5,
               "n": 5
-            }
-          }
-        },
-        "2026-06-10": {
-          "rev_m": 38.0,
-          "rev_e": 592.7,
-          "measured_min": 60.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1740.0,
-              "r": 630.7
-            }
-          },
-          "tod": {
-            "Nachmittag": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 1
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 5.14,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-13": {
-          "rev_m": 266.0,
-          "rev_e": 551.0,
-          "measured_min": 420.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1290.0,
-              "r": 817.0
-            }
-          },
-          "tod": {
-            "Vormittag": 120,
-            "Mittag": 120,
-            "Nachmittag": 180
-          },
-          "dur": {
-            "2h": 3,
-            "1h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 4
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 32.56,
-              "n": 4
             }
           }
         },
@@ -5321,59 +5414,48 @@
             }
           }
         },
-        "2026-06-09": {
-          "rev_m": 92.0,
-          "rev_e": 627.9,
-          "measured_min": 240.0,
+        "2026-06-08": {
+          "rev_m": 99.5,
+          "rev_e": 312.3,
+          "measured_min": 360.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1710.0,
-              "r": 720.0
+              "b": 1290.0,
+              "r": 411.8
             }
           },
           "tod": {
-            "Vormittag": 150,
-            "Nachmittag": 90
+            "Vormittag": 180,
+            "Mittag": 180
           },
           "dur": {
-            "1h": 1,
-            "1,5h": 2
+            "1,5h": 4
           },
           "vorlauf": {
-            "3–7 Tage": 3
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 11.93,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 22.5,
-          "rev_e": 104.3,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 360.0,
-              "r": 126.8
-            }
-          },
-          "tod": {
-            "Vormittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
+            "3–7 Tage": 2,
+            "2 Tage": 2
           },
           "wd_adv": {
             "Mo": {
-              "s": 9.51,
-              "n": 1
+              "s": 12.42,
+              "n": 4
             }
           }
+        },
+        "2026-06-16": {
+          "rev_m": 0.0,
+          "rev_e": 638.1,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1200.0,
+              "r": 638.1
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
         "2026-06-07": {
           "rev_m": 437.0,
@@ -5406,88 +5488,6 @@
               "n": 8
             }
           }
-        },
-        "2026-06-04": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 98.8,
-          "rev_e": 0.0,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 180.0,
-              "r": 98.8
-            }
-          },
-          "tod": {
-            "Mittag": 180
-          },
-          "dur": {
-            "2h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 14.0,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 192.3,
-          "rev_e": 436.3,
-          "measured_min": 450.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1560.0,
-              "r": 628.6
-            }
-          },
-          "tod": {
-            "Mittag": 210,
-            "Abend": 180,
-            "Vormittag": 60
-          },
-          "dur": {
-            "1,5h": 1,
-            "1h": 6
-          },
-          "vorlauf": {
-            "Gleicher Tag": 4,
-            "<6h": 2,
-            "<2h": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 2.8,
-              "n": 7
-            }
-          }
-        },
-        "2026-06-16": {
-          "rev_m": 0.0,
-          "rev_e": 638.1,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1200.0,
-              "r": 638.1
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
         }
       },
       "events": [
@@ -5515,6 +5515,67 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 140.0,
+          "rev_e": 27.0,
+          "measured_min": 300.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 167.0
+            }
+          },
+          "tod": {
+            "Nachmittag": 150,
+            "Mittag": 150
+          },
+          "dur": {
+            "1,5h": 2,
+            "1h": 2
+          },
+          "vorlauf": {
+            "Gleicher Tag": 1,
+            "<6h": 2,
+            "<2h": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 1.25,
+              "n": 4
+            }
+          }
+        },
+        "2026-06-19": {
+          "rev_m": 173.6,
+          "rev_e": 161.9,
+          "measured_min": 360.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 810.0,
+              "r": 335.4
+            }
+          },
+          "tod": {
+            "Vormittag": 120,
+            "Nachmittag": 150,
+            "Mittag": 90
+          },
+          "dur": {
+            "2h": 1,
+            "1,5h": 2,
+            "1h": 1
+          },
+          "vorlauf": {
+            "15–30 Tage": 2,
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 56.03,
+              "n": 4
+            }
+          }
+        },
         "2026-06-11": {
           "rev_m": 56.2,
           "rev_e": 122.1,
@@ -5542,33 +5603,31 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 209.0,
-          "rev_e": 118.0,
-          "measured_min": 600.0,
+        "2026-06-09": {
+          "rev_m": 71.5,
+          "rev_e": 282.0,
+          "measured_min": 150.0,
           "types": {
             "Double · Outdoor": {
-              "b": 960.0,
-              "r": 327.0
+              "b": 840.0,
+              "r": 353.5
             }
           },
           "tod": {
-            "Vormittag": 540,
+            "Mittag": 90,
             "Nachmittag": 60
           },
           "dur": {
-            "1,5h": 4,
-            "1h": 2,
-            "2h": 1
+            "1,5h": 1,
+            "1h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 4,
-            "2 Tage": 3
+            "3–7 Tage": 2
           },
           "wd_adv": {
-            "Mo": {
-              "s": 22.02,
-              "n": 7
+            "Di": {
+              "s": 8.1,
+              "n": 2
             }
           }
         },
@@ -5601,20 +5660,57 @@
             }
           }
         },
-        "2026-06-17": {
-          "rev_m": 0.0,
-          "rev_e": 176.9,
-          "measured_min": 0.0,
+        "2026-06-15": {
+          "rev_m": 20.0,
+          "rev_e": 219.9,
+          "measured_min": 60.0,
           "types": {
             "Double · Outdoor": {
-              "b": 510.0,
-              "r": 176.9
+              "b": 690.0,
+              "r": 239.9
             }
           },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
+          "tod": {
+            "Vormittag": 60
+          },
+          "dur": {
+            "1h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 9.65,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-13": {
+          "rev_m": 57.0,
+          "rev_e": 684.0,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1170.0,
+              "r": 741.0
+            }
+          },
+          "tod": {
+            "Mittag": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "8–14 Tage": 1
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 7.61,
+              "n": 1
+            }
+          }
         },
         "2026-06-21": {
           "rev_m": 190.0,
@@ -5644,58 +5740,35 @@
             }
           }
         },
-        "2026-06-10": {
-          "rev_m": 47.4,
-          "rev_e": 224.1,
-          "measured_min": 150.0,
+        "2026-06-17": {
+          "rev_m": 0.0,
+          "rev_e": 176.9,
+          "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 720.0,
-              "r": 271.5
+              "b": 510.0,
+              "r": 176.9
             }
           },
-          "tod": {
-            "Vormittag": 150
-          },
-          "dur": {
-            "1,5h": 1,
-            "1h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 9.53,
-              "n": 2
-            }
-          }
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
-        "2026-06-13": {
-          "rev_m": 57.0,
-          "rev_e": 684.0,
-          "measured_min": 90.0,
+        "2026-06-07": {
+          "rev_m": 0.0,
+          "rev_e": 418.0,
+          "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 1170.0,
-              "r": 741.0
+              "b": 660.0,
+              "r": 418.0
             }
           },
-          "tod": {
-            "Mittag": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 7.61,
-              "n": 1
-            }
-          }
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         },
         "2026-06-14": {
           "rev_m": 285.0,
@@ -5792,133 +5865,33 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-09": {
-          "rev_m": 71.5,
-          "rev_e": 282.0,
-          "measured_min": 150.0,
+        "2026-06-08": {
+          "rev_m": 209.0,
+          "rev_e": 118.0,
+          "measured_min": 600.0,
           "types": {
             "Double · Outdoor": {
-              "b": 840.0,
-              "r": 353.5
+              "b": 960.0,
+              "r": 327.0
             }
           },
           "tod": {
-            "Mittag": 90,
+            "Vormittag": 540,
             "Nachmittag": 60
           },
           "dur": {
-            "1,5h": 1,
-            "1h": 1
+            "1,5h": 4,
+            "1h": 2,
+            "2h": 1
           },
           "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 8.1,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 20.0,
-          "rev_e": 219.9,
-          "measured_min": 60.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 690.0,
-              "r": 239.9
-            }
-          },
-          "tod": {
-            "Vormittag": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "8–14 Tage": 1
+            "3–7 Tage": 4,
+            "2 Tage": 3
           },
           "wd_adv": {
             "Mo": {
-              "s": 9.65,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-07": {
-          "rev_m": 0.0,
-          "rev_e": 418.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 660.0,
-              "r": 418.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 173.6,
-          "rev_e": 161.9,
-          "measured_min": 360.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 810.0,
-              "r": 335.4
-            }
-          },
-          "tod": {
-            "Vormittag": 120,
-            "Nachmittag": 150,
-            "Mittag": 90
-          },
-          "dur": {
-            "2h": 1,
-            "1,5h": 2,
-            "1h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 2,
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 56.03,
-              "n": 4
-            }
-          }
-        },
-        "2026-06-05": {
-          "rev_m": 140.0,
-          "rev_e": 27.0,
-          "measured_min": 300.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 167.0
-            }
-          },
-          "tod": {
-            "Nachmittag": 150,
-            "Mittag": 150
-          },
-          "dur": {
-            "1,5h": 2,
-            "1h": 2
-          },
-          "vorlauf": {
-            "Gleicher Tag": 1,
-            "<6h": 2,
-            "<2h": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 1.25,
-              "n": 4
+              "s": 22.02,
+              "n": 7
             }
           }
         },
@@ -5945,6 +5918,33 @@
             "Di": {
               "s": 10.89,
               "n": 1
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 47.4,
+          "rev_e": 224.1,
+          "measured_min": 150.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 720.0,
+              "r": 271.5
+            }
+          },
+          "tod": {
+            "Vormittag": 150
+          },
+          "dur": {
+            "1,5h": 1,
+            "1h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 2
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 9.53,
+              "n": 2
             }
           }
         }
@@ -5974,14 +5974,14 @@
         }
       ],
       "daily": {
-        "2026-06-22": {
+        "2026-06-09": {
           "rev_m": 0.0,
-          "rev_e": 173.3,
+          "rev_e": 322.5,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 360.0,
-              "r": 173.3
+              "b": 720.0,
+              "r": 322.5
             }
           },
           "tod": {},
@@ -5989,14 +5989,14 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-10": {
+        "2026-06-15": {
           "rev_m": 0.0,
-          "rev_e": 258.4,
+          "rev_e": 274.6,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 570.0,
-              "r": 258.4
+              "b": 600.0,
+              "r": 274.6
             }
           },
           "tod": {},
@@ -6030,45 +6030,32 @@
             }
           }
         },
-        "2026-06-14": {
-          "rev_m": 0.0,
-          "rev_e": 160.0,
-          "measured_min": 0.0,
+        "2026-06-08": {
+          "rev_m": 57.8,
+          "rev_e": 281.8,
+          "measured_min": 120.0,
           "types": {
             "Double · Outdoor": {
-              "b": 300.0,
-              "r": 160.0
+              "b": 750.0,
+              "r": 339.6
             }
           },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-09": {
-          "rev_m": 0.0,
-          "rev_e": 322.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 720.0,
-              "r": 322.5
-            }
+          "tod": {
+            "Nachmittag": 60,
+            "Mittag": 60
           },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-04": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
+          "dur": {
+            "1h": 2
+          },
+          "vorlauf": {
+            "3–7 Tage": 2
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 7.46,
+              "n": 2
+            }
+          }
         },
         "2026-06-05": {
           "rev_m": 112.0,
@@ -6098,29 +6085,14 @@
             }
           }
         },
-        "2026-06-26": {
-          "rev_m": 0.0,
-          "rev_e": 600.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1440.0,
-              "r": 600.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-12": {
+        "2026-06-19": {
           "rev_m": 48.0,
-          "rev_e": 116.8,
+          "rev_e": 302.1,
           "measured_min": 90.0,
           "types": {
             "Double · Outdoor": {
-              "b": 330.0,
-              "r": 164.8
+              "b": 720.0,
+              "r": 350.1
             }
           },
           "tod": {
@@ -6130,26 +6102,31 @@
             "1,5h": 1
           },
           "vorlauf": {
-            "8–14 Tage": 1
+            "15–30 Tage": 1
           },
           "wd_adv": {
             "Fr": {
-              "s": 7.41,
+              "s": 14.39,
               "n": 1
             }
           }
         },
-        "2026-06-20": {
+        "2026-06-21": {
           "rev_m": 0.0,
-          "rev_e": 0.0,
+          "rev_e": 176.0,
           "measured_min": 0.0,
-          "types": {},
+          "types": {
+            "Double · Outdoor": {
+              "b": 330.0,
+              "r": 176.0
+            }
+          },
           "tod": {},
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-16": {
+        "2026-06-17": {
           "rev_m": 0.0,
           "rev_e": 221.5,
           "measured_min": 0.0,
@@ -6157,47 +6134,6 @@
             "Double · Outdoor": {
               "b": 480.0,
               "r": 221.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-11": {
-          "rev_m": 48.0,
-          "rev_e": 290.9,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 750.0,
-              "r": 338.9
-            }
-          },
-          "tod": {
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 1
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 6.34,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-23": {
-          "rev_m": 0.0,
-          "rev_e": 209.2,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 450.0,
-              "r": 209.2
             }
           },
           "tod": {},
@@ -6231,6 +6167,87 @@
             }
           }
         },
+        "2026-06-16": {
+          "rev_m": 0.0,
+          "rev_e": 221.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 480.0,
+              "r": 221.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 0.0,
+          "rev_e": 258.4,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 570.0,
+              "r": 258.4
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-04": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-23": {
+          "rev_m": 0.0,
+          "rev_e": 209.2,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 450.0,
+              "r": 209.2
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-11": {
+          "rev_m": 48.0,
+          "rev_e": 290.9,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 750.0,
+              "r": 338.9
+            }
+          },
+          "tod": {
+            "Abend": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 1
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 6.34,
+              "n": 1
+            }
+          }
+        },
         "2026-06-24": {
           "rev_m": 0.0,
           "rev_e": 224.0,
@@ -6245,74 +6262,6 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 48.0,
-          "rev_e": 302.1,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 720.0,
-              "r": 350.1
-            }
-          },
-          "tod": {
-            "Abend": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 1
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 14.39,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-25": {
-          "rev_m": 0.0,
-          "rev_e": 223.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 480.0,
-              "r": 223.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-08": {
-          "rev_m": 57.8,
-          "rev_e": 281.8,
-          "measured_min": 120.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 750.0,
-              "r": 339.6
-            }
-          },
-          "tod": {
-            "Nachmittag": 60,
-            "Mittag": 60
-          },
-          "dur": {
-            "1h": 2
-          },
-          "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 7.46,
-              "n": 2
-            }
-          }
         },
         "2026-06-06": {
           "rev_m": 400.0,
@@ -6346,14 +6295,14 @@
             }
           }
         },
-        "2026-06-17": {
+        "2026-06-22": {
           "rev_m": 0.0,
-          "rev_e": 221.5,
+          "rev_e": 173.3,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 480.0,
-              "r": 221.5
+              "b": 360.0,
+              "r": 173.3
             }
           },
           "tod": {},
@@ -6361,29 +6310,14 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-06-21": {
+        "2026-06-26": {
           "rev_m": 0.0,
-          "rev_e": 176.0,
+          "rev_e": 600.0,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 330.0,
-              "r": 176.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-15": {
-          "rev_m": 0.0,
-          "rev_e": 274.6,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 600.0,
-              "r": 274.6
+              "b": 1440.0,
+              "r": 600.0
             }
           },
           "tod": {},
@@ -6420,6 +6354,73 @@
               "n": 5
             }
           }
+        },
+        "2026-06-14": {
+          "rev_m": 0.0,
+          "rev_e": 160.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 300.0,
+              "r": 160.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-12": {
+          "rev_m": 96.0,
+          "rev_e": 116.8,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 420.0,
+              "r": 212.8
+            }
+          },
+          "tod": {
+            "Abend": 180
+          },
+          "dur": {
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 1,
+            "3–7 Tage": 1
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 13.97,
+              "n": 2
+            }
+          }
+        },
+        "2026-06-20": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-25": {
+          "rev_m": 0.0,
+          "rev_e": 223.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 480.0,
+              "r": 223.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
         }
       },
       "events": []
@@ -6441,6 +6442,16 @@
         }
       ],
       "daily": {
+        "2026-06-05": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
         "2026-06-11": {
           "rev_m": 233.7,
           "rev_e": 467.9,
@@ -6469,33 +6480,29 @@
             }
           }
         },
-        "2026-06-08": {
-          "rev_m": 256.0,
-          "rev_e": 252.0,
-          "measured_min": 510.0,
+        "2026-06-09": {
+          "rev_m": 56.0,
+          "rev_e": 434.0,
+          "measured_min": 120.0,
           "types": {
             "Double · Outdoor": {
               "b": 1050.0,
-              "r": 508.0
+              "r": 490.0
             }
           },
           "tod": {
-            "Mittag": 150,
-            "Vormittag": 270,
-            "Abend": 90
+            "Mittag": 120
           },
           "dur": {
-            "1h": 4,
-            "1,5h": 3
+            "1h": 2
           },
           "vorlauf": {
-            "3–7 Tage": 2,
-            "2 Tage": 5
+            "3–7 Tage": 2
           },
           "wd_adv": {
-            "Mo": {
-              "s": 19.64,
-              "n": 7
+            "Di": {
+              "s": 7.72,
+              "n": 2
             }
           }
         },
@@ -6524,93 +6531,6 @@
           "wd_adv": {
             "Sa": {
               "s": 1.85,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-10": {
-          "rev_m": 310.4,
-          "rev_e": 187.8,
-          "measured_min": 600.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 990.0,
-              "r": 498.3
-            }
-          },
-          "tod": {
-            "Nachmittag": 60,
-            "Vormittag": 180,
-            "Mittag": 360
-          },
-          "dur": {
-            "1h": 2,
-            "1,5h": 4,
-            "2h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 7
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 34.9,
-              "n": 7
-            }
-          }
-        },
-        "2026-06-12": {
-          "rev_m": 824.3,
-          "rev_e": 910.0,
-          "measured_min": 1440.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 3390.0,
-              "r": 1734.3
-            }
-          },
-          "tod": {
-            "Vormittag": 180,
-            "Mittag": 510,
-            "Nachmittag": 390,
-            "Abend": 360
-          },
-          "dur": {
-            "1,5h": 6,
-            "2h": 3,
-            "1h": 9
-          },
-          "vorlauf": {
-            "3–7 Tage": 18
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 124.22,
-              "n": 18
-            }
-          }
-        },
-        "2026-06-09": {
-          "rev_m": 56.0,
-          "rev_e": 434.0,
-          "measured_min": 120.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1050.0,
-              "r": 490.0
-            }
-          },
-          "tod": {
-            "Mittag": 120
-          },
-          "dur": {
-            "1h": 2
-          },
-          "vorlauf": {
-            "3–7 Tage": 2
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 7.72,
               "n": 2
             }
           }
@@ -6645,15 +6565,96 @@
             }
           }
         },
-        "2026-06-05": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
+        "2026-06-12": {
+          "rev_m": 824.3,
+          "rev_e": 910.0,
+          "measured_min": 1440.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 3390.0,
+              "r": 1734.3
+            }
+          },
+          "tod": {
+            "Vormittag": 180,
+            "Mittag": 510,
+            "Nachmittag": 390,
+            "Abend": 360
+          },
+          "dur": {
+            "1,5h": 6,
+            "2h": 3,
+            "1h": 9
+          },
+          "vorlauf": {
+            "3–7 Tage": 18
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 124.22,
+              "n": 18
+            }
+          }
+        },
+        "2026-06-08": {
+          "rev_m": 256.0,
+          "rev_e": 252.0,
+          "measured_min": 510.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1050.0,
+              "r": 508.0
+            }
+          },
+          "tod": {
+            "Mittag": 150,
+            "Vormittag": 270,
+            "Abend": 90
+          },
+          "dur": {
+            "1h": 4,
+            "1,5h": 3
+          },
+          "vorlauf": {
+            "3–7 Tage": 2,
+            "2 Tage": 5
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 19.64,
+              "n": 7
+            }
+          }
+        },
+        "2026-06-10": {
+          "rev_m": 310.4,
+          "rev_e": 187.8,
+          "measured_min": 600.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 990.0,
+              "r": 498.3
+            }
+          },
+          "tod": {
+            "Nachmittag": 60,
+            "Vormittag": 180,
+            "Mittag": 360
+          },
+          "dur": {
+            "1h": 2,
+            "1,5h": 4,
+            "2h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 7
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 34.9,
+              "n": 7
+            }
+          }
         }
       },
       "events": []
@@ -6675,96 +6676,6 @@
         }
       ],
       "daily": {
-        "2026-07-03": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-22": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-10": {
-          "rev_m": 43.8,
-          "rev_e": 36.3,
-          "measured_min": 210.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 420.0,
-              "r": 80.1
-            }
-          },
-          "tod": {
-            "Abend": 120,
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1h": 2,
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 3
-          },
-          "wd_adv": {
-            "Mi": {
-              "s": 17.2,
-              "n": 3
-            }
-          }
-        },
-        "2026-06-13": {
-          "rev_m": 0.0,
-          "rev_e": 325.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1560.0,
-              "r": 325.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-14": {
-          "rev_m": 37.5,
-          "rev_e": 225.0,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1260.0,
-              "r": 262.5
-            }
-          },
-          "tod": {
-            "Mittag": 90,
-            "Nachmittag": 90
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "So": {
-              "s": 17.49,
-              "n": 2
-            }
-          }
-        },
         "2026-06-29": {
           "rev_m": 0.0,
           "rev_e": 0.0,
@@ -6802,7 +6713,37 @@
             }
           }
         },
-        "2026-06-04": {
+        "2026-06-15": {
+          "rev_m": 0.0,
+          "rev_e": 51.3,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 300.0,
+              "r": 51.3
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-13": {
+          "rev_m": 0.0,
+          "rev_e": 325.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1560.0,
+              "r": 325.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-03": {
           "rev_m": 0.0,
           "rev_e": 0.0,
           "measured_min": 0.0,
@@ -6812,14 +6753,44 @@
           "vorlauf": {},
           "wd_adv": {}
         },
-        "2026-07-01": {
+        "2026-07-02": {
           "rev_m": 0.0,
-          "rev_e": 15.5,
+          "rev_e": 11.2,
           "measured_min": 0.0,
           "types": {
             "Double · Outdoor": {
-              "b": 90.0,
-              "r": 15.5
+              "b": 60.0,
+              "r": 11.2
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-08": {
+          "rev_m": 0.0,
+          "rev_e": 87.3,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 540.0,
+              "r": 87.3
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-28": {
+          "rev_m": 0.0,
+          "rev_e": 81.2,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 390.0,
+              "r": 81.2
             }
           },
           "tod": {},
@@ -6853,6 +6824,252 @@
             }
           }
         },
+        "2026-06-19": {
+          "rev_m": 0.0,
+          "rev_e": 20.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 120.0,
+              "r": 20.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-21": {
+          "rev_m": 0.0,
+          "rev_e": 143.8,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 690.0,
+              "r": 143.8
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-17": {
+          "rev_m": 0.0,
+          "rev_e": 45.8,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 270.0,
+              "r": 45.8
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-01": {
+          "rev_m": 0.0,
+          "rev_e": 15.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 90.0,
+              "r": 15.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-18": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-07-05": {
+          "rev_m": 0.0,
+          "rev_e": 25.0,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 120.0,
+              "r": 25.0
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-16": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-10": {
+          "rev_m": 43.8,
+          "rev_e": 36.3,
+          "measured_min": 210.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 420.0,
+              "r": 80.1
+            }
+          },
+          "tod": {
+            "Abend": 120,
+            "Nachmittag": 90
+          },
+          "dur": {
+            "1h": 2,
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 3
+          },
+          "wd_adv": {
+            "Mi": {
+              "s": 17.2,
+              "n": 3
+            }
+          }
+        },
+        "2026-06-04": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-30": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-23": {
+          "rev_m": 25.0,
+          "rev_e": 0.0,
+          "measured_min": 120.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 120.0,
+              "r": 25.0
+            }
+          },
+          "tod": {
+            "Nachmittag": 120
+          },
+          "dur": {
+            "2h": 1
+          },
+          "vorlauf": {
+            "15–30 Tage": 1
+          },
+          "wd_adv": {
+            "Di": {
+              "s": 18.18,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-11": {
+          "rev_m": 12.5,
+          "rev_e": 31.0,
+          "measured_min": 60.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 240.0,
+              "r": 43.5
+            }
+          },
+          "tod": {
+            "Abend": 60
+          },
+          "dur": {
+            "1h": 1
+          },
+          "vorlauf": {
+            "3–7 Tage": 1
+          },
+          "wd_adv": {
+            "Do": {
+              "s": 6.01,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-24": {
+          "rev_m": 0.0,
+          "rev_e": 20.5,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 120.0,
+              "r": 20.5
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-06": {
+          "rev_m": 18.8,
+          "rev_e": 362.5,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1830.0,
+              "r": 381.2
+            }
+          },
+          "tod": {
+            "Nachts": 90
+          },
+          "dur": {
+            "1,5h": 1
+          },
+          "vorlauf": {
+            "Gleicher Tag": 1
+          },
+          "wd_adv": {
+            "Sa": {
+              "s": 0.49,
+              "n": 1
+            }
+          }
+        },
+        "2026-06-22": {
+          "rev_m": 0.0,
+          "rev_e": 0.0,
+          "measured_min": 0.0,
+          "types": {},
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
         "2026-06-26": {
           "rev_m": 0.0,
           "rev_e": 0.0,
@@ -6862,6 +7079,76 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
+        },
+        "2026-06-27": {
+          "rev_m": 0.0,
+          "rev_e": 243.8,
+          "measured_min": 0.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1170.0,
+              "r": 243.8
+            }
+          },
+          "tod": {},
+          "dur": {},
+          "vorlauf": {},
+          "wd_adv": {}
+        },
+        "2026-06-07": {
+          "rev_m": 18.8,
+          "rev_e": 181.2,
+          "measured_min": 90.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 960.0,
+              "r": 200.0
+            }
+          },
+          "tod": {
+            "Abend": 60,
+            "Vormittag": 30
+          },
+          "dur": {
+            "1h": 2
+          },
+          "vorlauf": {
+            "2 Tage": 1,
+            "1 Tag": 1
+          },
+          "wd_adv": {
+            "So": {
+              "s": 4.91,
+              "n": 2
+            }
+          }
+        },
+        "2026-06-14": {
+          "rev_m": 37.5,
+          "rev_e": 225.0,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1260.0,
+              "r": 262.5
+            }
+          },
+          "tod": {
+            "Mittag": 90,
+            "Nachmittag": 90
+          },
+          "dur": {
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "So": {
+              "s": 17.49,
+              "n": 2
+            }
+          }
         },
         "2026-06-12": {
           "rev_m": 0.0,
@@ -6904,83 +7191,6 @@
             }
           }
         },
-        "2026-07-05": {
-          "rev_m": 0.0,
-          "rev_e": 25.0,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 120.0,
-              "r": 25.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-16": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-11": {
-          "rev_m": 12.5,
-          "rev_e": 31.0,
-          "measured_min": 60.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 240.0,
-              "r": 43.5
-            }
-          },
-          "tod": {
-            "Abend": 60
-          },
-          "dur": {
-            "1h": 1
-          },
-          "vorlauf": {
-            "3–7 Tage": 1
-          },
-          "wd_adv": {
-            "Do": {
-              "s": 6.01,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-23": {
-          "rev_m": 25.0,
-          "rev_e": 0.0,
-          "measured_min": 120.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 120.0,
-              "r": 25.0
-            }
-          },
-          "tod": {
-            "Nachmittag": 120
-          },
-          "dur": {
-            "2h": 1
-          },
-          "vorlauf": {
-            "15–30 Tage": 1
-          },
-          "wd_adv": {
-            "Di": {
-              "s": 18.18,
-              "n": 1
-            }
-          }
-        },
         "2026-07-04": {
           "rev_m": 0.0,
           "rev_e": 25.0,
@@ -6989,61 +7199,6 @@
             "Double · Outdoor": {
               "b": 120.0,
               "r": 25.0
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-18": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-24": {
-          "rev_m": 0.0,
-          "rev_e": 20.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 120.0,
-              "r": 20.5
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-27": {
-          "rev_m": 0.0,
-          "rev_e": 243.8,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1170.0,
-              "r": 243.8
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-19": {
-          "rev_m": 0.0,
-          "rev_e": 20.5,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 120.0,
-              "r": 20.5
             }
           },
           "tod": {},
@@ -7065,160 +7220,6 @@
           "dur": {},
           "vorlauf": {},
           "wd_adv": {}
-        },
-        "2026-06-28": {
-          "rev_m": 0.0,
-          "rev_e": 81.2,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 390.0,
-              "r": 81.2
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-08": {
-          "rev_m": 0.0,
-          "rev_e": 87.3,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 540.0,
-              "r": 87.3
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-30": {
-          "rev_m": 0.0,
-          "rev_e": 0.0,
-          "measured_min": 0.0,
-          "types": {},
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-06": {
-          "rev_m": 18.8,
-          "rev_e": 362.5,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1830.0,
-              "r": 381.2
-            }
-          },
-          "tod": {
-            "Nachts": 90
-          },
-          "dur": {
-            "1,5h": 1
-          },
-          "vorlauf": {
-            "Gleicher Tag": 1
-          },
-          "wd_adv": {
-            "Sa": {
-              "s": 0.49,
-              "n": 1
-            }
-          }
-        },
-        "2026-06-17": {
-          "rev_m": 0.0,
-          "rev_e": 45.8,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 270.0,
-              "r": 45.8
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-21": {
-          "rev_m": 0.0,
-          "rev_e": 143.8,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 690.0,
-              "r": 143.8
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-07-02": {
-          "rev_m": 0.0,
-          "rev_e": 11.2,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 60.0,
-              "r": 11.2
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-15": {
-          "rev_m": 0.0,
-          "rev_e": 51.3,
-          "measured_min": 0.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 300.0,
-              "r": 51.3
-            }
-          },
-          "tod": {},
-          "dur": {},
-          "vorlauf": {},
-          "wd_adv": {}
-        },
-        "2026-06-07": {
-          "rev_m": 18.8,
-          "rev_e": 181.2,
-          "measured_min": 90.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 960.0,
-              "r": 200.0
-            }
-          },
-          "tod": {
-            "Abend": 60,
-            "Vormittag": 30
-          },
-          "dur": {
-            "1h": 2
-          },
-          "vorlauf": {
-            "2 Tage": 1,
-            "1 Tag": 1
-          },
-          "wd_adv": {
-            "So": {
-              "s": 4.91,
-              "n": 2
-            }
-          }
         }
       },
       "events": [
@@ -7246,6 +7247,59 @@
         }
       ],
       "daily": {
+        "2026-06-19": {
+          "rev_m": 144.0,
+          "rev_e": 588.0,
+          "measured_min": 240.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 1500.0,
+              "r": 732.0
+            }
+          },
+          "tod": {
+            "Nachmittag": 240
+          },
+          "dur": {
+            "2h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "Fr": {
+              "s": 27.79,
+              "n": 2
+            }
+          }
+        },
+        "2026-06-15": {
+          "rev_m": 97.2,
+          "rev_e": 117.4,
+          "measured_min": 180.0,
+          "types": {
+            "Double · Outdoor": {
+              "b": 420.0,
+              "r": 214.6
+            }
+          },
+          "tod": {
+            "Nachmittag": 90,
+            "Mittag": 90
+          },
+          "dur": {
+            "1,5h": 2
+          },
+          "vorlauf": {
+            "8–14 Tage": 2
+          },
+          "wd_adv": {
+            "Mo": {
+              "s": 20.08,
+              "n": 2
+            }
+          }
+        },
         "2026-06-17": {
           "rev_m": 107.5,
           "rev_e": 147.6,
@@ -7295,59 +7349,6 @@
             "Do": {
               "s": 13.31,
               "n": 1
-            }
-          }
-        },
-        "2026-06-15": {
-          "rev_m": 97.2,
-          "rev_e": 117.4,
-          "measured_min": 180.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 420.0,
-              "r": 214.6
-            }
-          },
-          "tod": {
-            "Nachmittag": 90,
-            "Mittag": 90
-          },
-          "dur": {
-            "1,5h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "Mo": {
-              "s": 20.08,
-              "n": 2
-            }
-          }
-        },
-        "2026-06-19": {
-          "rev_m": 144.0,
-          "rev_e": 588.0,
-          "measured_min": 240.0,
-          "types": {
-            "Double · Outdoor": {
-              "b": 1500.0,
-              "r": 732.0
-            }
-          },
-          "tod": {
-            "Nachmittag": 240
-          },
-          "dur": {
-            "2h": 2
-          },
-          "vorlauf": {
-            "8–14 Tage": 2
-          },
-          "wd_adv": {
-            "Fr": {
-              "s": 27.79,
-              "n": 2
             }
           }
         },
