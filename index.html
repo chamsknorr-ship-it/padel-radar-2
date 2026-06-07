@@ -194,6 +194,7 @@ let cFrom=null, cTo=null;
 const $=id=>document.getElementById(id);
 const eur=n=>"€"+Math.round(n).toLocaleString("de-DE");
 const pct=n=>Math.round(n*100)+"%";
+const capOcc=n=>Math.min(1,n||0);
 const ddmm=iso=>{const[y,m,d]=iso.split("-");return d+"."+m+".";};
 const maxS=(a,b)=>a>b?a:b, minS=(a,b)=>a<b?a:b;
 
@@ -254,7 +255,7 @@ function renderKPIs(from,to){
   let cap=0,book=0,rev=0,ev=0;
   DATA.venues.forEach(v=>{const c=computeRange(v,from,to);cap+=c.cap;book+=c.booked;rev+=c.rev;
     ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;});
-  const cards=[["Clubs erfasst",DATA.venues.length,""],["Ø Auslastung",pct(cap?book/cap:0),""],
+  const cards=[["Clubs erfasst",DATA.venues.length,""],["Ø Auslastung",pct(capOcc(cap?book/cap:0)),""],
     ["Umsatz · Zeitraum",eur(rev),"acc"],["Events erkannt",ev,""]];
   $("kpis").innerHTML=cards.map(c=>`<div class="kpi"><div class="l">${c[0]}</div><div class="v ${c[2]}">${c[1]}</div></div>`).join("");
 }
@@ -266,7 +267,7 @@ function renderList(from,to){
     ?(b.c.cap?b.c.booked/b.c.cap:0)-(a.c.cap?a.c.booked/a.c.cap:0):b.c.rev-a.c.rev);
   const max=Math.max(1,...vs.map(x=>x.c.rev));
   if(!vs.length){$("list").innerHTML='<div class="empty">Keine Clubs gefunden.</div>';return;}
-  $("list").innerHTML=vs.map((x,i)=>{const c=x.c,occ=c.cap?c.booked/c.cap:0;
+  $("list").innerHTML=vs.map((x,i)=>{const c=x.c,occ=capOcc(c.cap?c.booked/c.cap:0);
     const mw=c.rev_m/max*100,ew=c.rev_e/max*100;const idx=DATA.venues.indexOf(x.v);
     return `<div class="row" onclick="openDetail(${idx})"><span class="rank">${i+1}</span>
       <div style="min-width:0">
@@ -279,9 +280,9 @@ function renderList(from,to){
       </div><span style="color:var(--faint);font-size:18px">›</span></div>`;}).join("");
 }
 function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];const c=computeRange(v,from,to);
-  const occ=c.cap?c.booked/c.cap:0;
+  const occ=capOcc(c.cap?c.booked/c.cap:0);
   const types=(v.court_types||[]).map(t=>({label:t.label,courts:t.courts,
-    occ:c.typeCap[t.label]?(c.typeB[t.label]||0)/c.typeCap[t.label]:0,rev:c.typeR[t.label]||0}));
+    occ:capOcc(c.typeCap[t.label]?(c.typeB[t.label]||0)/c.typeCap[t.label]:0),rev:c.typeR[t.label]||0}));
   const maxT=Math.max(1,...types.map(t=>t.rev));
   const typeHtml=types.length?types.map(t=>tbar(`${t.label} · ${t.courts} C`,t.rev/maxT,pct(t.occ)+" · "+eur(t.rev),"var(--blue)")).join(""):'<div class="empty">–</div>';
   const evs=(v.events||[]).filter(e=>e.date>=from&&e.date<=to);
@@ -331,12 +332,12 @@ function renderReport(from,to){
     for(const k in c.wd)wd[k]=(wd[k]||0)+c.wd[k];
     for(const k in c.vorlauf)vorlauf[k]=(vorlauf[k]||0)+c.vorlauf[k];
     for(const k in c.wdAdv){wdAdv[k]=wdAdv[k]||{s:0,n:0};wdAdv[k].s+=c.wdAdv[k].s;wdAdv[k].n+=c.wdAdv[k].n;}
-    per.push({name:v.name,occ:c.cap?c.booked/c.cap:0,rev:c.rev});});
-  const occ=cap?book/cap:0, rev=rev_m+rev_e;
+    per.push({name:v.name,occ:capOcc(c.cap?c.booked/c.cap:0),rev:c.rev});});
+  const occ=capOcc(cap?book/cap:0), rev=rev_m+rev_e;
   const types=Object.keys(typeCap).sort();
   const maxTr=Math.max(1,...types.map(t=>typeR[t]||0));
   const typeHtml=types.length?types.map(t=>tbar(t,(typeR[t]||0)/maxTr,
-    pct(typeCap[t]?(typeB[t]||0)/typeCap[t]:0)+" · "+eur(typeR[t]||0),"var(--blue)")).join(""):'<div class="empty">–</div>';
+    pct(capOcc(typeCap[t]?(typeB[t]||0)/typeCap[t]:0))+" · "+eur(typeR[t]||0),"var(--blue)")).join(""):'<div class="empty">–</div>';
   // Wochentag mit Ø Vorlauf
   const wtot=WDO.reduce((a,k)=>a+(wd[k]||0),0)||1;
   const wdHtml=WDO.map(k=>{const avg=wdAdv[k]&&wdAdv[k].n>0?(wdAdv[k].s/wdAdv[k].n).toFixed(1):null;
@@ -388,7 +389,7 @@ function renderMap(from,to){
   if(typeof L==="undefined"){$("map").innerHTML='<div class="empty" style="padding:60px 0">Karte konnte nicht geladen werden (keine Internetverbindung zur Kartenquelle).</div>';return;}
   if(!MAP)initMap();
   const rows=DATA.venues.filter(v=>v.lat&&v.lng).map(v=>{const c=computeRange(v,from,to);
-    return {v,hours:c.booked/60,occ:c.cap?c.booked/c.cap:0,rev:c.rev};});
+    return {v,hours:c.booked/60,occ:capOcc(c.cap?c.booked/c.cap:0),rev:c.rev};});
   const max=Math.max(1,...rows.map(r=>r.hours));
   const pts=rows.map(r=>[r.v.lat,r.v.lng,Math.max(0.05,r.hours/max)]);
   if(HEAT)MAP.removeLayer(HEAT);
