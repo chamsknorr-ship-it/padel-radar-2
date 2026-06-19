@@ -116,14 +116,18 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
 
         cap_by_type: dict[str, float] = {}
         type_courts: dict[str, int] = {}
+        cap_by_loc: dict[str, float] = {"indoor": 0.0, "outdoor": 0.0, "unknown": 0.0}
         for c in vcourts:
             lab = court_type_label({"size": c["size"], "location": c["location"]})
             cap_by_type[lab] = cap_by_type.get(lab, 0) + _window(c)
             type_courts[lab] = type_courts.get(lab, 0) + 1
+            lk = "indoor" if c["location"] == "indoor" else ("outdoor" if c["location"] == "outdoor" else "unknown")
+            cap_by_loc[lk] = cap_by_loc.get(lk, 0) + _window(c)
 
         daily = {d: {"rev_m": 0.0, "rev_e": 0.0, "measured_min": 0.0,
                      "types": {}, "tod": {}, "dur": {},
-                     "vorlauf": {}, "wd_adv": {}} for d in obs}
+                     "vorlauf": {}, "wd_adv": {},
+                     "hours": {}, "loc": {}} for d in obs}
 
         for b in book_by_tenant.get(tid, []):
             d = b["date"]
@@ -131,10 +135,16 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
                 continue
             c = courts.get(b["resource_id"])
             lab = court_type_label({"size": c["size"], "location": c["location"]}) if c else "Unbekannt"
+            loc = (c["location"] if c else "unknown")
             rec = daily[d]
             t = rec["types"].setdefault(lab, {"b": 0.0, "r": 0.0})
             t["b"] += b["duration_min"]
             t["r"] += b["price_value"]
+            # Indoor/Outdoor-Topf (Minuten + Umsatz, gemessen+geschätzt)
+            lkey = "indoor" if loc == "indoor" else ("outdoor" if loc == "outdoor" else "unknown")
+            lt = rec["loc"].setdefault(lkey, {"b": 0.0, "r": 0.0, "cap": 0.0})
+            lt["b"] += b["duration_min"]
+            lt["r"] += b["price_value"]
             if b["kind"] == "measured":
                 rec["rev_m"] += b["price_value"]
                 rec["measured_min"] += b["duration_min"]
@@ -142,6 +152,11 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
                 rec["tod"][tb] = rec["tod"].get(tb, 0) + b["duration_min"]
                 du = duration_bucket(b["duration_min"])
                 rec["dur"][du] = rec["dur"].get(du, 0) + 1
+                # Stundenraster (nach Startstunde, gemessene Minuten + Umsatz)
+                hr = str(b["start_min"] // 60)
+                hrec = rec["hours"].setdefault(hr, {"b": 0.0, "r": 0.0})
+                hrec["b"] += b["duration_min"]
+                hrec["r"] += b["price_value"]
                 # Vorlaufzeit aus observed_at berechnen
                 try:
                     slot_dt = datetime(
@@ -171,6 +186,12 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             for o in rec["types"].values():
                 o["b"] = round(o["b"], 1)
                 o["r"] = round(o["r"], 1)
+            for o in rec["loc"].values():
+                o["b"] = round(o["b"], 1)
+                o["r"] = round(o["r"], 1)
+            for o in rec["hours"].values():
+                o["b"] = round(o["b"], 1)
+                o["r"] = round(o["r"], 1)
 
         events = _detect_events(vcourts, book_by_tenant.get(tid, []), obs, courts, today)
         total_rev = sum(rec["rev_m"] + rec["rev_e"] for rec in daily.values())
@@ -183,6 +204,7 @@ def build_dashboard(conn, today: date | None = None, ccy: str = "EUR") -> dict:
             "lng": v.get("lng"),
             "courts": len(vcourts),
             "capacity": {k: round(val, 1) for k, val in cap_by_type.items()},
+            "cap_loc": {k: round(val, 1) for k, val in cap_by_loc.items() if val > 0},
             "court_types": [{"label": k, "courts": type_courts[k]} for k in sorted(cap_by_type)],
             "daily": daily,
             "events": events,

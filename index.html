@@ -190,6 +190,7 @@ const FALLBACK={updated_at:new Date().toISOString(),city:"Berlin",sample:true,
     daily:{[new Date().toISOString().slice(0,10)]:{rev_m:120,rev_e:300,measured_min:240,types:{"Double · Indoor":{b:600,r:420}},tod:{Abend:240},dur:{"1h":4}}},events:[]}]};
 
 let DATA=null, tab="clubs", preset="week", sortBy="rev", query="";
+let reportLoc="all", chartMode="occ";
 let cFrom=null, cTo=null;
 const $=id=>document.getElementById(id);
 const eur=n=>"€"+Math.round(n).toLocaleString("de-DE");
@@ -219,21 +220,29 @@ function currentRange(){
   return [dmin,dmax];
 }
 
-function computeRange(v,from,to){
-  let nDays=0,booked=0,rev_m=0,rev_e=0,mm=0;
+function computeRange(v,from,to,locFilter){
+  let nDays=0,bookedAll=0,rev_m=0,rev_e=0,mm=0;
   const typeB={},typeR={},tod={},dur={},wd={};
   const vorlauf={},wdAdv={};
+  const loc={},hours={};
+  const lf=locFilter&&locFilter!=="all"?locFilter:null;
   for(const iso of eachDate(from,to)){const rec=v.daily[iso];if(!rec)continue;nDays++;
     rev_m+=rec.rev_m||0;rev_e+=rec.rev_e||0;mm+=rec.measured_min||0;
     const w=weekdayOf(iso);wd[w]=(wd[w]||0)+(rec.measured_min||0);
-    for(const k in rec.types){typeB[k]=(typeB[k]||0)+rec.types[k].b;typeR[k]=(typeR[k]||0)+rec.types[k].r;booked+=rec.types[k].b;}
+    for(const k in rec.types){typeB[k]=(typeB[k]||0)+rec.types[k].b;typeR[k]=(typeR[k]||0)+rec.types[k].r;bookedAll+=rec.types[k].b;}
     for(const k in rec.tod) tod[k]=(tod[k]||0)+rec.tod[k];
     for(const k in rec.dur) dur[k]=(dur[k]||0)+rec.dur[k];
+    for(const k in (rec.loc||{})){loc[k]=loc[k]||{b:0,r:0};loc[k].b+=rec.loc[k].b;loc[k].r+=rec.loc[k].r;}
+    for(const k in (rec.hours||{})){hours[k]=hours[k]||{b:0,r:0};hours[k].b+=rec.hours[k].b;hours[k].r+=rec.hours[k].r;}
     for(const k in (rec.vorlauf||{})) vorlauf[k]=(vorlauf[k]||0)+rec.vorlauf[k];
     for(const k in (rec.wd_adv||{})){const x=rec.wd_adv[k];wdAdv[k]=wdAdv[k]||{s:0,n:0};wdAdv[k].s+=x.s;wdAdv[k].n+=x.n;}}
   const cap1=Object.values(v.capacity||{}).reduce((a,b)=>a+b,0);
   const typeCap={};for(const k in (v.capacity||{}))typeCap[k]=v.capacity[k]*nDays;
-  return {nDays,booked,cap:cap1*nDays,rev_m,rev_e,rev:rev_m+rev_e,mm,typeB,typeR,typeCap,tod,dur,wd,vorlauf,wdAdv};
+  let booked=bookedAll, cap=cap1*nDays, rev=rev_m+rev_e, rM=rev_m, rE=rev_e;
+  if(lf){const L=loc[lf]||{b:0,r:0};booked=L.b;rev=L.r;rM=L.r;rE=0;
+    cap=((v.cap_loc||{})[lf]||0)*nDays;}
+  const avgPrice=booked>0?rev/(booked/60):0;
+  return {nDays,booked,cap,rev_m:rM,rev_e:rE,rev,mm,typeB,typeR,typeCap,tod,dur,wd,vorlauf,wdAdv,loc,hours,avgPrice,lf};
 }
 
 function tbar(label,frac,right,color){return `<div class="tbar"><div class="t"><span>${label}</span>
@@ -246,7 +255,71 @@ const TODO=["Vormittag","Mittag","Nachmittag","Abend","Nachts"];
 const WDO=["Mo","Di","Mi","Do","Fr","Sa","So"];
 const DURO=["1h","1,5h","2h"];
 
-function renderRangeLabel(){const[f,t]=currentRange();const r=computeRange(DATA.venues[0]||{daily:{},capacity:{}},f,t);
+// Zeitachsen-Diagramm (SVG-Balken). buckets: [{label, occ, rev}]
+function timeChart(buckets,mode){
+  if(!buckets.length||buckets.every(b=>(mode==="rev"?b.rev:b.occ)===0))
+    return '<div class="empty" style="padding:30px 0">Noch keine Daten im Zeitraum.</div>';
+  const W=Math.max(560,buckets.length*Math.max(26,Math.min(60,560/buckets.length))),H=240;
+  const padL=44,padB=34,padT=14,padR=10;
+  const cw=W-padL-padR, ch=H-padB-padT;
+  const vals=buckets.map(b=>mode==="rev"?b.rev:b.occ);
+  const max=Math.max(...vals)||1;
+  const bw=cw/buckets.length, barW=Math.min(40,bw*0.66);
+  const col=mode==="rev"?"var(--teal)":"var(--acc)";
+  const fmt=v=>mode==="rev"?eur(v):Math.round(v*100)+"%";
+  // Y-Gitter (4 Linien)
+  let grid="",yl="";
+  for(let i=0;i<=4;i++){const y=padT+ch-ch*i/4;const val=max*i/4;
+    grid+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`;
+    yl+=`<text x="${padL-6}" y="${y+3}" text-anchor="end" fill="var(--faint)" font-size="10" font-family="var(--mono)">${fmt(val)}</text>`;}
+  let bars="",xl="";
+  buckets.forEach((b,i)=>{const v=mode==="rev"?b.rev:b.occ;const h=ch*v/max;
+    const x=padL+i*bw+(bw-barW)/2;const y=padT+ch-h;
+    bars+=`<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="3" fill="${col}"><title>${b.label}: ${fmt(v)}</title></rect>`;
+    const showEvery=buckets.length>16?Math.ceil(buckets.length/16):1;
+    if(i%showEvery===0)xl+=`<text x="${padL+i*bw+bw/2}" y="${H-padB+16}" text-anchor="middle" fill="var(--muted)" font-size="10">${b.label}</text>`;});
+  return `<div style="overflow-x:auto"><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:${W>700?W:0}px;max-width:100%;display:block">
+    ${grid}${yl}${bars}${xl}</svg></div>`;
+}
+
+// Zeitachsen-Buckets für ganz Berlin (oder gefiltert nach Lage)
+function cityBuckets(from,to,lf){
+  let nd=0;for(const _ of eachDate(from,to))nd++;
+  const venues=DATA.venues;
+  const capDayOf=v=>lf?((v.cap_loc||{})[lf]||0):Object.values(v.capacity||{}).reduce((a,b)=>a+b,0);
+  // Modus 1: genau 1 Tag -> Stunden
+  if(nd===1){
+    const H={};
+    venues.forEach(v=>{const rec=v.daily[from];if(!rec)return;
+      for(const k in (rec.hours||{})){const h=+k;H[h]=H[h]||{b:0,r:0};H[h].b+=rec.hours[k].b;H[h].r+=rec.hours[k].r;}});
+    const hoursOpen=18;
+    const capH=venues.reduce((s,v)=>s+capDayOf(v),0)/hoursOpen;
+    const hrs=Object.keys(H).map(Number);
+    const lo=hrs.length?Math.min(...hrs,9):9, hi=hrs.length?Math.max(...hrs,21):21;
+    const out=[];for(let h=lo;h<=hi;h++){const x=H[h]||{b:0,r:0};
+      out.push({label:h+"h",occ:capH?Math.min(1,x.b/capH):0,rev:x.r});}
+    return out;
+  }
+  // Modus 2: <=8 Tage -> je Wochentag
+  if(nd<=8){
+    const acc={};WDO.forEach(k=>acc[k]={b:0,cap:0,r:0});
+    for(const iso of eachDate(from,to)){const w=weekdayOf(iso);
+      venues.forEach(v=>{const rec=v.daily[iso];if(!rec)return;acc[w].cap+=capDayOf(v);
+        if(lf){const L=(rec.loc||{})[lf];if(L){acc[w].b+=L.b;acc[w].r+=L.r;}}
+        else{for(const k in rec.types){acc[w].b+=rec.types[k].b;acc[w].r+=rec.types[k].r;}}});}
+    return WDO.map(k=>({label:k,occ:acc[k].cap?Math.min(1,acc[k].b/acc[k].cap):0,rev:acc[k].r}));
+  }
+  // Modus 3: je Tag
+  const out=[];
+  for(const iso of eachDate(from,to)){let b=0,cap=0,r=0;
+    venues.forEach(v=>{const rec=v.daily[iso];cap+=capDayOf(v);if(!rec)return;
+      if(lf){const L=(rec.loc||{})[lf];if(L){b+=L.b;r+=L.r;}}
+      else{for(const k in rec.types){b+=rec.types[k].b;r+=rec.types[k].r;}}});
+    out.push({label:ddmm(iso).replace(/\.$/,''),occ:cap?Math.min(1,b/cap):0,rev:r});}
+  return out;
+}
+
+function renderRangeLabel(){const[f,t]=currentRange();
   let nd=0;for(const _ of eachDate(f,t))nd++;
   $("rangelabel").textContent=`${ddmm(f)}–${ddmm(t)} · ${nd} Tag${nd===1?"":"e"}`;}
 
@@ -306,6 +379,7 @@ function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];
       <div class="mcard"><div class="l">Auslastung</div><div class="v">${pct(occ)}</div></div>
       <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(c.rev)}</div><div class="x">${eur(c.rev_m)} gemessen · ${eur(c.rev_e)} geschätzt</div></div>
       <div class="mcard"><div class="l">Gebuchte Std.</div><div class="v">${Math.round(c.booked/60)}</div></div>
+      <div class="mcard"><div class="l">Ø-Preis / Std.</div><div class="v">${eur(c.avgPrice)}</div><div class="x">über gebuchte Courts</div></div>
     </div>
     <div class="dh">Nach Court-Typ · Auslastung &amp; Umsatz</div>${typeHtml}
     <div class="dh">Nach Buchungslänge · Anteil</div>${barShares(c.dur,DURO,"var(--warn)")}
@@ -320,31 +394,34 @@ $("overlay").addEventListener("click",e=>{if(e.target===$("overlay"))closeDetail
 
 /* ---------- Bericht-Ansicht (ganz Berlin) ---------- */
 function renderReport(from,to){
-  let cap=0,book=0,rev_m=0,rev_e=0,courts=0,ev=0;
+  const lf=reportLoc==="all"?null:reportLoc;
+  let cap=0,book=0,rev=0,rev_m=0,rev_e=0,courts=0,ev=0;
   const typeB={},typeR={},typeCap={},tod={},dur={},wd={},vorlauf={},wdAdv={};
   const per=[];
-  DATA.venues.forEach(v=>{const c=computeRange(v,from,to);cap+=c.cap;book+=c.booked;rev_m+=c.rev_m;rev_e+=c.rev_e;
-    courts+=v.courts;ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;
-    for(const k in c.typeB){typeB[k]=(typeB[k]||0)+c.typeB[k];typeR[k]=(typeR[k]||0)+c.typeR[k];}
-    for(const k in c.typeCap)typeCap[k]=(typeCap[k]||0)+c.typeCap[k];
+  DATA.venues.forEach(v=>{const c=computeRange(v,from,to,reportLoc);cap+=c.cap;book+=c.booked;rev+=c.rev;rev_m+=c.rev_m;rev_e+=c.rev_e;
+    courts+=lf?courtsOfLoc(v,lf):v.courts;ev+=(v.events||[]).filter(e=>e.date>=from&&e.date<=to).length;
     for(const k in c.tod)tod[k]=(tod[k]||0)+c.tod[k];
     for(const k in c.dur)dur[k]=(dur[k]||0)+c.dur[k];
     for(const k in c.wd)wd[k]=(wd[k]||0)+c.wd[k];
     for(const k in c.vorlauf)vorlauf[k]=(vorlauf[k]||0)+c.vorlauf[k];
     for(const k in c.wdAdv){wdAdv[k]=wdAdv[k]||{s:0,n:0};wdAdv[k].s+=c.wdAdv[k].s;wdAdv[k].n+=c.wdAdv[k].n;}
+    // Court-Typ nur passend zur Lage zeigen
+    for(const k in c.typeB){if(lf&&!k.toLowerCase().includes(lf==="indoor"?"indoor":"outdoor"))continue;
+      typeB[k]=(typeB[k]||0)+c.typeB[k];typeR[k]=(typeR[k]||0)+c.typeR[k];}
+    for(const k in c.typeCap){if(lf&&!k.toLowerCase().includes(lf==="indoor"?"indoor":"outdoor"))continue;
+      typeCap[k]=(typeCap[k]||0)+c.typeCap[k];}
     per.push({name:v.name,occ:capOcc(c.cap?c.booked/c.cap:0),rev:c.rev});});
-  const occ=capOcc(cap?book/cap:0), rev=rev_m+rev_e;
+  const occ=capOcc(cap?book/cap:0);
+  const avgPrice=book>0?rev/(book/60):0;
   const types=Object.keys(typeCap).sort();
   const maxTr=Math.max(1,...types.map(t=>typeR[t]||0));
   const typeHtml=types.length?types.map(t=>tbar(t,(typeR[t]||0)/maxTr,
     pct(capOcc(typeCap[t]?(typeB[t]||0)/typeCap[t]:0))+" · "+eur(typeR[t]||0),"var(--blue)")).join(""):'<div class="empty">–</div>';
-  // Wochentag mit Ø Vorlauf
   const wtot=WDO.reduce((a,k)=>a+(wd[k]||0),0)||1;
   const wdHtml=WDO.map(k=>{const avg=wdAdv[k]&&wdAdv[k].n>0?(wdAdv[k].s/wdAdv[k].n).toFixed(1):null;
     const lbl=avg!==null?`${k} · Ø ${avg} T`:k;
     return tbar(lbl,(wd[k]||0)/wtot,Math.round((wd[k]||0)/wtot*100)+"%","var(--blue)");}).join("")||
     '<div class="empty">Noch keine gemessenen Buchungen.</div>';
-  // Vorlaufzeit
   const VORO=["<2h","<6h","Gleicher Tag","1 Tag","2 Tage","3–7 Tage","8–14 Tage","15–30 Tage"];
   const vtot=VORO.reduce((a,k)=>a+(vorlauf[k]||0),0);
   const vorlaufHtml=vtot>0
@@ -353,15 +430,34 @@ function renderReport(from,to){
   const topRev=[...per].sort((a,b)=>b.rev-a.rev).slice(0,5);
   const topOcc=[...per].sort((a,b)=>b.occ-a.occ).slice(0,5);
   const maxR=Math.max(1,...topRev.map(x=>x.rev));
+  // Zeitachsen-Chart
+  const buckets=cityBuckets(from,to,lf);
+  const chart=timeChart(buckets,chartMode);
+  const xachse=buckets.length&&buckets[0].label.endsWith("h")?"je Stunde":(WDO.includes(buckets[0]?.label)?"je Wochentag":"je Tag");
   $("report-view").innerHTML=`
+    <div class="seg" id="locseg" style="margin-bottom:14px">
+      <button data-loc="all"${reportLoc==="all"?' class="on"':''}>Alle Courts</button>
+      <button data-loc="indoor"${reportLoc==="indoor"?' class="on"':''}>Indoor</button>
+      <button data-loc="outdoor"${reportLoc==="outdoor"?' class="on"':''}>Outdoor</button>
+    </div>
     <div class="kpis">
-      <div class="kpi"><div class="l">Clubs · Courts</div><div class="v">${DATA.venues.length} · ${courts}</div></div>
-      <div class="kpi"><div class="l">Ø Auslastung Berlin</div><div class="v">${pct(occ)}</div></div>
-      <div class="kpi"><div class="l">Umsatz gesamt</div><div class="v acc">${eur(rev)}</div><div class="x" style="font-size:11px;color:var(--faint);margin-top:3px">${eur(rev_m)} gemessen · ${eur(rev_e)} geschätzt</div></div>
-      <div class="kpi"><div class="l">Events erkannt</div><div class="v">${ev}</div></div>
+      <div class="kpi"><div class="l">${lf?(lf==="indoor"?"Indoor":"Outdoor")+" · Courts":"Clubs · Courts"}</div><div class="v">${lf?courts:DATA.venues.length+" · "+courts}</div></div>
+      <div class="kpi"><div class="l">Ø Auslastung${lf?" "+(lf==="indoor"?"Indoor":"Outdoor"):" Berlin"}</div><div class="v">${pct(occ)}</div></div>
+      <div class="kpi"><div class="l">Umsatz gesamt</div><div class="v acc">${eur(rev)}</div>${lf?"":`<div class="x" style="font-size:11px;color:var(--faint);margin-top:3px">${eur(rev_m)} gemessen · ${eur(rev_e)} geschätzt</div>`}</div>
+      <div class="kpi"><div class="l">Ø-Preis / Std.</div><div class="v">${eur(avgPrice)}</div></div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:6px">
+        <h3 style="margin:0">Verlauf · ${xachse}</h3>
+        <div class="seg" id="chartseg" style="padding:2px">
+          <button data-cm="occ"${chartMode==="occ"?' class="on"':''}>Auslastung</button>
+          <button data-cm="rev"${chartMode==="rev"?' class="on"':''}>Umsatz</button>
+        </div>
+      </div>
+      ${chart}
     </div>
     <div class="two">
-      <div class="card"><h3>Auslastung &amp; Umsatz nach Court-Typ (ganz Berlin)</h3>${typeHtml}</div>
+      <div class="card"><h3>Auslastung &amp; Umsatz nach Court-Typ${lf?" ("+(lf==="indoor"?"Indoor":"Outdoor")+")":" (ganz Berlin)"}</h3>${typeHtml}</div>
       <div class="card"><h3>Buchungen nach Tageszeit</h3>${barShares(tod,TODO,"var(--teal)")}</div>
     </div>
     <div class="two">
@@ -375,7 +471,11 @@ function renderReport(from,to){
     <div class="two">
       <div class="card"><h3>Top 5 nach Umsatz</h3>${topRev.map(x=>tbar(x.name,x.rev/maxR,eur(x.rev),"var(--teal)")).join("")||'<div class="empty">–</div>'}</div>
     </div>`;
+  // Umschalter-Events
+  $("locseg").addEventListener("click",e=>{if(!e.target.dataset.loc)return;reportLoc=e.target.dataset.loc;renderReport(...currentRange());});
+  $("chartseg").addEventListener("click",e=>{if(!e.target.dataset.cm)return;chartMode=e.target.dataset.cm;renderReport(...currentRange());});
 }
+function courtsOfLoc(v,lf){return (v.court_types||[]).filter(t=>t.label.toLowerCase().includes(lf)).reduce((a,t)=>a+t.courts,0);}
 
 /* ---------- Karte (Heatmap) ---------- */
 let MAP=null,HEAT=null,MARKERS=null;
