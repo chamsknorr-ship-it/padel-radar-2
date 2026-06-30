@@ -160,11 +160,10 @@ body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1
 
   <div id="clubs-view">
     <div class="kpis" id="kpis"></div>
-    <div class="section-h" id="list-title">Clubs nach geschätztem Umsatz</div>
+    <div class="section-h" id="list-title">Clubs nach Umsatz</div>
     <div class="list" id="list"></div>
     <div class="legend">
-      <span><span class="sw" style="background:var(--teal)"></span>gemessen (live erfasst)</span>
-      <span><span class="sw" style="background:repeating-linear-gradient(45deg,var(--teal-dim) 0 3px,transparent 3px 6px)"></span>geschätzt (Altbestand)</span>
+      <span><span class="sw" style="background:var(--teal)"></span>live gemessene Buchungen</span>
     </div>
   </div>
 
@@ -377,7 +376,7 @@ function openDetail(idx){const[from,to]=currentRange();const v=DATA.venues[idx];
     <h2>${v.name}</h2><div class="dsub">${v.district||""} · ${v.courts} Courts · ${ddmm(from)}–${ddmm(to)} · ${c.nDays} beob. Tage</div>
     <div class="mcards">
       <div class="mcard"><div class="l">Auslastung</div><div class="v">${pct(occ)}</div></div>
-      <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(c.rev)}</div><div class="x">${eur(c.rev_m)} gemessen · ${eur(c.rev_e)} geschätzt</div></div>
+      <div class="mcard"><div class="l">Umsatz gesamt</div><div class="v">${eur(c.rev)}</div><div class="x">live gemessen</div></div>
       <div class="mcard"><div class="l">Gebuchte Std.</div><div class="v">${Math.round(c.booked/60)}</div></div>
       <div class="mcard"><div class="l">Ø-Preis / Std.</div><div class="v">${eur(c.avgPrice)}</div><div class="x">über gebuchte Courts</div></div>
     </div>
@@ -443,7 +442,7 @@ function renderReport(from,to){
     <div class="kpis">
       <div class="kpi"><div class="l">${lf?(lf==="indoor"?"Indoor":"Outdoor")+" · Courts":"Clubs · Courts"}</div><div class="v">${lf?courts:DATA.venues.length+" · "+courts}</div></div>
       <div class="kpi"><div class="l">Ø Auslastung${lf?" "+(lf==="indoor"?"Indoor":"Outdoor"):" Berlin"}</div><div class="v">${pct(occ)}</div></div>
-      <div class="kpi"><div class="l">Umsatz gesamt</div><div class="v acc">${eur(rev)}</div>${lf?"":`<div class="x" style="font-size:11px;color:var(--faint);margin-top:3px">${eur(rev_m)} gemessen · ${eur(rev_e)} geschätzt</div>`}</div>
+      <div class="kpi"><div class="l">Umsatz gesamt</div><div class="v acc">${eur(rev)}</div><div class="x" style="font-size:11px;color:var(--faint);margin-top:3px">live gemessen</div></div>
       <div class="kpi"><div class="l">Ø-Preis / Std.</div><div class="v">${eur(avgPrice)}</div></div>
     </div>
     <div class="card">
@@ -517,8 +516,7 @@ function renderAll(){
 function init(){
   $("updated").textContent="aktualisiert "+new Date(DATA.updated_at).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
   if(DATA.sample)$("sample-badge").innerHTML='<span class="sample">Beispieldaten – echte Zahlen nach Einrichtung</span>';
-  $("foot").innerHTML="Zahlen sind Schätzungen aus öffentlich sichtbarer Verfügbarkeit (Snapshot-Vergleich). "+
-    "»Gemessen« = live erfasste Buchungen, »geschätzt« = Belegung vor Beobachtungsbeginn. "+
+  $("foot").innerHTML="Alle Zahlen sind live gemessene Buchungen (Snapshot-Vergleich der öffentlich sichtbaren Verfügbarkeit). "+
     "Auslastung bezieht sich nur auf beobachtete Tage. Tageszeit/Wochentag/Länge basieren auf gemessenen Buchungen.";
   // Datumsfelder
   $("d-from").min=DATA.date_min;$("d-from").max=DATA.date_max;$("d-from").value=DATA.date_min;

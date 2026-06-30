@@ -25,7 +25,7 @@ import store
 from aggregate import write_dashboard
 from courts import classify_court
 from infer import (
-    estimate_backlog, free_minutes, infer_bookings,
+    free_minutes, infer_bookings,
     normalize_snapshot, observed_window, price_per_minute,
 )
 from playtomic import PlaytomicClient
@@ -185,17 +185,8 @@ def main():
         store.update_court_window(conn, resource_id, op_s, op_e)
         store.add_court_price(conn, resource_id, price_per_minute(slots, op_s, op_e))
 
-        if store.is_first_sight(conn, resource_id, day, now_iso):
-            row = store.get_courts(conn).get(resource_id, {})
-            bl = estimate_backlog(day, slots,
-                                  row.get("op_start") or op_s,
-                                  row.get("op_end") or op_e, now)
-            if bl:
-                store.add_booking(conn, {
-                    "tenant_id": tenant_id, "resource_id": resource_id, "date": day,
-                    "start_min": 0, "duration_min": bl["duration_min"],
-                    "price_value": bl["price_value"], "ccy": bl["ccy"], "kind": "backlog",
-                }, now_iso)
+    # Hinweis: Altbestand-Schätzung (backlog) wurde bewusst entfernt.
+    # Es werden nur noch tatsächlich gemessene Buchungen gezählt (siehe Schritt 5).
 
     # --- 5. Vergleich mit letztem Snapshot -> gemessene Buchungen ---------
     if SNAPSHOT_PATH.exists():
@@ -205,7 +196,7 @@ def main():
             store.add_booking(conn, b, now_iso)
         print(f"  {len(bookings)} neue Buchungen erkannt.")
     else:
-        print("  Erster Lauf – kein Vergleich, nur Altbestand-Schätzung.")
+        print("  Erster Lauf – noch kein Vergleich möglich, Snapshot gespeichert.")
 
     # --- 6. Snapshot speichern -------------------------------------------
     SNAPSHOT_PATH.write_text(json.dumps(curr, ensure_ascii=False), encoding="utf-8")
